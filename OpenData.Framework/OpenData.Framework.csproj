@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD3DCA24-67FF-4555-A803-5D14335822F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenData.Framework</RootNamespace>
+    <AssemblyName>OpenData.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Schema.cs" />
+    <Compile Include="Entity\Column.cs" />
+    <Compile Include="Entity\OpenEntity.cs" />
+    <Compile Include="Query\OpenExpressionVisitor.cs" />
+    <Compile Include="Query\OpenExpression\AndAlsoExpression.cs" />
+    <Compile Include="Query\OpenExpression\BinaryExpression.cs" />
+    <Compile Include="Query\OpenExpression\CallExpression.cs" />
+    <Compile Include="Query\OpenExpression\Expression.cs" />
+    <Compile Include="Query\OpenExpression\ExpressionValueHelper.cs" />
+    <Compile Include="Query\OpenExpression\FalseExpression.cs" />
+    <Compile Include="Query\OpenExpression\IExpression.cs" />
+    <Compile Include="Query\OpenExpression\IWhereExpression.cs" />
+    <Compile Include="Query\OpenExpression\OrderExpression.cs" />
+    <Compile Include="Query\OpenExpression\OrElseExpression.cs" />
+    <Compile Include="Query\OpenExpression\SelectExpression.cs" />
+    <Compile Include="Query\OpenExpression\SkipExpression.cs" />
+    <Compile Include="Query\OpenExpression\TakeExpression.cs" />
+    <Compile Include="Query\OpenExpression\TrueExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereBetweenExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereBetweenOrEqualExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereCategoryExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereClauseExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereContainsExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereEndsWithExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereEqualsExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereFieldExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereGreaterThanExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereGreaterThanOrEqualExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereInExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereLessThanExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereLessThanOrEqualExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereNotEqualsExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereNotInExpression.cs" />
+    <Compile Include="Query\OpenExpression\WhereStartsWithExpression.cs" />
+    <Compile Include="Extension\OpenEntityHelper.cs" />
+    <Compile Include="OpenDatabase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\OpenFilter.cs" />
+    <Compile Include="Query\IOpenQuery.cs" />
+    <Compile Include="Query\IOpenRepository.cs" />
+    <Compile Include="Query\OpenQuery.cs" />
+    <Compile Include="Query\OpenQueryTranslator.cs" />
+    <Compile Include="Query\Select.cs" />
+    <Compile Include="Query\Sort.cs" />
+    <Compile Include="Query\Linq\OpenQueryable.cs" />
+    <Compile Include="Query\Linq\OpenQueryProvider.cs" />
+    <Compile Include="Query\Linq\QueryTranslator.cs" />
+    <Compile Include="Script\Template.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Script\IJsHost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

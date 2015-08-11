@@ -1,0 +1,14 @@
+D:\Work\OpenData\bowain\OpenData.SQL\obj\Debug\OpenData.SQL.csprojResolveAssemblyReference.cache
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\Script\Template.cs
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\OpenData.SQL.dll.config
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\OpenData.SQL.dll
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\OpenData.SQL.pdb
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\EntityFramework.dll
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\OpenData.Framework.dll
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\System.Data.dll
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\OpenData.Framework.pdb
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\EntityFramework.xml
+D:\Work\OpenData\bowain\OpenData.SQL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\OpenData\bowain\OpenData.SQL\obj\Debug\OpenData.SQL.dll
+D:\Work\OpenData\bowain\OpenData.SQL\obj\Debug\OpenData.SQL.pdb

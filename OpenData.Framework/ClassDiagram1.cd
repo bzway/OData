@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="OpenData.Framework.Query.Expressions.AndAlsoExpression" BaseTypeListCollapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\AndAlsoExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.BinaryExpression" Collapsed="true">
+    <Position X="33.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\BinaryExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.CallExpression" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\CallExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.Expression" Collapsed="true">
+    <Position X="35" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\Expression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.ExpressionValueHelper">
+    <Position X="14.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\ExpressionValueHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.FalseExpression" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\FalseExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.OrderExpression" Collapsed="true">
+    <Position X="47.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\OrderExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.OrElseExpression" BaseTypeListCollapsed="true">
+    <Position X="9" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\OrElseExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.SelectExpression" Collapsed="true">
+    <Position X="55.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Query\Expressions\SelectExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.SkipExpression" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\SkipExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.TakeExpression" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\TakeExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.TrueExpression" BaseTypeListCollapsed="true">
+    <Position X="11" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\TrueExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereBetweenExpression" Collapsed="true">
+    <Position X="50.25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereBetweenExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereBetweenOrEqualExpression" Collapsed="true">
+    <Position X="50" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereBetweenOrEqualExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereClauseExpression" Collapsed="true">
+    <Position X="58" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Query\Expressions\WhereClauseExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereContainsExpression" Collapsed="true">
+    <Position X="21" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereContainsExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereEndsWithExpression" Collapsed="true">
+    <Position X="23.75" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereEndsWithExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereEqualsExpression" Collapsed="true">
+    <Position X="29.25" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereEqualsExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereFieldExpression" Collapsed="true">
+    <Position X="34" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereFieldExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereGreaterThanExpression" Collapsed="true">
+    <Position X="38.25" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereGreaterThanExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereGreaterThanOrEqualExpression" Collapsed="true">
+    <Position X="41.25" Y="12" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereGreaterThanOrEqualExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereInExpression" Collapsed="true">
+    <Position X="18.5" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereInExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereLessThanExpression" Collapsed="true">
+    <Position X="26.5" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereLessThanExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereLessThanOrEqualExpression" Collapsed="true">
+    <Position X="32" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereLessThanOrEqualExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereNotEqualsExpression" Collapsed="true">
+    <Position X="35.25" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereNotEqualsExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereNotInExpression" Collapsed="true">
+    <Position X="53.25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereNotInExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Framework.Query.Expressions.WhereStartsWithExpression" Collapsed="true">
+    <Position X="44.75" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\WhereStartsWithExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OpenData.Framework.Query.Expressions.IExpression">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\IExpression.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OpenData.Framework.Query.Expressions.IWhereExpression">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\IWhereExpression.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OpenData.Framework.Query.Expressions.CallType">
+    <Position X="9" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAJCAAAAQAAAAAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Query\Expressions\CallExpression.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
