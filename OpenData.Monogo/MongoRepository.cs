@@ -106,7 +106,7 @@ namespace OpenData.Framework
             var sort = Builders<BsonDocument>.Sort.Ascending("Name").Ascending("_id");
 
 
-            var result = await collection.Find(filter).Sort(sort).ToListAsync();
+            var result =   collection.Find(filter).Sort(sort).ToListAsync().GetAwaiter().GetResult();
 
             List<OpenEntity> list = new List<OpenEntity>();
 
