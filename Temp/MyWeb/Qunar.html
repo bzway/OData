@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>【去哪儿网】机票查询,特价机票,打折飞机票-去哪儿网Qunar.com</title>
+    <meta name="Robots" content="index,follow,NOODP">
+    <meta name="keywords" content="机票,机票预订,特价机票,打折机票,机票预订,飞机票,航班信息,航班查询,去哪儿,Qunar.com,去那儿,航班查询,">
+    <meta name="description" content="去哪儿(Qunar.com)飞机票,特价机票，提供国内2600多条航线的飞机票查询服务和特价机票信息。同时搜索国航、南航、携程等上千家机票预订网站.99元特价机票、1折超低折扣机票,是您机票查询和飞机票预订的最佳渠道.">
+    <meta http-equiv="cache-control" content="no-cache">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="/css/qunar.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .b_fly_search {
+            padding: 20px 20px 30px 20px;
+            background: #f5fbfd;
+        }
+    </style>
+</head>
+<body>
+    <div class="b_fly_search">
+        <div class="e_search_wrap">
+            <div class="e_fly_search" id="search_box">
+                <div id="js_flighttype_tab_domestic" class="ch_sch_form">
+                    <form id="dfsForm" action="http://flight.qunar.com/twell/flight/Search.jsp" method="GET" target="_blank">
+                        <div class="crl_sp_sel">
+
+                            <label for="searchTypeSng" id="js_lab_sng"  >
+                                <input type="radio" class="inp_chk js-searchtype-oneway" value="OnewayFlight" id="searchTypeSng" name="searchType" checked="checked">
+                                单程
+                            </label>
+                            <label for="searchTypeRnd" id="js_lab_rng" data >
+                                <input type="radio" class="inp_chk js-searchtype-roundtrip" value="RoundTripFlight" id="searchTypeRnd" name="searchType" onclick="">
+                                往返
+                            </label>
+                        </div>
+                        <div class="crl_sp_city">
+                            <a class="lnk_change js-exchagne-city" href="http://flight.qunar.com/#" title="互换出发、到达城市" target="_blank" onfocus="this.blur()" data-track="key=101020007&amp;val=换">换</a>
+                            <div class="controls">
+                                <div class="qcbox qcity" style="z-index: 40;">
+
+                                    <div class="qunar-qcbox"><div class="qcbox-placeholder" style="display: none;">输入国家/城市/机场</div><div class="qcbox-prefix">从</div><div class="qcbox-info"><b class="iconfont f-location"></b></div></div><input type="text" value="" name="fromCity" class="textbox" data-qcbox-placeholder="城市名" data-qcbox-prefix="从" data-qcbox-suggest="flight-fromcity" data-qcbox-hotcity="flight" spellcheck="false" autocomplete="off" x-webkit-speech="x-webkit-speech" data-detect-oninput="3" data-track="key=101020003&amp;val=出发城市"><div class="qcbox-fixed js_hotcity">
+                                        <div class="hotcity" style="display: none;">
+                                            <div></div><div class="ui-city-sug" style="width:px" data-hotcity-nogo="true">
+                                                <i class="iconfont f-close js_close_flight_hotcity" id="closeXI20"></i>
+
+                                                <div class="m-hct-nav">
+                                                    <span data-key="domesticfrom" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-国内热门" class="">国内热门<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="ABCDE" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-ABCDE" class="active">ABCDE<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="FGHJ" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-FGHJ" class="">FGHJ<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="KLMNP" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-KLMNP" class="">KLMNP<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="QRSTW" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-QRSTW" class="">QRSTW<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="XYZ" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-XYZ" class="">XYZ<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="国际·港澳台" data-tab="domesticfrom-flight-hotcity-from" data-tab-id="dfh-国际·港澳台" class="">国际·港澳台<i class="i1"></i><i class="i2"></i></span>
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-国内热门" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <dt>城市</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHA" href="http://flight.qunar.com/#">上海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BJS" href="http://flight.qunar.com/#">北京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CAN" href="http://flight.qunar.com/#">广州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KMG" href="http://flight.qunar.com/#">昆明</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SZX" href="http://flight.qunar.com/#">深圳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CTU" href="http://flight.qunar.com/#">成都</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HGH" href="http://flight.qunar.com/#">杭州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XMN" href="http://flight.qunar.com/#">厦门</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TSN" href="http://flight.qunar.com/#">天津</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TAO" href="http://flight.qunar.com/#">青岛</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CKG" href="http://flight.qunar.com/#">重庆</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NKG" href="http://flight.qunar.com/#">南京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHE" href="http://flight.qunar.com/#">沈阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SIA" href="http://flight.qunar.com/#">西安</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FOC" href="http://flight.qunar.com/#">福州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUH" href="http://flight.qunar.com/#">武汉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DLC" href="http://flight.qunar.com/#">大连</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NGB" href="http://flight.qunar.com/#">宁波</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CSX" href="http://flight.qunar.com/#">长沙</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HAK" href="http://flight.qunar.com/#">海口</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGO" href="http://flight.qunar.com/#">郑州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NNG" href="http://flight.qunar.com/#">南宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGQ" href="http://flight.qunar.com/#">长春</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TNA" href="http://flight.qunar.com/#">济南</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WNZ" href="http://flight.qunar.com/#">温州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HRB" href="http://flight.qunar.com/#">哈尔滨</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="URC" href="http://flight.qunar.com/#">乌鲁木齐</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JJN" href="http://flight.qunar.com/#">晋江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YNJ" href="http://flight.qunar.com/#">延吉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KWE" href="http://flight.qunar.com/#">贵阳</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-ABCDE" class="m-hct-lst js-transition-before js-transition-after" style="display: block;">
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>A</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NGQ" href="http://flight.qunar.com/#">阿里</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YIE" href="http://flight.qunar.com/#">阿尔山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AQG" href="http://flight.qunar.com/#">安庆</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AAT" href="http://flight.qunar.com/#">阿勒泰</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AKA" href="http://flight.qunar.com/#">安康</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AOG" href="http://flight.qunar.com/#">鞍山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AVA" href="http://flight.qunar.com/#">安顺</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AKU" href="http://flight.qunar.com/#">阿克苏</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AXF" href="http://flight.qunar.com/#">阿拉善左旗</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="RHT" href="http://flight.qunar.com/#">阿拉善右旗</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>B</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BAV" href="http://flight.qunar.com/#">包头</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BHY" href="http://flight.qunar.com/#">北海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BJS" href="http://flight.qunar.com/#">北京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="AEB" href="http://flight.qunar.com/#">百色</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BSD" href="http://flight.qunar.com/#">保山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BPL" href="http://flight.qunar.com/#">博乐</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BFJ" href="http://flight.qunar.com/#">毕节</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="RLK" href="http://flight.qunar.com/#">巴彦淖尔</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>C</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CSX" href="http://flight.qunar.com/#">长治</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JUH" href="http://flight.qunar.com/#">池州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGQ" href="http://flight.qunar.com/#">长春</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CZX" href="http://flight.qunar.com/#">常州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BPX" href="http://flight.qunar.com/#">昌都</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CHG" href="http://flight.qunar.com/#">朝阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGD" href="http://flight.qunar.com/#">常德</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NBS" href="http://flight.qunar.com/#">长白山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CTU" href="http://flight.qunar.com/#">成都</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CKG" href="http://flight.qunar.com/#">重庆</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CSX" href="http://flight.qunar.com/#">长沙</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CIF" href="http://flight.qunar.com/#">赤峰</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>D</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DAT" href="http://flight.qunar.com/#">大同</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DLC" href="http://flight.qunar.com/#">大连</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DOY" href="http://flight.qunar.com/#">东营</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DQA" href="http://flight.qunar.com/#">大庆</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DDG" href="http://flight.qunar.com/#">丹东</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DLU" href="http://flight.qunar.com/#">大理</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DNH" href="http://flight.qunar.com/#">敦煌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DAX" href="http://flight.qunar.com/#">达州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DCY" href="http://flight.qunar.com/#">稻城</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>E</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ENH" href="http://flight.qunar.com/#">恩施</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DSN" href="http://flight.qunar.com/#">鄂尔多斯</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ERL" href="http://flight.qunar.com/#">二连浩特</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="EJN" href="http://flight.qunar.com/#">额济纳旗</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-FGHJ" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>F</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FUO" href="http://flight.qunar.com/#">佛山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FOC" href="http://flight.qunar.com/#">福州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FUG" href="http://flight.qunar.com/#">阜阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FYJ" href="http://flight.qunar.com/#">抚远</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>G</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KWE" href="http://flight.qunar.com/#">贵阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KWL" href="http://flight.qunar.com/#">桂林</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CAN" href="http://flight.qunar.com/#">广州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="GYS" href="http://flight.qunar.com/#">广元</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="GOQ" href="http://flight.qunar.com/#">格尔木</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KOW" href="http://flight.qunar.com/#">赣州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="GYU" href="http://flight.qunar.com/#">固原</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>H</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HMI" href="http://flight.qunar.com/#">哈密</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HET" href="http://flight.qunar.com/#">呼和浩特</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HEK" href="http://flight.qunar.com/#">黑河</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HLD" href="http://flight.qunar.com/#">海拉尔</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HRB" href="http://flight.qunar.com/#">哈尔滨</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HAK" href="http://flight.qunar.com/#">海口</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TXN" href="http://flight.qunar.com/#">黄山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HGH" href="http://flight.qunar.com/#">杭州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HDG" href="http://flight.qunar.com/#">邯郸</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HFE" href="http://flight.qunar.com/#">合肥</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JZH" href="http://flight.qunar.com/#">黄龙</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HZG" href="http://flight.qunar.com/#">汉中</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HTN" href="http://flight.qunar.com/#">和田</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HIA" href="http://flight.qunar.com/#">淮安</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>J</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JXA" href="http://flight.qunar.com/#">鸡西</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JJN" href="http://flight.qunar.com/#">晋江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JNZ" href="http://flight.qunar.com/#">锦州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JDZ" href="http://flight.qunar.com/#">景德镇</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JGN" href="http://flight.qunar.com/#">嘉峪关</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JGS" href="http://flight.qunar.com/#">井冈山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JNG" href="http://flight.qunar.com/#">济宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JIU" href="http://flight.qunar.com/#">九江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JMU" href="http://flight.qunar.com/#">佳木斯</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TNA" href="http://flight.qunar.com/#">济南</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JGD" href="http://flight.qunar.com/#">加格达奇</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JIC" href="http://flight.qunar.com/#">金昌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SWA" href="http://flight.qunar.com/#">揭阳</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-KLMNP" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>K</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KHG" href="http://flight.qunar.com/#">喀什</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KMG" href="http://flight.qunar.com/#">昆明</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KGT" href="http://flight.qunar.com/#">康定</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KRY" href="http://flight.qunar.com/#">克拉玛依</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KRL" href="http://flight.qunar.com/#">库尔勒</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KCA" href="http://flight.qunar.com/#">库车</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KJI" href="http://flight.qunar.com/#">喀纳斯</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KJH" href="http://flight.qunar.com/#">凯里</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>L</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LHW" href="http://flight.qunar.com/#">兰州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LYA" href="http://flight.qunar.com/#">洛阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LJG" href="http://flight.qunar.com/#">丽江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LLB" href="http://flight.qunar.com/#">荔波</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LZY" href="http://flight.qunar.com/#">林芝</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LZH" href="http://flight.qunar.com/#">柳州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LZO" href="http://flight.qunar.com/#">泸州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LYG" href="http://flight.qunar.com/#">连云港</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HZH" href="http://flight.qunar.com/#">黎平</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LCX" href="http://flight.qunar.com/#">连城</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LXA" href="http://flight.qunar.com/#">拉萨</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LNJ" href="http://flight.qunar.com/#">临沧</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LYI" href="http://flight.qunar.com/#">临沂</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LLV" href="http://flight.qunar.com/#">吕梁</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>M</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LUM" href="http://flight.qunar.com/#">芒市</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="MDG" href="http://flight.qunar.com/#">牡丹江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NZH" href="http://flight.qunar.com/#">满洲里</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="MIG" href="http://flight.qunar.com/#">绵阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="MXZ" href="http://flight.qunar.com/#">梅县</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="OHE" href="http://flight.qunar.com/#">漠河</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>N</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NKG" href="http://flight.qunar.com/#">南京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NAO" href="http://flight.qunar.com/#">南充</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NNG" href="http://flight.qunar.com/#">南宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NNY" href="http://flight.qunar.com/#">南阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NTG" href="http://flight.qunar.com/#">南通</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KHN" href="http://flight.qunar.com/#">南昌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NLT" href="http://flight.qunar.com/#">那拉提</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NGB" href="http://flight.qunar.com/#">宁波</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>P</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="PZI" href="http://flight.qunar.com/#">攀枝花</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SYM" href="http://flight.qunar.com/#">普洱</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-QRSTW" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>Q</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JUZ" href="http://flight.qunar.com/#">衢州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JIQ" href="http://flight.qunar.com/#">黔江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHP" href="http://flight.qunar.com/#">秦皇岛</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="IQN" href="http://flight.qunar.com/#">庆阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="IQM" href="http://flight.qunar.com/#">且末</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NDG" href="http://flight.qunar.com/#">齐齐哈尔</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TAO" href="http://flight.qunar.com/#">青岛</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>R</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="RKZ" href="http://flight.qunar.com/#">日喀则</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>S</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SZX" href="http://flight.qunar.com/#">深圳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SJW" href="http://flight.qunar.com/#">石家庄</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SYX" href="http://flight.qunar.com/#">三亚</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHE" href="http://flight.qunar.com/#">沈阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHA" href="http://flight.qunar.com/#">上海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HPG" href="http://flight.qunar.com/#">神农架</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>T</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TVS" href="http://flight.qunar.com/#">唐山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TEN" href="http://flight.qunar.com/#">铜仁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TCG" href="http://flight.qunar.com/#">塔城</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TCZ" href="http://flight.qunar.com/#">腾冲</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HYN" href="http://flight.qunar.com/#">台州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="THQ" href="http://flight.qunar.com/#">天水</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TSN" href="http://flight.qunar.com/#">天津</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TGO" href="http://flight.qunar.com/#">通辽</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TLQ" href="http://flight.qunar.com/#">吐鲁番</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TYN" href="http://flight.qunar.com/#">太原</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>W</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WEH" href="http://flight.qunar.com/#">威海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUH" href="http://flight.qunar.com/#">武汉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUZ" href="http://flight.qunar.com/#">梧州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WNH" href="http://flight.qunar.com/#">文山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUX" href="http://flight.qunar.com/#">无锡</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WEF" href="http://flight.qunar.com/#">潍坊</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUS" href="http://flight.qunar.com/#">武夷山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HLH" href="http://flight.qunar.com/#">乌兰浩特</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WNZ" href="http://flight.qunar.com/#">温州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="URC" href="http://flight.qunar.com/#">乌鲁木齐</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WXN" href="http://flight.qunar.com/#">万州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUA" href="http://flight.qunar.com/#">乌海</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+
+
+
+
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-XYZ" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>X</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ACX" href="http://flight.qunar.com/#">兴义</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XIC" href="http://flight.qunar.com/#">西昌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XMN" href="http://flight.qunar.com/#">厦门</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DIG" href="http://flight.qunar.com/#">香格里拉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SIA" href="http://flight.qunar.com/#">西安</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XNN" href="http://flight.qunar.com/#">西宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XFN" href="http://flight.qunar.com/#">襄阳(中国)</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XIL" href="http://flight.qunar.com/#">锡林浩特</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="JHG" href="http://flight.qunar.com/#">西双版纳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XUZ" href="http://flight.qunar.com/#">徐州</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>Y</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YIW" href="http://flight.qunar.com/#">义乌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LLF" href="http://flight.qunar.com/#">永州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="UYN" href="http://flight.qunar.com/#">榆林</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YTY" href="http://flight.qunar.com/#">扬州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ENY" href="http://flight.qunar.com/#">延安</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YCU" href="http://flight.qunar.com/#">运城</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YNT" href="http://flight.qunar.com/#">烟台</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="INC" href="http://flight.qunar.com/#">银川</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YIH" href="http://flight.qunar.com/#">宜昌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YBP" href="http://flight.qunar.com/#">宜宾</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YIC" href="http://flight.qunar.com/#">宜春</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YNZ" href="http://flight.qunar.com/#">盐城</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YNJ" href="http://flight.qunar.com/#">延吉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YUS" href="http://flight.qunar.com/#">玉树</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YIN" href="http://flight.qunar.com/#">伊宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LDS" href="http://flight.qunar.com/#">伊春</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="e-hct-lst ">
+                                                        <dt>Z</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZUH" href="http://flight.qunar.com/#">珠海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZAT" href="http://flight.qunar.com/#">昭通</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DYG" href="http://flight.qunar.com/#">张家界</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HSN" href="http://flight.qunar.com/#">舟山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGO" href="http://flight.qunar.com/#">郑州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZHY" href="http://flight.qunar.com/#">中卫</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HJJ" href="http://flight.qunar.com/#">芷江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZHA" href="http://flight.qunar.com/#">湛江</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZYI" href="http://flight.qunar.com/#">遵义</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="YZY" href="http://flight.qunar.com/#">张掖</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="ZQZ" href="http://flight.qunar.com/#">张家口</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+
+
+
+
+                                                </div>
+                                                <div data-panel="domesticfrom-flight-hotcity-from" data-panel-id="dfh-国际·港澳台" class="m-hct-lst" style="display: none;">
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <dt>城市</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国香港" data-code="HKG" href="http://flight.qunar.com/#">香港</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="泰国" data-code="BKK" href="http://flight.qunar.com/#">曼谷</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="韩国" data-code="SEL" href="http://flight.qunar.com/#">首尔</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="日本" data-code="TYO" href="http://flight.qunar.com/#">东京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="泰国" data-code="HKT" href="http://flight.qunar.com/#">普吉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="新加坡" data-code="SIN" href="http://flight.qunar.com/#">新加坡</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国台湾" data-code="TPE" href="http://flight.qunar.com/#">台北</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="泰国" data-code="CNX" href="http://flight.qunar.com/#">清迈</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="马来西亚" data-code="KUL" href="http://flight.qunar.com/#">吉隆坡</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="澳大利亚" data-code="SYD" href="http://flight.qunar.com/#">悉尼</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国澳门" data-code="MFM" href="http://flight.qunar.com/#">澳门</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="日本" data-code="OSA" href="http://flight.qunar.com/#">大阪</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="英国" data-code="LON" href="http://flight.qunar.com/#">伦敦</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="美国" data-code="LAX" href="http://flight.qunar.com/#">洛杉矶</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="美国" data-code="NYC" href="http://flight.qunar.com/#">纽约</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="菲律宾" data-code="MNL" href="http://flight.qunar.com/#">马尼拉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="澳大利亚" data-code="MEL" href="http://flight.qunar.com/#">墨尔本</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="加拿大" data-code="YVR" href="http://flight.qunar.com/#">温哥华</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="法国" data-code="PAR" href="http://flight.qunar.com/#">巴黎</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="马来西亚" data-code="PEN" href="http://flight.qunar.com/#">槟城</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="加拿大" data-code="YTO" href="http://flight.qunar.com/#">多伦多</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="越南" data-code="SGN" href="http://flight.qunar.com/#">胡志明市</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="美国" data-code="SFO" href="http://flight.qunar.com/#">旧金山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="柬埔寨" data-code="PNH" href="http://flight.qunar.com/#">金边</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="印度尼西亚" data-code="JKT" href="http://flight.qunar.com/#">雅加达</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="韩国" data-code="CJU" href="http://flight.qunar.com/#">济州岛</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国台湾" data-code="KHH" href="http://flight.qunar.com/#">高雄</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="韩国" data-code="PUS" href="http://flight.qunar.com/#">釜山</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="柬埔寨" data-code="REP" href="http://flight.qunar.com/#">暹粒</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="德国" data-code="FRA" href="http://flight.qunar.com/#">法兰克福</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <span class="e-fuzzy-line"></span>
+                                                        <dt>国家</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CN" href="http://flight.qunar.com/#">中国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="韩国" data-code="KR" href="http://flight.qunar.com/#">韩国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="泰国" data-code="TH" href="http://flight.qunar.com/#">泰国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="美国" data-code="US" href="http://flight.qunar.com/#">美国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="加拿大" data-code="CA" href="http://flight.qunar.com/#">加拿大</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="日本" data-code="JP" href="http://flight.qunar.com/#">日本</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="澳大利亚" data-code="AU" href="http://flight.qunar.com/#">澳大利亚</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="英国" data-code="GB" href="http://flight.qunar.com/#">英国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="法国" data-code="FR" href="http://flight.qunar.com/#">法国</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="马来西亚" data-code="MY" href="http://flight.qunar.com/#">马来西亚</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <span class="e-fuzzy-line"></span>
+                                                        <dt>热词</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="东南亚" data-code="" href="http://flight.qunar.com/#">东南亚</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="港澳台" data-code="" href="http://flight.qunar.com/#">港澳台</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="日韩" data-code="" href="http://flight.qunar.com/#">日韩</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="欧洲" data-code="" href="http://flight.qunar.com/#">欧洲</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="所有地点" data-code="" href="http://flight.qunar.com/#">所有地点</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qcbox-fixed js-suggestcontainer"><div class="q-suggest" style="display: none; z-index: 500;"></div></div>
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <div class="qcbox qcity" style="z-index: 30;">
+
+                                    <div class="qunar-qcbox"><div class="qcbox-placeholder" style="display: none;">输入国家/城市/机场</div><div class="qcbox-prefix">到</div><div class="qcbox-info"><b class="iconfont f-location"></b></div></div><input type="text" value="" name="toCity" class="textbox" data-qcbox-placeholder="城市名" data-qcbox-prefix="到" data-qcbox-suggest="flight-tocity" data-qcbox-hotcity="flight" spellcheck="false" autocomplete="off" x-webkit-speech="x-webkit-speech" data-detect-oninput="4" data-track="key=101020004&amp;val=到达城市"><div class="qcbox-fixed js_hotcity">
+                                        <div class="hotcity" style="display: none;">
+                                            <div></div><div class="ui-city-sug" style="width:px" data-hotcity-nogo="true">
+                                                <i class="iconfont f-close js_close_flight_hotcity" id="closeXI20"></i>
+
+                                                <div class="m-hct-nav">
+                                                    <span data-key="domesticto" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-国内热门" class="active">国内热门<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="ABCDE" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-ABCDE">ABCDE<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="FGHJ" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-FGHJ">FGHJ<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="KLMNP" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-KLMNP">KLMNP<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="QRSTW" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-QRSTW">QRSTW<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="XYZ" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-XYZ">XYZ<i class="i1"></i><i class="i2"></i></span>
+                                                    <span data-key="国际·港澳台" data-tab="domesticto-flight-hotcity-to" data-tab-id="dfh-国际·港澳台">国际·港澳台<i class="i1"></i><i class="i2"></i></span>
+                                                </div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-国内热门" class="m-hct-lst js-transition-before js-transition-after" style="display: block;">
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <dt>城市</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHA" href="http://flight.qunar.com/#">上海</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="BJS" href="http://flight.qunar.com/#">北京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CAN" href="http://flight.qunar.com/#">广州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KMG" href="http://flight.qunar.com/#">昆明</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SIA" href="http://flight.qunar.com/#">西安</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CTU" href="http://flight.qunar.com/#">成都</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SZX" href="http://flight.qunar.com/#">深圳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="XMN" href="http://flight.qunar.com/#">厦门</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="URC" href="http://flight.qunar.com/#">乌鲁木齐</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NKG" href="http://flight.qunar.com/#">南京</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CKG" href="http://flight.qunar.com/#">重庆</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HGH" href="http://flight.qunar.com/#">杭州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="DLC" href="http://flight.qunar.com/#">大连</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CSX" href="http://flight.qunar.com/#">长沙</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HAK" href="http://flight.qunar.com/#">海口</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="HRB" href="http://flight.qunar.com/#">哈尔滨</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TAO" href="http://flight.qunar.com/#">青岛</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SHE" href="http://flight.qunar.com/#">沈阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="SYX" href="http://flight.qunar.com/#">三亚</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TNA" href="http://flight.qunar.com/#">济南</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="WUH" href="http://flight.qunar.com/#">武汉</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGO" href="http://flight.qunar.com/#">郑州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KWE" href="http://flight.qunar.com/#">贵阳</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="NNG" href="http://flight.qunar.com/#">南宁</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="FOC" href="http://flight.qunar.com/#">福州</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TSN" href="http://flight.qunar.com/#">天津</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="CGO" href="http://flight.qunar.com/#">长春</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="TYN" href="http://flight.qunar.com/#">太原</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="KHN" href="http://flight.qunar.com/#">南昌</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="LJG" href="http://flight.qunar.com/#">丽江</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+
+                                                    <dl class="e-hct-lst e-hct-lst-h">
+                                                        <span class="e-fuzzy-line"></span>
+                                                        <dt>热词</dt>
+                                                        <dd>
+                                                            <ul>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">华北</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">华南</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">东北</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">华东</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">华中</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">西南</a></li>
+                                                                <li><a class="js-hotcitylist" data-country="中国" data-code="" href="http://flight.qunar.com/#">西北</a></li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+
+
+
+                                                </div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-ABCDE" class="m-hct-lst" style="display: none;"></div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-FGHJ" class="m-hct-lst" style="display: none;"></div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-KLMNP" class="m-hct-lst" style="display: none;"></div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-QRSTW" class="m-hct-lst" style="display: none;"></div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-XYZ" class="m-hct-lst" style="display: none;"></div>
+                                                <div data-panel="domesticto-flight-hotcity-to" data-panel-id="dfh-国际·港澳台" class="m-hct-lst" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qcbox-fixed js-suggestcontainer"><div class="q-suggest" style="display: none; z-index: 500;"></div></div>
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <div class="qcbox qdate fromD" style="z-index: 20;">
+
+                                    <div class="qunar-qcbox">
+                                        <div class="qcbox-placeholder"></div><div class="qcbox-prefix">出发</div><div class="qcbox-info">
+                                            <b class="iconfont f-calendar"></b><span class="dp-text"></span>
+                                        </div>
+                                    </div>
+                                    <input type="text" value="" id="fromDate" name="fromDate" class="textbox" spellcheck="false" autocomplete="off" maxlength="10" data-prefix="出发"
+                                           data-type="oneWay" data-track="key=101020005&amp;val=出发日期" style="left: 36px;">
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <div class="qcbox qdate fromD" style="z-index: 20;">
+
+                                    <div class="qunar-qcbox">
+                                        <div class="qcbox-placeholder"></div><div class="qcbox-prefix">返回</div>
+                                        <div class="qcbox-info">
+                                            <b class="iconfont f-calendar"></b><span class="dp-text"></span>
+                                        </div>
+                                    </div>
+                                    <input type="text" value="" id="toDate" name="toDate" class="textbox" spellcheck="false" autocomplete="off" maxlength="10" data-prefix="返回" data-track="key=101020006&amp;val=到达日期" style="left: 36px;">
+
+                                </div>
+                            </div>
+                            <div class="controls js_arrivalDateDiv" style="display: none;">
+                                <div class="qcbox qdate toD" style="z-index: 10;">
+
+                                    <div class="qunar-qcbox"><div class="qcbox-placeholder"></div><div class="qcbox-prefix">返回</div><div class="qcbox-info"><b class="iconfont f-calendar"></b><span class="dp-text">周二</span></div></div><input type="text" value="" id="toDate" name="toDate" class="textbox" spellcheck="false" autocomplete="off" maxlength="10" data-prefix="返回" data-track="key=101020006&amp;val=到达日期" style="left: 36px;"><div class="qcbox-fixed"><div class="q-datepicker-fly" style="display: none;"></div></div>
+                                </div>
+                            </div>
+                            <div class="crl_sp_action">
+                                <button class="btn_search" type="submit" data-track="key=101020008&amp;val=国内搜索">搜　索</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <link href="/Content/themes/base/datepicker.css" rel="stylesheet" />
+    <link href="Content/themes/jquery-ui.theme.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script>
+        
+        $(document).ready(function () {
+            $("#fromDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#toDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+    </script>
+</body>
+</html>

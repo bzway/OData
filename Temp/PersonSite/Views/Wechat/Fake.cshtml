@@ -1,0 +1,78 @@
+﻿@model Bzway.WebSite.WebApp.Models.FakeViewModel
+@{
+    ViewBag.Title = "Fake";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<input value="http://localhost:20329/wechat/index/010c7906e302be7c0b6b5b1c5645d7833d5d97b6?signature=1d8dd5ac39f61666cc53c87f99230c2baf31ea9c&timestamp=timestamp&nonce=nonce" />
+
+
+
+
+@using (Html.BeginForm("Index", "Wechat", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <h4>Enter your email.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.token, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.token, new { @class = "form-control" })
+        </div>
+    </div>    <div class="form-group">
+        @Html.LabelFor(m => m.signature, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.signature, new { @class = "form-control" })
+        </div>
+    </div>    <div class="form-group">
+        @Html.LabelFor(m => m.nonce, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.nonce, new { @class = "form-control" })
+        </div>
+    </div>    <div class="form-group">
+        @Html.LabelFor(m => m.timestamp, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.timestamp, new { @class = "form-control" })
+        </div>
+    </div>    <div class="form-group">
+        @Html.LabelFor(m => m.data, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.data, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.result, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.result, new { @class = "form-control", @rows = 12 })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Submit" onclick="doSubmit();" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        function doSubmit() {
+            var url = "/Wechat/Index/" + $("#token").val()
+                        + "?signature=" + $("#signature").val()
+                        + "&timestamp=" + $("#timestamp").val()
+                        + "&nonce=" + $("#nonce").val();
+
+            $.ajax(url,
+            {
+                data: $("#data").val(),
+                type: "POST"
+            }).fail(function () {
+                alert("failed");
+            }).done(function (n) {
+                $("#result").val(n);
+            })
+        }
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

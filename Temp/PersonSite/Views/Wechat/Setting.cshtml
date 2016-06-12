@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Bzway.Business.Model.ViewWechatSetting>
+
+@{
+    ViewBag.Title = "Setting";
+}
+
+<h2>Setting</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServerUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Token)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EncodingAESKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppSecret)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessToken)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpireTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsServiceAccount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServerUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Token)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EncodingAESKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppSecret)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessToken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpireTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsServiceAccount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

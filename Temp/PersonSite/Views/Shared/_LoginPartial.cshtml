@@ -1,0 +1,23 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    <li>@Html.Partial("_Language")</li>
+
+
+    @if (this.Context.GetOwinContext().GetUserManager().GetCurrentUser() != null)
+    {
+        <li>
+            @Html.ActionLink("Hello ".Localize() + this.Context.GetOwinContext().GetUserManager().GetCurrentUser().Name + "!", "Index", "User", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li>
+            <a href="javascript:document.getElementById('logoutForm').submit()">@("Log off".Localize())</a>
+            @using (Html.BeginForm("LogOff", "User", new { area = "", returnUrl = Url.Action("Index", "Home", new { area = "cardclub" }) }, FormMethod.Post, new { id = "logoutForm" }))
+            {
+                @Html.AntiForgeryToken();
+            }
+        </li>
+    }
+    else
+    {
+        <li> <a href="~/User/Login" id="loginLink">@("Log in".Localize())</a> </li>
+    }
+
+</ul>

@@ -1,0 +1,16 @@
+﻿@model  System.Collections.Generic.IEnumerable<Schema>
+
+@{
+    ViewBag.Title = "Bind";
+}
+
+<h2>当前系统中的表</h2>
+
+
+@Html.ActionLink("Create New Schema".Localize(), "CreateSchema", new { siteName = this.Request.QueryString["siteName"] })
+<ul>
+    @foreach (var item in this.Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Column", new { siteName = this.Request.QueryString["siteName"], schemaName = item.Name })</li>
+    }
+</ul>

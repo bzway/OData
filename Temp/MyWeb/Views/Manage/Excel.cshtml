@@ -1,0 +1,148 @@
+﻿@model IEnumerable<OpenData.MyWeb.Models.MyOrder>
+
+@{
+    this.Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlightNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FligthLine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlightTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BigNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SmallNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExternalNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChangeToDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChangePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FligthLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Operator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BigNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmallNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExternalNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketMode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassportNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Return)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,231 @@
+﻿@model OpenData.MyWeb.Models.MyOrder
+
+@{
+    ViewBag.Title = "票务详情";
+}
+
+<table class="table table-bordered    table-hover" style="font-size:12pt; background-color:white;">
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Source)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Source)
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </td>
+
+
+        <td>
+            @Html.DisplayFor(model => model.OrderNumber)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.FligthLine)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FligthLine)
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            去程<span>@Html.DisplayNameFor(model => model.FlightNumber)</span>
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FlightNumber)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.GoDate)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.GoDate)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.FlightTime)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FlightTime)
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            回程<span>@Html.DisplayNameFor(model => model.FlightNumberBack)</span>
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FlightNumberBack)
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.BackDate)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.BackDate)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.FlightTimeBack)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FlightTimeBack)
+        </td>
+
+    </tr>
+
+
+    <tr><td colspan="6"></td></tr>
+    <tr>
+
+        <td>
+            @Html.DisplayNameFor(model => model.TicketNumber)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.TicketNumber)
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.BigNumber)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.BigNumber)
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.SmallNumber)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.SmallNumber)
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            @Html.DisplayNameFor(model => model.ExternalNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ExternalNumber)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.TicketMode)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.TicketMode)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Status)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Status)
+        </td>
+
+    </tr>
+    <tr><td colspan="6"></td></tr>
+    <tr>
+
+
+        <td>
+            @Html.DisplayNameFor(model => model.FullName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.FullName)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.PassportNumber)
+        </td>
+
+
+
+        <td>
+            @Html.DisplayNameFor(model => model.Operator)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Operator)
+        </td>
+    </tr>
+    <tr><td colspan="6"></td></tr>
+
+    <tr>
+
+
+        <td>
+            @Html.DisplayNameFor(model => model.ChangeToDate)
+        </td>
+
+        <td colspan="5">
+            @Html.DisplayFor(model => model.ChangeToDate)
+        </td>
+
+
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.ChangePrice)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.ChangePrice)
+        </td>
+
+
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Return)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Return)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.ReturnNumber)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.ReturnNumber)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Price)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Price)
+        </td>
+
+
+    </tr>
+    <tr><td colspan="6"></td></tr>
+
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Remark)
+        </td>
+        <td colspan="5">
+            @Html.DisplayFor(model => model.Remark)
+        </td>
+    </tr>
+    <tr>
+</table>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.UUID }) |
+    @Html.ActionLink("返回", "Index")
+</p>

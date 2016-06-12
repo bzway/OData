@@ -1,0 +1,22 @@
+﻿@model Bzway.Wechat.Core.Models.ReplyNewsMessage
+@{
+    Layout = null;
+}
+<xml>
+    <tousername><![CDATA[@this.Model.ToUserName]]></tousername>
+    <fromusername><![CDATA[@this.Model.FromUserName]]></fromusername>
+    <createtime>@Bzway.Utility.DateTimeHelper.GetWeixinDateTime(this.Model.CreateTime)</createtime>
+    <msgtype><![CDATA[@this.Model.MsgType]]></msgtype>
+    <articlecount>@this.Model.ArticleCount</articlecount>
+    <articles>
+        @foreach (var item in this.Model.Articles)
+        {
+            <item>
+                <title><![CDATA[@item.Title]]></title>
+                <description><![CDATA[@item.Description]]></description>
+                <picurl><![CDATA[@item.PicUrl]]></picurl>
+                <url><![CDATA[@item.Url]]></url>
+            </item>
+        }
+    </articles>
+</xml>

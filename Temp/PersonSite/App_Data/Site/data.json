@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "test",
+    "Caption": "test",
+    "LogoUrl": null,
+    "FaviconUrl": null,
+    "Description": "MongoDB",
+    "Domains": null,
+    "TimeZone": null,
+    "IsShowLogo": false,
+    "IsShowMenu": false,
+    "IsShowSideBar": false,
+    "ProviderName":"MongoDB" ,
+    "DatabaseName": "test",
+    "ConnectionString": "mongodb://localhost:27017",
+    "UUID": "ae9d2e4c61fc42ed97328b5aa5b7db07",
+    "CreatedOn": "2015-12-15T14:34:29.6051373Z",
+    "UpdatedOn": "2015-12-15T14:34:29.6051373Z"
+  }
+]

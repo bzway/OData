@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="查找促销机票">
+    <meta name="keywords" content="促销机票,预订,航班,飞往">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 谐悠机票</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="navbar container">
+        <div class="navbar-header">
+            <a href="@Url.Action("Index", "Home", new { area = "" })" class="navbar-brand">
+                <img src="~/img/logo2.jpg" width="150" height="100" style="display:inline;" />
+                <h2 style="display:inline;">南通谐悠旅游咨询服务有限公司</h2>
+            </a>
+
+        </div>
+        <div class="navbar-header fright" style="float:right;">
+            @Html.Partial("_LoginPartial")
+
+        </div>
+        <nav class="AF__nav" style="margin-top:120px;">
+            <div class="nav--maxi">
+                <ul class="nav__main">
+                    <li><a href="/"><span>首页</span></a></li>
+                    <li><a href="/Search"><span>留言查询</span></a></li>
+                    <li><a href="/notice"><span>购票须知</span></a></li>
+                    <li><a href="/qa"><span>谐悠特色</span></a></li>
+                    @*<li><a href="/News"><span>公司动态</span></a></li>*@
+                    <li><a href="/home/contact"><span>联系我们</span></a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="container body-content">
+        @RenderBody()
+    </main>
+    <footer style="background-color: #051039;  ">
+
+        <style>
+            .nav-tabs {
+                background-color: #dff2fd;
+            }
+
+                .nav-tabs > li.active > a,
+                .nav-tabs > li.active > a:hover {
+                    color: #dddddd;
+                    cursor: default;
+                    background-color: #051039;
+                    border: 1px solid #dddddd;
+                    border-bottom-color: #051039;
+                }
+        </style>
+
+
+        <div class="container-fluid " style=" padding :0px; ">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="tabbable">
+                        <div style="background-color:#dff2fd;">
+                            <div class="container body-content">
+
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#panel-784424" data-toggle="tab">客户服务</a>
+                                    </li>
+                                    <li>
+                                        <a href="#panel-498850" data-toggle="tab">关于我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="#panel-111111" data-toggle="tab">联系方式</a>
+                                    </li>
+                                    <li>
+                                        <a href="#panel-121212" data-toggle="tab">赞助商</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="tab-content container">
+                            <div class="tab-pane active" id="panel-784424">
+                                <p>
+                                    <ul class=" breadcrumb" style="background-color:transparent;">
+
+                                        <li>
+                                            <a href="#"><span>行李和遗失物品服务</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>投诉</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>建议</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>行动不便的乘客</span></a>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="panel-498850">
+                                <p>
+                                    <ul class="breadcrumb" style="background-color:transparent;">
+                                        <li>
+                                            <a href="#"><span>企业文化</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>隐私保护</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>免责声明</span></a>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="panel-111111">
+                                <p>
+
+                                    <ul class="breadcrumb" style="background-color:transparent;">
+                                        <li>
+                                            <a href="/home/contact"><span>联系我们</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>在线留言</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="/home/contact"><span>QQ留言</span></a>
+                                        </li>
+                                    </ul>
+
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="panel-121212">
+                                <p>
+                                    <ul class="breadcrumb" style="background-color:transparent;">
+                                        <li>
+                                            <a href="http://www.bzway.com"><span>比之为</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.qunar.com/"><span>去哪儿</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.elong.com/"><span>艺龙</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tuniu.com/"><span>途牛</span></a>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <div class="container text-center">
+            <div class="footer__trail uppercase autocenter max1280">
+                <div class="footer__trail__inner">
+                    <a href="#" id="fo_majeur_0" target="_blank">网站地图</a>
+                    <a href="#" id="fo_majeur_1">法律信息</a>
+                    <a href="#" id="fo_majeur_2">Copyright© 1999-2015, www.xieyoutrip.com. All rights reserved. | ICP证：沪B2-20050130</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

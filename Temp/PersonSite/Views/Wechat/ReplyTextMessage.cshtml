@@ -1,0 +1,11 @@
+﻿@model Bzway.Wechat.Core.Models.ReplyTextMessage
+@{
+    Layout = null;
+}
+<xml>
+    <tousername><![CDATA[@this.Model.ToUserName]]></tousername>
+    <fromusername><![CDATA[@this.Model.FromUserName]]></fromusername>
+    <createtime>@Bzway.Utility.DateTimeHelper.GetWeixinDateTime(this.Model.CreateTime)</createtime>
+    <msgtype><![CDATA[@this.Model.MsgType]]></msgtype>
+    <content><![CDATA[@this.Model.Content]]></content>
+</xml>

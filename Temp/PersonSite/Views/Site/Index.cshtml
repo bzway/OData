@@ -1,0 +1,93 @@
+﻿@model SiteSearchViewModel
+@{
+    ViewBag.Title = "Search Member";
+}
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-4">
+            <input type="submit" value="@("Search".Localize())" class="btn btn-default" />
+            @Html.ActionLink("Create New".Localize(), "Edit", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Import".Localize(), "Import", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
+
+@if (this.Model == null || this.Model.SearchResult.Count() < 1)
+{
+    return;
+}
+@Html.Pager(this.Model.SearchResult)
+<hr />
+
+
+<table class="table">
+    <tr>
+        <th>@("Operate".Localize())</th>
+        <th>
+            @Html.DisplayName("Name".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Gender".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("NickName".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("UserName".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Country".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Province".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("City".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Distinct".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Birthday".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("IsLocked".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("IsConfirmed".Localize())
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model.SearchResult)
+    {
+        <tr>
+            <td>
+
+                @Html.ActionLink("Edit".Localize(), "Edit", new { id = item.Name })|
+                @Html.ActionLink("Bind Card".Localize(), "Bind", new { id = item.Name }) |
+                @Html.ActionLink("Details".Localize(), "Details", new { id = item.Name }) |
+                @Html.ActionLink("Delete".Localize(), "Delete", new { id = item.Name })
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectionString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatabaseName)
+            </td>
+        </tr>
+    }
+
+</table>
+<hr />
+@Html.Pager(this.Model.SearchResult)

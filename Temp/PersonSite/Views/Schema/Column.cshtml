@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Column>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"] })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Label)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ControlType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowNull)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modifiable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Indexable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowInGrid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tooltip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefaultValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSystemField)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ControlType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllowNull)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modifiable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indexable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShowInGrid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tooltip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSystemField)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"], columnName = item.Name }) |
+                @Html.ActionLink("Details", "Details", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"], columnName = item.Name })|
+                @Html.ActionLink("Delete", "Delete", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"], columnName = item.Name })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="row">
+    @Html.ActionLink("Back to List", "Index", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"] })
+</div>

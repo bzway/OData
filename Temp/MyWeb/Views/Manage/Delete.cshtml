@@ -1,0 +1,198 @@
+﻿@model OpenData.MyWeb.Models.MyOrder
+
+@{
+    ViewBag.Title = "删除票务";
+}
+
+<h3>您确认是要删除这个票务吗?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FligthLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FligthLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BigNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BigNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmallNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmallNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExternalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExternalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChangeToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangeToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChangePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Return)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Return)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回", "Index")
+        </div>
+    }
+</div>

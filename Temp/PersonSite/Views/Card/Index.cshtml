@@ -1,0 +1,109 @@
+﻿@model  CardSearchViewModel
+@using Bzway.Web.Mvc.Paging;
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CardNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CardNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardGrade, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EnumDropDownListFor(model => model.CardGrade)
+                    @Html.ValidationMessageFor(model => model.CardGrade, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div><div class="form-group">
+            @Html.LabelFor(model => model.IsUsed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsUsed)
+                    @Html.ValidationMessageFor(model => model.IsUsed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@("Search".Localize())" class="btn btn-default" />
+                @Html.ActionLink("Create New".Localize(), "Create", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Import".Localize(), "Import", null, new { @class = "btn btn-default" })
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@if (this.Model == null) { return; }
+
+@Html.Pager(this.Model.SearchResult)
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Card Number".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Card Name".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Card Grade".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Validate Code".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Is Used".Localize())
+        </th>
+        <th>@("Operate".Localize())</th>
+    </tr>
+
+    @foreach (var item in this.Model.SearchResult)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValidateCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUsed)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.UUID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UUID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UUID })
+            </td>
+        </tr>
+    }
+
+</table>
+<hr />
+@Html.Pager(this.Model.SearchResult)
+

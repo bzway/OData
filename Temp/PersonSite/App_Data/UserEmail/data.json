@@ -1,0 +1,32 @@
+[
+  {
+    "ValidateTime": "2015-12-15T13:46:40.3860746Z",
+    "UserID": "c950f9e0e38e4807ac6bd72f30270b42",
+    "Email": "zhumingwu@126.com",
+    "IsConfirmed": true,
+    "ValidateCode": "BKTMKF",
+    "UUID": "73b2871f28354fa191386d7b954fb03a",
+    "CreatedOn": "2015-12-15T13:46:40.4290567Z",
+    "UpdatedOn": "2015-12-15T14:12:40.1182644Z"
+  },
+  {
+    "ValidateTime": "2015-12-15T14:18:23.0334572Z",
+    "UserID": "5dd16796c08e4b8a838a2b9ab9da7f02",
+    "Email": "zhumingwu@bzway.com",
+    "IsConfirmed": true,
+    "ValidateCode": "5YAL7X",
+    "UUID": "195651d0a61e49e18165c0e4661bdc9d",
+    "CreatedOn": "2015-12-15T14:18:23.0544711Z",
+    "UpdatedOn": "2015-12-15T14:19:34.1815859Z"
+  },
+  {
+    "ValidateTime": "2015-12-11T08:13:27.9318933Z",
+    "UserID": "78df202e29624adaae4d031a61ea167c",
+    "Email": "zhumingwu@hotmail.com",
+    "IsConfirmed": true,
+    "ValidateCode": "6NS5RN",
+    "UUID": "718a970dcbf24668b60801b3790e89d9",
+    "CreatedOn": "2015-12-11T08:14:54.8138933Z",
+    "UpdatedOn": "2015-12-17T03:17:46.7960366Z"
+  }
+]

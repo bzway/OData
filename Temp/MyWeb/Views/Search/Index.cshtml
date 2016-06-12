@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "主页";
+}
+@*<link href="/css/qunar.css" rel="stylesheet" />*@
+
+<div class="row">
+
+    <section id="loginForm">
+        <form id="dfsForm" action="http://flight.qunar.com/twell/flight/Search.jsp" method="GET" target="_blank" style="form-horizontal">
+            <br />
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <label>
+                        出发城市
+                        <input type="text" value="" name="fromCity" class="textbox" placeholder="中文/拼音/简拼" data-qcbox-prefix="从" data-qcbox-suggest="flight-fromcity"
+                               data-qcbox-hotcity="flight" spellcheck="false" autocomplete="off" x-webkit-speech="x-webkit-speech" data-detect-oninput="3"
+                               data-track="key=101020003&amp;val=出发城市">
+                    </label>
+                </div>
+
+                <div class="col-md-4">
+                    <label>
+                        目标城市
+                        <input type="text" value="" name="toCity" class="textbox" placeholder="中文/拼音/简拼" data-qcbox-prefix="到" data-qcbox-suggest="flight-tocity" data-qcbox-hotcity="flight"
+                               spellcheck="false" autocomplete="off" x-webkit-speech="x-webkit-speech" data-detect-oninput="4" data-track="key=101020004&amp;val=到达城市">
+                    </label>
+
+                </div>
+                <div class="col-md-4">
+                    <label>
+                        特价订制
+                        <input type="text" value="" name="toCity" class="textbox" placeholder="RMB" data-qcbox-prefix="到" data-qcbox-suggest="flight-tocity" data-qcbox-hotcity="flight"
+                               spellcheck="false" autocomplete="off" x-webkit-speech="x-webkit-speech" data-detect-oninput="4" data-track="key=101020004&amp;val=到达城市">
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label>
+                        出发时间
+                        <input type="text" value="" id="fromDate" name="fromDate" class="textbox" placeholder="出发日期" autocomplete="off" maxlength="10" data-prefix="出发"
+                               data-type="oneWay" data-track="key=101020005&amp;val=出发日期" style="left: 36px;">
+                    </label>
+
+                </div>
+                <div class="col-md-4">
+                    <label>
+                        返回时间
+                        <input type="text" value="" id="toDate" name="toDate" class="textbox" placeholder="到达日期" autocomplete="off" maxlength="10" data-prefix="返回"
+                               data-track="key=101020006&amp;val=到达日期" style="left: 36px;">
+
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <label for="searchTypeSng" id="js_lab_sng">
+                        <input type="radio" value="OnewayFlight" id="searchTypeSng" name="searchType" checked="checked">
+                        不限舱位
+                    </label>
+                    <label for="searchTypeRnd" id="js_lab_rng">
+                        <input type="radio" value="RoundTripFlight" id="searchTypeRnd" name="searchType">
+                        经济舱（以特惠经济舱为第一考量）
+                    </label>
+                    <label for="searchTypeRnds" id="js_lab_rng">
+                        <input type="radio" value="RoundTripFlight" id="searchTypeRnds" name="searchType">
+                        商务舱
+                    </label>
+                    <label for="searchTypeRndx" id="js_lab_rng">
+                        <input type="radio" value="RoundTripFlight" id="searchTypeRndx" name="searchType">
+                        头等舱
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>选择乘机人数：</label>
+                    <label>
+                        成人：<select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </label><label>
+                        儿童：<select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <hr />
+            <h2>联系人信息</h2>
+            <hr />
+            <div class="form-group">
+                @Html.Label("联系人姓名", new { @class = "col-md-2 control-label ", style = "text-align:right;" })
+                <div class="col-md-10">
+                    @Html.TextBox("name", null, new { @class = "form-control" })
+
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.Label("手机号码", new { @class = "col-md-2 control-label", style = "text-align:right;" })
+                <div class="col-md-10">
+                    @Html.TextBox("mob", null, new { @class = "form-control" })
+
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.Label("Email", new { @class = "col-md-2 control-label", style = "text-align:right;" })
+                <div class="col-md-10">
+                    @Html.TextBox("Email", null, new { @class = "form-control" })
+
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="确认提交" class="btn btn-default" />
+                </div>
+            </div>
+        </form>
+    </section>
+
+</div>
+<br /><br /><br /><br />
+
+
+@section Scripts {
+
+    <link href="/Content/themes/base/datepicker.css" rel="stylesheet" />
+    <link href="Content/themes/jquery-ui.theme.min.css" rel="stylesheet" />
+    @*<script src="Scripts/jquery-2.1.4.min.js"></script>*@
+    <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
+    @*<script src="Scripts/bootstrap.js"></script>*@
+
+    <script>
+
+        $(document).ready(function () {
+            $("#fromDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#toDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+    </script>
+}

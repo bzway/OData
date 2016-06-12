@@ -1,0 +1,18 @@
+[
+    {
+        "UUID": "113c6686b5ed4066b4a7a4ce4c93c829",
+        "UserName": "admin@126.com",
+        "Password": "123456",
+        "IsAdmin": true,
+        "CreatedOn": "2015-12-18T15:20:17.2288797Z",
+        "UpdatedOn": "2015-12-18T15:20:17.2288797Z"
+    },
+    {
+        "UUID": "113c6686b5e12346b4a7a4ce4c931234",
+        "UserName": "user@126.com",
+        "Password": "123456",
+        "IsAdmin": false,
+        "CreatedOn": "2015-12-18T15:20:17.2288797Z",
+        "UpdatedOn": "2015-12-18T15:20:17.2288797Z"
+    }
+]

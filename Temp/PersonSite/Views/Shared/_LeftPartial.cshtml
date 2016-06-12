@@ -1,0 +1,51 @@
+﻿<div id="accordion">
+    <h3>@("System Setting".Localize())</h3>
+    <div>
+        <ul class="menu">
+
+            <li class="open-tab" data-href="/Card/" data-frame="frame">
+                <span class="ui-icon ui-icon-arrow-1-e"></span>@("Card Management".Localize())
+            </li>
+            <li class="open-tab" data-href="/Site/" data-frame="frame">
+                <span class="ui-icon ui-icon-arrow-1-e"></span>@("Site Setting".Localize())
+            </li>
+        </ul>
+    </div>
+    <h3>@("Account Management".Localize())</h3>
+    <div>
+        <ul class="menu">
+            <li class="open-tab" data-href="/Member" data-frame="frame">
+                <span class="ui-icon ui-icon-arrow-1-e"></span>@("Member Search".Localize())
+            </li>
+            <li class="open-tab" data-href="/Member/Create/" data-frame="frame">
+                <span class="ui-icon ui-icon-arrow-1-e"></span>@("Member Create".Localize())
+            </li>
+            <li class="open-tab" data-href="/MemberCard" data-frame="frame">
+                <span class="ui-icon ui-icon-arrow-1-e"></span>@("Member Card".Localize())
+            </li>
+        </ul>
+    </div>
+
+    @{
+
+        var siteService = ApplicationEngine.Current.Resolve<ISiteService>();
+
+        foreach (var item in siteService.FindSiteByUserID(this.Context.GetOwinContext().GetUserManager().GetCurrentUser().ID))
+        {
+            <h3>@("Wechat".Localize() + "[" + item.Name + "]")</h3>
+            <div>
+                <ul class="menu">
+                    <li class="open-tab" data-href="/Schema/Index?siteName=@item.Name" data-frame="frame">
+                        <span class="ui-icon ui-icon-arrow-1-e"></span>@("Schema Setting".Localize())
+                    </li>
+                </ul>
+            </div>
+        }
+    }
+    <h3>@("Wechat Setting".Localize())</h3>
+    <div>
+        <ul class="menu">
+            <li class="open-tab" data-href="@Url.Action("Setting","Wechat")"><span class="ui-icon ui-icon-arrow-1-e"></span>微信公众号</li>
+        </ul>
+    </div>
+</div>
