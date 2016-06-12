@@ -9,7 +9,6 @@ D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\bin\Debug\log4net.xml
 D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\bin\Debug\Microsoft.Owin.xml
 D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\bin\Debug\Microsoft.Owin.Security.xml
 D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\bin\Debug\Newtonsoft.Json.xml
-D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\obj\Debug\Microsoft.Owin.Security.WeChat.csprojResolveAssemblyReference.cache
 D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\obj\Debug\Microsoft.Owin.Security.WeChat.dll
 D:\Work\OpenData\Modules\Microsoft.Owin.Security.WeChat\obj\Debug\Microsoft.Owin.Security.WeChat.pdb
 D:\OpenData\Modules\Microsoft.Owin.Security.WeChat\bin\Debug\Microsoft.Owin.Security.WeChat.dll

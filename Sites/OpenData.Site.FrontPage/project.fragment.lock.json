@@ -3,7 +3,7 @@
   "exports": {
     "OpenData.Common/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
         "bin/Debug/OpenData.Common.dll": {}
       },
@@ -31,39 +31,22 @@
         "bin/Debug/OpenData.Common.dll": {}
       }
     },
-    "OpenData.Data/1.0.0": {
+    "OpenData.Data.Core/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
-        "bin/Debug/OpenData.Data.dll": {}
+        "bin/Debug/OpenData.Data.Core.dll": {}
       },
       "runtime": {
         "../../packages/Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll": {},
         "../../packages/PagedList.1.17.0.0/lib/net40/PagedList.dll": {},
         "../../packages/log4net.2.0.5/lib/net45-full/log4net.dll": {},
-        "bin/Debug/OpenData.Data.dll": {}
-      }
-    },
-    "OpenData.Data.Mongo/1.0.0": {
-      "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
-      "compile": {
-        "bin/Debug/OpenData.Data.Mongo.dll": {}
-      },
-      "runtime": {
-        "../../packages/MongoDB.Bson.2.2.4/lib/net45/MongoDB.Bson.dll": {},
-        "../../packages/MongoDB.Driver.2.2.4/lib/net45/MongoDB.Driver.dll": {},
-        "../../packages/MongoDB.Driver.Core.2.2.4/lib/net45/MongoDB.Driver.Core.dll": {},
-        "../../packages/Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll": {},
-        "../../packages/PagedList.1.17.0.0/lib/net40/PagedList.dll": {},
-        "../../packages/log4net.2.0.5/lib/net45-full/log4net.dll": {},
-        "../../packages/mongocsharpdriver.2.2.4/lib/net45/MongoDB.Driver.Legacy.dll": {},
-        "bin/Debug/OpenData.Data.Mongo.dll": {}
+        "bin/Debug/OpenData.Data.Core.dll": {}
       }
     },
     "OpenData.Data.SQL/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
         "bin/Debug/OpenData.Data.SQL.dll": {}
       },
@@ -76,12 +59,13 @@
     },
     "OpenData.Framework.Core/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
         "bin/Debug/OpenData.Framework.Core.dll": {}
       },
       "runtime": {
         "../../packages/Autofac.4.0.0-rc2-240/lib/netstandard1.1/Autofac.dll": {},
+        "../../packages/Autofac.Extensions.DependencyInjection.4.0.0-rc2-240/lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {},
         "../../packages/Microsoft.AspNet.Identity.Core.2.2.1/lib/net45/Microsoft.AspNet.Identity.Core.dll": {},
         "../../packages/Microsoft.AspNet.Mvc.5.2.3/lib/net45/System.Web.Mvc.dll": {},
         "../../packages/Microsoft.AspNet.Razor.3.2.3/lib/net45/System.Web.Razor.dll": {},
@@ -93,6 +77,7 @@
         "../../packages/Microsoft.AspNetCore.Http.Abstractions.1.0.0-rc2-final/lib/net451/Microsoft.AspNetCore.Http.Abstractions.dll": {},
         "../../packages/Microsoft.AspNetCore.Http.Features.1.0.0-rc2-final/lib/net451/Microsoft.AspNetCore.Http.Features.dll": {},
         "../../packages/Microsoft.AspNetCore.WebUtilities.1.0.0-rc2-final/lib/net451/Microsoft.AspNetCore.WebUtilities.dll": {},
+        "../../packages/Microsoft.Extensions.DependencyInjection.1.0.0-rc2-final/lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {},
         "../../packages/Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0-rc2-final/lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {},
         "../../packages/Microsoft.Extensions.ObjectPool.1.0.0-rc2-final/lib/net451/Microsoft.Extensions.ObjectPool.dll": {},
         "../../packages/Microsoft.Extensions.Options.1.0.0-rc2-final/lib/netstandard1.0/Microsoft.Extensions.Options.dll": {},
@@ -111,7 +96,7 @@
     },
     "Microsoft.Owin.Security.WeChat/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.5",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
         "bin/Debug/Microsoft.Owin.Security.WeChat.dll": {}
       },
@@ -126,7 +111,7 @@
     },
     "OpenData.Framework.Common/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.5.2",
       "compile": {
         "bin/Debug/OpenData.Framework.Common.dll": {}
       },

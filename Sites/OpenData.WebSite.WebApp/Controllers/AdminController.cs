@@ -7,7 +7,6 @@ namespace OpenData.Framework.WebApp.Controllers
     {
         public ActionResult Index()
         {
-
             return View();
         }
     }

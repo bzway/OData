@@ -3,7 +3,6 @@ D:\Work\OpenData\Common\OpenData.Common\bin\Debug\OpenData.Common.dll.config
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\OpenData.Common.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\OpenData.Common.pdb
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\ICSharpCode.SharpZipLib.dll
-D:\Work\OpenData\Common\OpenData.Common\bin\Debug\log4net.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\Newtonsoft.Json.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\Ninject.dll
@@ -21,7 +20,6 @@ D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.Razor.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.dll
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.Razor.dll
-D:\Work\OpenData\Common\OpenData.Common\bin\Debug\log4net.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\Newtonsoft.Json.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\Ninject.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\NPOI.xml

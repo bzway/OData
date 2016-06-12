@@ -67,18 +67,12 @@
   },
 
   "frameworks": {
-    "net461": {
+    "net452": {
       "dependencies": {
         "Microsoft.Owin.Security.WeChat": {
           "target": "project"
         },
-        "OpenData.Common": {
-          "target": "project"
-        },
-        "OpenData.Data": {
-          "target": "project"
-        },
-        "OpenData.Data.Mongo": {
+        "OpenData.Data.Core": {
           "target": "project"
         },
         "OpenData.Data.SQL": {
@@ -90,9 +84,10 @@
         "OpenData.Framework.Common": {
           "target": "project"
         },
-        "OpenData.Data.Core": {
+        "OpenData.Common": {
           "target": "project"
-        }
+        },
+    
       }
     }
   },

@@ -2,7 +2,6 @@ D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Script\Template.cs
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\OpenData.Framework.Common.dll.config
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\OpenData.Framework.Common.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\OpenData.Framework.Common.pdb
-D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\log4net.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Microsoft.Owin.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Microsoft.Web.Infrastructure.dll
@@ -25,7 +24,6 @@ D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\PagedList.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\OpenData.Common.pdb
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\OpenData.Data.Core.pdb
-D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\log4net.xml
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Microsoft.Owin.xml
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 D:\Work\OpenData\Framework\OpenData.Framework.Core\bin\Debug\Newtonsoft.Json.xml
