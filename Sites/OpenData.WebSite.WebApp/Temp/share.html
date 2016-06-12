@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>微信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="description" content="jquery获取页面description的方法">
+    <link rel="stylesheet" href="http://203.195.235.76/jssdk/css/style.css">
+    <meta name="Access-Control-Allow-Origin" content="*">
+    <script src="Scripts/jquery-2.2.1.js"></script>
+</head>
+<body ontouchstart="">
+    <div id="btnOK">test</div>
+
+    <script src="http://localhost:55393/Wechat/Wechat/Track"></script>
+    <script>
+        $(document).ready(function () {
+            var config = { wechat: true };
+            share.init(config);
+
+            $("#btnOK").on("click", function () { share.track(this); });
+        });
+
+    </script>
+</body>
+</html>

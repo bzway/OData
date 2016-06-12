@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenData.Specification.CompositeSpecification&lt;T&gt;">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Specification\CompositeSpecification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OpenData.Specification.AndSpecification&lt;T&gt;">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAIAAAA=</HashCode>
+      <FileName>Specification\CompositeSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Specification.NotSpecification&lt;T&gt;">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAA=</HashCode>
+      <FileName>Specification\CompositeSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Specification.IsActiveSpecification">
+    <Position X="5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Specification\AdminSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenData.Specification.OrSpecification&lt;T&gt;">
+    <Position X="8" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAIAAAA=</HashCode>
+      <FileName>Specification\CompositeSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OpenData.Specification.ISpecification&lt;T&gt;">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Specification\ISpecification.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

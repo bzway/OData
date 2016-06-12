@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Bzway.Business.Model.WechatNewsMaterial>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                <b>
+                    标题：   @Html.DisplayFor(modelItem => item.Title)
+                </b>
+                <div>
+                    更新时间： @Html.DisplayFor(modelItem => item.LastUpdateTime) 作者：  @Html.DisplayFor(modelItem => item.Author)
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    @Html.Raw(item.Content)
+                </div>
+                <div>
+                    @Html.DisplayFor(modelItem => item.ThumbMediaId)
+                </div>
+
+                <label>@Html.DisplayFor(modelItem => item.ShowCoverPicture)是否显示封面</label>
+
+                <a href="@item.Url">
+                    阅读原文
+                </a>
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+@section scripts
+{
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("img").each(function (item, i) {
+                $(item).attr("src", $(item).data("src"));
+            });
+            $("img").attr("src", $("img").data("src"));
+        });
+
+    </script>
+}

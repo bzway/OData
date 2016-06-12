@@ -1,0 +1,14 @@
+﻿<a data-toggle="dropdown"> @("Langauge".Localize()) </a>
+<ul class="dropdown-menu">
+    <li>
+        <a href="/User/Home/Langauge/CN" style="color:@(CultureHelper.GetCurrentNeutralCulture() == "zh" ? "blue" : "")">
+            中文
+        </a>
+    </li>
+    <li>
+        <a href="/User/Home/Langauge/En" style="color:@(CultureHelper.GetCurrentNeutralCulture() == "en" ? "blue" : "")">
+            English
+        </a>
+    </li>
+
+</ul>

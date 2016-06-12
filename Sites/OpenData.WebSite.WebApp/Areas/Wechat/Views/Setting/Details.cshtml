@@ -1,0 +1,69 @@
+﻿@model WechatOfficialAccount
+@{
+    ViewBag.Title = "Details".Localize();
+}
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Token)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EncodingAESKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EncodingAESKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppSecret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppSecret)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsServiceAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsServiceAccount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit".Localize(), "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List".Localize(), "Index")
+</p>

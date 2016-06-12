@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WechatOfficialAccount>
+
+@{
+ViewBag.Title = "Index".Localize();
+}
+
+<h2>@("My Wechat Official Account".Localize())</h2>
+
+<p>
+    @Html.ActionLink("Create New Wechat Official Account".Localize(), "Create")   
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4">
+
+            <div class="panel @((item.Id == ViewBag.CurrentOfficialAccount) ? "panel-primary" : "panel-info")">
+
+                <div class="panel-heading">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+                <div class="panel-body">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => modelItem.AppID)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.AppID)
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => modelItem.AppSecret)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.AppSecret)
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => modelItem.Token)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Token)
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => modelItem.IsServiceAccount)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.IsServiceAccount)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="panel-footer">
+                    @Html.ActionLink("Select".Localize(), "Index", "Setting", new { id = item.Id }, null) |
+                    @Html.ActionLink("User".Localize(), "Index", "User", new { id = item.Id }, null) |
+                    @Html.ActionLink("Material".Localize(), "Index", "Material", new { id = item.Id }, null) |
+                    @Html.ActionLink("Menu".Localize(), "Index", "Menu", new { id = item.Id }, null) |
+                    @Html.ActionLink("Edit".Localize(), "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("QR Code".Localize(), "Index", "QRCode", new { id = item.Id }, null) |
+                    @Html.ActionLink("Delete".Localize(), "Delete", new { id = item.Id })
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+</div>
+

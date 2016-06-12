@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bzway.Data.EntityBase" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAIAEAEEAAAEABAQGAAABIQECAADAAAEIAAgAABQIAE=</HashCode>
+      <FileName>EntityBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bzway.Data.Schema" Collapsed="true">
+    <Position X="13.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAiAUQEmAAAAAQAAIABAIAACAAAAAgABiA=</HashCode>
+      <FileName>Schema\Schema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bzway.Data.Column" Collapsed="true">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAEBEAAAACAAkAABAAREAIhFAIAEAAAAJAAAAiA=</HashCode>
+      <FileName>Schema\Column.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Schema" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bzway.Data.DefaultDatabase">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAAAAAEAAAAAAAAAAAAAAACAAAAABgBA=</HashCode>
+      <FileName>DefaultDatabase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bzway.Data.DefaultRepository&lt;T&gt;">
+    <Position X="7" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAUAAAAAAAQQAAIAAAAQAAAEAAAgAAIgCAAAAAAA=</HashCode>
+      <FileName>DefaultRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bzway.Data.Workflow">
+    <Position X="2.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAEAAgAAQAAAABAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Workflow\Workflow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bzway.Data.WorkflowState">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACCgAAAAEAAAAAQAAAABAAAAAAAgAAAAYAA=</HashCode>
+      <FileName>Workflow\WorkflowState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Workflow1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bzway.Data.WorkflowTransition">
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACCAAAAAEAIAACQAAAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Workflow\WorkflowTransition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Workflow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bzway.Data.WorkflowAction">
+    <Position X="7.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAABAAAEAAgAAQAAAABAAAAAQAACAAAAAI=</HashCode>
+      <FileName>Workflow\WorkflowAction.cs</FileName>
+      <NewMemberFileName>Workflow\WorkflowState - Copy - Copy.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WorkflowTransition" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bzway.Data.WorkflowActionDetail">
+    <Position X="9.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAIAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Workflow\WorkflowActionDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WorkflowAction" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bzway.Data.Version">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Version\Version.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Bzway.Data.IDatabase">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBA=</HashCode>
+      <FileName>Interface\IDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Bzway.Data.IRepository&lt;T&gt;">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAQAAAAAAAAAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

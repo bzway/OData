@@ -1,0 +1,168 @@
+﻿@model Bzway.Business.Model.WechatNewsMaterial
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>WechatNewsMaterial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficialAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficialAccount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SortBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThumbMediaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThumbMediaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowCoverPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowCoverPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Digest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Digest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentSourceUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentSourceUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

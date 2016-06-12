@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Bzway.Business.Model.WechatQRCode>
+
+@{
+    ViewBag.Title = "QR Code List".Localize();
+}
+
+<p>
+    @using (Html.BeginForm("Refresh", "QrCode", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="@("Create Limited QR Code".Localize())" class="btn btn-default" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiredTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsUsed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+
+                @if (item.Type == QRCodeType.TemporalScene || item.Type == QRCodeType.LimitScene)
+                {
+                    <a href="@item.Url" target="_blank">@("Browse".Localize())</a>
+                }
+                else
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+
+            </td>
+            <td>
+                <img src="@item.Url" width="50" />
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiredTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUsed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerID)
+            </td>
+        </tr>
+    }
+
+
+
+</table>

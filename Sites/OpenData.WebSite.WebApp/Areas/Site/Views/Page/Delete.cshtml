@@ -1,0 +1,232 @@
+﻿@model Bzway.Business.Model.SitePage
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SitePage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Layout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Layout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VirtualPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VirtualPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExternalUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExternalUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkTarget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkTarget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterVirtualPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterVirtualPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutputCache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutputCache)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Searchable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Searchable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnableTheming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnableTheming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnableScript)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnableScript)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Keywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Keywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HtmlTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HtmlTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Canonical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Canonical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowInNavigation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowInNavigation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisplayText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisplayText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SortBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowInCrumb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowInCrumb)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

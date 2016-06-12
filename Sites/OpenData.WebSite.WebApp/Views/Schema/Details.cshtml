@@ -1,0 +1,114 @@
+﻿@model  Column
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ColumnModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Label)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Label)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ControlType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ControlType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowNull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowNull)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modifiable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modifiable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Indexable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Indexable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowInGrid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowInGrid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tooltip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tooltip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefaultValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefaultValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSystemField)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsSystemField)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="row">
+    @Html.ActionLink("Edit", "Edit", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"], columnName = Model.Name }) | @Html.ActionLink("Back to List", "Index", new { siteName = this.Request.QueryString["siteName"], schemaName = this.Request.QueryString["schemaName"] })
+</div>

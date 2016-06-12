@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = Html.FrontPage().Title;
+    //this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>@Html.FrontPage().Title</div>
+    <div class="container-fluid">
+        @Html.RenderBlocks("~/App_Data/TEst/Home/NotFound.cshtml");
+    </div>

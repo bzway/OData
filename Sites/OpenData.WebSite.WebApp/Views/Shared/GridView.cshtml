@@ -1,0 +1,147 @@
+﻿@model IPagedList<EntityBase>
+
+@{
+
+    var aa = this.Model;
+}
+<table class="table">
+    <tr>
+        <th>@("Operate".Localize())</th>
+        <th>
+            @Html.DisplayName("Name".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Gender".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("NickName".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("UserName".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Country".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Province".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("City".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Distinct".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("Birthday".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("IsLocked".Localize())
+        </th>
+        <th>
+            @Html.DisplayName("IsConfirmed".Localize())
+        </th>
+
+    </tr>
+    @if (Model.StartRecordIndex < Model.CurrentPageIndex)
+    {
+        @Html.ActionLink("<".Localize(), "Index", new { pageSize = Model.PageSize, pageIndex = Model.CurrentPageIndex - 1 })
+    }
+    else
+    {
+        <span class="disabled"><</span>
+    }
+    @for (int i = 1; i <= Model.TotalPageCount; i++)
+    {
+
+        if (i == Model.CurrentPageIndex)
+        {
+            <span class="current">@i</span>
+        }
+        else
+        {
+            if (i == 1)
+            {
+                <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+                if (Model.CurrentPageIndex >= 5 && Model.CurrentPageIndex > 7)
+                {
+                    <span>...</span>
+                }
+            }
+            else if (i == Model.TotalPageCount)
+            {
+                if (Model.CurrentPageIndex <= Model.TotalPageCount - 4 && Model.TotalPageCount > 7)
+                {
+                    <span>...</span>
+                }
+                <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+            }
+            else if ((Model.CurrentPageIndex < 4 && i < 7) || (Model.CurrentPageIndex > Model.TotalPageCount - 3 && i > Model.TotalPageCount - 6))
+            {
+
+                <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+            }
+            else if (i > Model.CurrentPageIndex - 3 && i < Model.CurrentPageIndex + 3)
+            {
+                <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+            }
+
+        }
+    }
+    @if (Model.CurrentPageIndex < Model.EndRecordIndex)
+    {
+        @Html.ActionLink(">".Localize(), "Index", new { pageSize = Model.PageSize, pageIndex = Model.CurrentPageIndex + 1 })
+
+    }
+    else
+    {
+        <span class="disabled">></span>
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @Html.ActionLink("Edit".Localize(), "Edit", new { id = item.Id })|
+                @Html.ActionLink("Bind Card".Localize(), "Bind", new { id = item.Id }) |
+                @Html.ActionLink("Details".Localize(), "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete".Localize(), "Delete", new { id = item.Id })
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["Name"])
+            </td>
+            <td>
+                @(Html.DisplayFor(modelItem => item["Gender"]).ToHtmlString().Localize())
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["NickName"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["UserName"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["Country"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["Province"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["City"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["Distinct"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["Birthday"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["IsLocked"])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item["IsConfirmed"])
+            </td>
+
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,159 @@
+﻿@model TrackModel
+@{
+    Layout = null;
+}
+//<script>
+
+    var share = {
+        track: function (sender, content, remark) {
+            var trackUrl = "@this.Request.Url" + "Share";
+            $.getJSON({
+                url: trackUrl,
+                data: { sender: $(sender).html(), content: content, remark: remark },
+                dataType: 'jsonp',
+                jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonpCallback: "success",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                success: function (result) {
+                    if (result) {
+                        alert("分享成功！"+result.name);
+                    } else {
+                        alert("分享失败！");
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        },
+        init: function (config) {
+            if ((config) == undefined) {
+                config = {};
+            }
+            if ((config.link) == undefined || config.link == "") {
+                config.link = document.location.href;
+            }
+
+            if (config.link.indexOf("?") > 0) {
+                config.link += "&trackId=@this.Model.trackId"
+            }
+            else {
+                config.link += "?trackId=@this.Model.trackId"
+            }
+
+            if ((config.title) == undefined || config.title == "") {
+                config.title = document.title;
+            }
+            if ((config.title) == undefined || config.title == "") {
+                config.title = "undefined";
+            }
+            if ((config.desc) == undefined || config.desc == "") {
+                config.desc = $("*[name='description']").attr("content");
+            }
+            if ((config.desc) == undefined || config.desc == "") {
+                config.desc = "undefined";
+            }
+            if ((config.debug) == undefined) {
+                config.debug = false;
+            }
+            if ((config.wechat) == undefined) {
+                config.wechat = false;
+            }
+
+            if (config.wechat) {
+                $.getScript("https://res.wx.qq.com/open/js/jweixin-1.0.0.js", function () {
+                    wx.config({
+                        debug: false,
+                        appId: '@Model.appId',
+                        timestamp: '@Model.timeStamp',
+                        nonceStr: '@Model.nonceStr',
+                        signature: '@Model.signature',
+                        jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareQZone", "openLocation"]
+                    });
+                    wx.ready(function () {
+                        wx.checkJsApi({
+                            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareQZone", "openLocation"],
+                            success: function (res) {
+                                console.log("checkJsApiError:" + res)
+                            }
+                        });
+                        wx.error(function (res) {
+                            console.log("error:" + res)
+                        });
+                        wx.onMenuShareTimeline({
+                            title: config.title, // 分享标题
+                            link: config.link, // 分享链接
+                            imgUrl: config.imgUrl, // 分享图标
+                            success: function () {
+                                var content = encodeURIComponent("title:" + config.title + ";desc:" + config.desc + ";link:" + config.link + ";imgUrl:" + config.imgUrl);
+                                WechatTraceShare("onMenuShareTimeline", 3, content);
+                                config.success("onMenuShareTimeline");
+                            },
+                            cancel: function () {
+                                config.cancel("onMenuShareTimeline");
+                            }
+                        });
+                        wx.onMenuShareAppMessage({
+                            title: config.title, // 分享标题
+                            desc: config.desc, // 分享描述
+                            link: config.link, // 分享链接
+                            imgUrl: config.imgUrl, // 分享图标
+                            type: config.type, // 分享类型,music、video或link，不填默认为link
+                            dataUrl: config.dataUrl, // 如果type是music或video，则要提供数据链接，默认为空
+                            success: function () {
+                                var content = encodeURIComponent("title:" + config.title + ";desc:" + config.desc + ";link:" + config.link + ";imgUrl:" + config.imgUrl + ";type:" + config.type + ";dataUrl:" + config.dataUrl);
+                                WechatTraceShare("onMenuShareAppMessage", 4, content);
+                                config.success("onMenuShareAppMessage");
+                            },
+                            cancel: function () {
+                                config.cancel("onMenuShareAppMessage");
+                            }
+                        });
+                        wx.onMenuShareQQ({
+                            title: config.title, // 分享标题
+                            desc: config.desc, // 分享描述
+                            link: config.link, // 分享链接
+                            imgUrl: config.imgUrl, // 分享图标
+                            success: function () {
+                                var content = encodeURIComponent("title:" + config.title + ";desc:" + config.desc + ";link:" + config.link + ";imgUrl:" + config.imgUrl);
+                                WechatTraceShare("onMenuShareQQ", 5, content);
+                                config.success("onMenuShareQQ");
+                            },
+                            cancel: function () {
+                                config.cancel("onMenuShareQQ");
+                            }
+                        });
+                        wx.onMenuShareWeibo({
+                            title: config.title, // 分享标题
+                            desc: config.desc, // 分享描述
+                            link: config.link, // 分享链接
+                            imgUrl: config.imgUrl, // 分享图标
+                            success: function () {
+                                var content = encodeURIComponent("title:" + config.title + ";desc:" + config.desc + ";link:" + config.link + ";imgUrl:" + config.imgUrl);
+                                WechatTraceShare("onMenuShareQZone", 6, content);
+                                config.success("onMenuShareWeibo");
+                            },
+                            cancel: function () {
+                                config.cancel("onMenuShareWeibo");
+                            }
+                        });
+                        wx.onMenuShareQZone({
+                            title: config.title, // 分享标题
+                            desc: config.desc, // 分享描述
+                            link: config.link, // 分享链接
+                            imgUrl: config.imgUrl, // 分享图标
+                            success: function () {
+                                var content = encodeURIComponent("title:" + config.title + ";desc:" + config.desc + ";link:" + config.link + ";imgUrl:" + config.imgUrl);
+                                WechatTraceShare("onMenuShareQZone", 7, content);
+                                config.success("onMenuShareQZone");
+                            },
+                            cancel: function () {
+                                config.cancel("onMenuShareQZone");
+                            }
+                        });
+                    });
+                });
+            }
+        }
+    };
+
+    //</script>

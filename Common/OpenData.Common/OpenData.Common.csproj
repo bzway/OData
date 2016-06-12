@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EAEF878-041B-4365-8CBF-0A7038B68468}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenData.Common</RootNamespace>
+    <AssemblyName>OpenData.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="log4net">
+      <HintPath>..\..\Lib\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppEngine\AppDomainTypeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\ApplicationInitialization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\DefaultEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\DependencyResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\AttributeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\ComponentLifeStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\ContainerManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\DependencyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\DependencyAttributeRegistrator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\IDependencyRegistrar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\InjectAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\InRequestScope\OnePerRequestHttpModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\InRequestScope\RequestScopeExtensionMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Dependency\NinjectWebCommonStartupTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplicationEngineConfiguration.cs" />
+    <Compile Include="ApplicationEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\IEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\IStartupTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\ITypeActivtorStartupTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\ITypeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\Singleton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\TypeActivator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppEngine\WebAppTypeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Caching\Extensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\MemoryCacheManager.cs" />
+    <Compile Include="Caching\NoCache.cs" />
+    <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="CallContext.cs" />
+    <Compile Include="Collections\CachableDictionary.cs" />
+    <Compile Include="Collections\ComparedResult.cs" />
+    <Compile Include="Collections\DictionaryExtensions.cs" />
+    <Compile Include="Collections\DynamicDictionary.cs" />
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="Collections\Matrix.cs" />
+    <Compile Include="Collections\PagedList.cs" />
+    <Compile Include="Collections\ReadonlyNameValueCollection.cs" />
+    <Compile Include="ComponentModel\MetadataForAttribute.cs" />
+    <Compile Include="ComponentModel\TypeDescriptorHelper.cs" />
+    <Compile Include="Configuration\FileConfigurationSection.cs" />
+    <Compile Include="Extensions\HttpExtensions.cs" />
+    <Compile Include="FileExtensions.cs" />
+    <Compile Include="IBaseDir.cs" />
+    <Compile Include="Message\APIService.cs" />
+    <Compile Include="Message\SohuSMSService.cs" />
+    <Compile Include="Message\SohuSMTPService.cs" />
+    <Compile Include="Script\Lexer.cs" />
+    <Compile Include="Script\RuleValue.cs" />
+    <Compile Include="Script\Rule.cs" />
+    <Compile Include="Script\OpenRuleEngine.cs" />
+    <Compile Include="Script\IJsHost.cs" />
+    <Compile Include="Script\ScriptAction.cs" />
+    <Compile Include="Script\ScriptClass.cs" />
+    <Compile Include="Script\ScriptCondition.cs" />
+    <Compile Include="Script\ScriptEngine.cs" />
+    <Compile Include="Script\ScriptException.cs" />
+    <Compile Include="Script\ScriptFunction.cs" />
+    <Compile Include="Script\ScriptMethod.cs" />
+    <Compile Include="Script\ScriptProperty.cs" />
+    <Compile Include="Script\ScriptScope.cs" />
+    <Compile Include="Script\ScriptType.cs" />
+    <Compile Include="Script\ScriptTypeCondition.cs" />
+    <Compile Include="Script\ScriptTypeFunction.cs" />
+    <Compile Include="Script\ScriptTypeMethod.cs" />
+    <Compile Include="Script\ScriptTypeProperty.cs" />
+    <Compile Include="Script\ScriptTypes.cs" />
+    <Compile Include="Script\ScriptVariable.cs" />
+    <Compile Include="Script\Template.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Script\TokenDefinitions.cs" />
+    <Compile Include="Script\Tokens.cs" />
+    <Compile Include="Security\BzwayAuthentication.cs" />
+    <Compile Include="Security\BzwayIdentity.cs" />
+    <Compile Include="Security\BzwayModule.cs" />
+    <Compile Include="Security\BzwayPrincipal.cs" />
+    <Compile Include="Security\Extensions.cs" />
+    <Compile Include="ServiceModel\JSONPBehavior.cs" />
+    <Compile Include="ServiceModel\JSONPBindingElement.cs" />
+    <Compile Include="ServiceModel\JSONPBindingExtension.cs" />
+    <Compile Include="ServiceModel\JSONPEncoderFactory.cs" />
+    <Compile Include="UrlUtility.cs" />
+    <Compile Include="Utility\CSVHelper.cs" />
+    <Compile Include="CultureHelper.cs" />
+    <Compile Include="Utility\HttpRequestClient.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\WebProxyHelper.cs" />
+    <Compile Include="Utility\WSDLParser.cs" />
+    <Compile Include="Drawing\ColorExtensions.cs" />
+    <Compile Include="Drawing\Corner.cs" />
+    <Compile Include="Drawing\Filters\BasicFilter.cs" />
+    <Compile Include="Drawing\Filters\BlackAndWhite.cs" />
+    <Compile Include="Drawing\Filters\BoxFilter.cs" />
+    <Compile Include="Drawing\Filters\CutCornersFilter.cs" />
+    <Compile Include="Drawing\Filters\DropShadow.cs" />
+    <Compile Include="Drawing\Filters\FloorReflectionFilter.cs" />
+    <Compile Include="Drawing\Filters\IFilter.cs" />
+    <Compile Include="Drawing\Filters\ImageWatermarkFilter.cs" />
+    <Compile Include="Drawing\Filters\Pipeline.cs" />
+    <Compile Include="Drawing\Filters\PolaroidFrameFilter.cs" />
+    <Compile Include="Drawing\Filters\ResizeFilter.cs" />
+    <Compile Include="Drawing\Filters\RotateFilter.cs" />
+    <Compile Include="Drawing\Filters\RoundedCornersFilter.cs" />
+    <Compile Include="Drawing\Filters\SkewFilter.cs" />
+    <Compile Include="Drawing\Filters\TextWatermarkFilter.cs" />
+    <Compile Include="Drawing\Filters\WaterMarkFilter.cs" />
+    <Compile Include="Drawing\GraphicsExtenions.cs" />
+    <Compile Include="Drawing\ImageTools.cs" />
+    <Compile Include="Drawing\WebPageCapture.cs" />
+    <Compile Include="Drawing\WebPageCapture_DefaultProvider.cs" />
+    <Compile Include="Message\ISMTPService.cs" />
+    <Compile Include="Message\SMTPLogService.cs" />
+    <Compile Include="Message\SMTPService.cs" />
+    <Compile Include="Exception\BzwayException.cs" />
+    <Compile Include="Exception\FriendlyException.cs" />
+    <Compile Include="Exception\ItemAlreadyExistsException.cs" />
+    <Compile Include="Exception\ItemDoesNotExistException.cs" />
+    <Compile Include="Exception\NameIsReqiredException.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Globalization\CurrencyInfo.cs" />
+    <Compile Include="Globalization\DirectoryCreateException.cs" />
+    <Compile Include="Globalization\Element.cs" />
+    <Compile Include="Globalization\ElementCacheKey.cs" />
+    <Compile Include="Globalization\ElementRepository.cs" />
+    <Compile Include="Globalization\IElementRepository.cs" />
+    <Compile Include="Globalization\LocalizeExtension.cs" />
+    <Compile Include="Globalization\LocalizeHelper.cs" />
+    <Compile Include="Globalization\Repository\CacheElementRepository.cs" />
+    <Compile Include="Globalization\Repository\ResXResource.cs" />
+    <Compile Include="Globalization\Repository\XmlElementRepository.cs" />
+    <Compile Include="HealthMonitoring\Log.cs" />
+    <Compile Include="HealthMonitoring\WebRequestErrorEventWrapper.cs" />
+    <Compile Include="IO\IOUtility.cs" />
+    <Compile Include="IO\StreamExtensions.cs" />
+    <Compile Include="Job\IJob.cs" />
+    <Compile Include="Job\JobExecutor.cs" />
+    <Compile Include="Job\Jobs.cs" />
+    <Compile Include="Job\TestJob.cs" />
+    <Compile Include="Linq\Dynamic.cs" />
+    <Compile Include="Linq\IEnumerableExtensions.cs" />
+    <Compile Include="Linq\PredicateBuilder.cs" />
+    <Compile Include="Log\DependencyRegistrar.cs" />
+    <Compile Include="Log\EmailLogger.cs" />
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Log\LoggerStartupTask.cs" />
+    <Compile Include="Log\PropertyLayout.cs" />
+    <Compile Include="Log\WebserviceLogger.cs" />
+    <Compile Include="Log\WechatLogger.cs" />
+    <Compile Include="Message\ISMSService.cs" />
+    <Compile Include="Message\SMSLogService.cs" />
+    <Compile Include="Message\SMSService.cs" />
+    <Compile Include="PluralizationServices\BidirectionalDictionary.cs" />
+    <Compile Include="PluralizationServices\EnglishPluralizationService.cs" />
+    <Compile Include="PluralizationServices\ICustomPluralizationMapping.cs" />
+    <Compile Include="PluralizationServices\PluralizationService.cs" />
+    <Compile Include="PluralizationServices\PluralizationServiceUtil.cs" />
+    <Compile Include="PluralizationServices\StringBidirectionalDictionary.cs" />
+    <Compile Include="Reflection\MemberException.cs" />
+    <Compile Include="Reflection\MemberNotFoundException.cs" />
+    <Compile Include="Reflection\ObjectExtensions.cs" />
+    <Compile Include="Reflection\PropertyExtensions.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Specification\AdminSpecification.cs" />
+    <Compile Include="Specification\CompositeSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="Utility\Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ADHelper.cs" />
+    <Compile Include="Utility\Base64Decoder.cs" />
+    <Compile Include="Utility\Base64Encoder.cs" />
+    <Compile Include="Utility\Cryptor.cs" />
+    <Compile Include="Utility\CssMinifier.cs" />
+    <Compile Include="Utility\DateTimeHelper.cs" />
+    <Compile Include="Utility\ExcelHelper.cs" />
+    <Compile Include="Utility\HttpWebRequestHelper.cs" />
+    <Compile Include="Utility\JavaScriptMinifier.cs" />
+    <Compile Include="Utility\JavaScriptObfuscator.cs" />
+    <Compile Include="Utility\PropertyCopy.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\SqlHelper.cs" />
+    <Compile Include="Utility\ValidateCodeGenerator.cs" />
+    <Compile Include="Utility\ConfigSetting.cs" />
+    <Compile Include="Utility\WebServiceHelper2.cs" />
+    <Compile Include="Utility\WordHelper.cs" />
+    <Compile Include="Utility\XmlSerializerHelper.cs" />
+    <Compile Include="Utility\XmlSerializerSectionHandler.cs" />
+    <Compile Include="Utility\WebHelper.cs" />
+    <Compile Include="Utility\ImageHelper.cs" />
+    <Compile Include="Utility\RegexHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Specification\SpecificationApply.cd" />
+    <None Include="Specification\Specification.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

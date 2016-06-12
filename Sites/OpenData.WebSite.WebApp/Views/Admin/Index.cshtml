@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+<div>
+    @Html.Partial("_LeftPartial")
+</div>
+<div>
+    <div id="tabs">
+        <ul></ul>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/Scripts/SideBar.js"></script>
+
+    <script>
+        function openTab(id, label, url) {
+            if ($("#" + id).attr("href") == undefined) {
+                url = "/home/frame?url=" + url;
+                var li = $(tabTemplate.replace(/#\{id\}/g, id).replace(/#\{href\}/g, url).replace(/#\{label\}/g, label));
+                tabs.find(".ui-tabs-nav").append(li);
+                tabs.tabs("refresh");
+            }
+            tabs.tabs("option", "active", tabs.find("ul li").index($("#" + id).parent()));
+        }
+        function removeTab() {
+            var panelId = tabs.find(".ui-tabs-active").remove().attr("aria-controls");
+            $("#" + panelId).remove();
+            tabs.tabs("refresh");
+        }
+
+        var tabTemplate = "<li><a href='#{href}' id='#{id}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>";
+        var tabs, accordion;
+        $(function () {
+            $('.body-content').SideBar("test");
+            $(".menu").menu();
+
+            accordion = $("#accordion").accordion({
+                heightStyle: "fill"
+            });
+
+            tabs = $("#tabs").tabs({
+                heightStyle: "fill",
+                activate: function (event, ui) {
+                    ui.newTab.find("a").attr("href", "#" + ui.newPanel.attr("id"));
+                }
+            });
+            // close icon: removing the tab on click
+            tabs.delegate("span.ui-icon-close", "click", function () {
+                var panelId = $(this).closest("li").remove().attr("aria-controls");
+                $("#" + panelId).remove();
+                tabs.tabs("refresh");
+            });
+            tabs.bind("mousedown", function (event) {
+
+                if (event.button == 1) {
+                    var panelId = tabs.find(".ui-tabs-active").remove().attr("aria-controls");
+                    $("#" + panelId).remove();
+                    tabs.tabs("refresh");
+                }
+            });
+            tabs.bind("dblclick", function (event) {
+
+                if (event.button == 0) {
+                    var panelId = tabs.find(".ui-tabs-active").attr("aria-controls");
+                    var iframe = $("#" + panelId).find("iframe");
+                    iframe.attr("src", iframe.attr("src"));
+                    tabs.tabs("refresh");
+                }
+            });
+
+            $(".open-tab").click(function () {
+
+                var url = $(this).attr("href");
+                if (url == undefined || url == "") {
+                    url = $(this).data("href");
+                }
+                if (url == undefined || url == "") {
+                    return false;
+                }
+                var id = "tabs" + url.replace(/\//g, "").replace("?", "").replace("#", "").replace("=", "");
+                if ($("#" + id).attr("href") == undefined) {
+                    if (!$(this).data("frame") || $(this).data("frame") == "frame") {
+                        url = "/home/frame?url=" + url;
+                    }
+                    var label = $(this).text();
+                    var li = $(tabTemplate.replace(/#\{id\}/g, id).replace(/#\{href\}/g, url).replace(/#\{label\}/g, label));
+                    tabs.find(".ui-tabs-nav").append(li);
+                    tabs.tabs("refresh");
+                }
+                tabs.tabs("option", "active", tabs.find("ul li").index($("#" + id).parent()));
+                return false;
+            });
+            $(window).resize(function () {
+                tabs.tabs("refresh");
+                accordion.accordion("refresh");
+            });
+        });
+    </script>
+}

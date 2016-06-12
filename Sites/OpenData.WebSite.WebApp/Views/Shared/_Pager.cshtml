@@ -1,0 +1,55 @@
+﻿@model IPagedList<object>
+@if (Model.StartRecordIndex < Model.CurrentPageIndex)
+{
+    @Html.ActionLink("<".Localize(), "Index", new { pageSize = Model.PageSize, pageIndex = Model.CurrentPageIndex - 1 })
+}
+else
+{
+    <span class="disabled"><</span>
+}
+@for (int i = 1; i <= Model.TotalPageCount; i++)
+{
+
+    if (i == Model.CurrentPageIndex)
+    {
+        <span class="current">@i</span>
+    }
+    else
+    {
+        if (i == 1)
+        {
+            <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+            if (Model.CurrentPageIndex >= 5 && Model.CurrentPageIndex > 7)
+            {
+                <span>...</span>
+            }
+        }
+        else if (i == Model.TotalPageCount)
+        {
+            if (Model.CurrentPageIndex <= Model.TotalPageCount - 4 && Model.TotalPageCount > 7)
+            {
+                <span>...</span>
+            }
+            <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+        }
+        else if ((Model.CurrentPageIndex < 4 && i < 7) || (Model.CurrentPageIndex > Model.TotalPageCount - 3 && i > Model.TotalPageCount - 6))
+        {
+
+            <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+        }
+        else if (i > Model.CurrentPageIndex - 3 && i < Model.CurrentPageIndex + 3)
+        {
+            <a href="javascript:void(0)" onclick="GoToPage('@i');">@i</a>
+        }
+
+    }
+}
+@if (Model.CurrentPageIndex < Model.EndRecordIndex)
+{
+    @Html.ActionLink(">".Localize(), "Index", new { pageSize = Model.PageSize, pageIndex = Model.CurrentPageIndex + 1 })
+
+}
+else
+{
+    <span class="disabled">></span>
+}

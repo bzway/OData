@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Site>
+@{
+    ViewBag.Title = "我的个人信息".Localize();
+}
+
+<h2>@("我的网站".Localize())</h2>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>@("操作".Localize())</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaviconUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Domains)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeZone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsShowLogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsShowMenu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsShowSideBar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatabaseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConnectionString)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppSecret)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("管理".Localize(), "Index", "Home", new { area = "Site", id = item.Id }, null) |
+                @Html.ActionLink("Edit".Localize(), "Edit", "Site", new { id = item.Id }, null) |
+                @Html.ActionLink("Details".Localize(), "Details", "Site", new { id = item.Id }, null) |
+                @Html.ActionLink("Delete".Localize(), "Delete", "Site", new { id = item.Id }, null)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaviconUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domains)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeZone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsShowLogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsShowMenu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsShowSideBar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatabaseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectionString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppSecret)
+            </td>
+
+        </tr>
+    }
+
+</table>
