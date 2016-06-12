@@ -19,7 +19,6 @@ D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\OpenData.Common.pdb
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\OpenData.Data.Core.pdb
-D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\log4net.xml
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\Newtonsoft.Json.xml
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\PagedList.xml
 D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\System.Web.Mvc.xml
@@ -66,3 +65,4 @@ D:\OpenData\Data\OpenData.Data.SQL\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\OpenData\Data\OpenData.Data.SQL\obj\Debug\OpenData.Data.SQL.csprojResolveAssemblyReference.cache
 D:\OpenData\Data\OpenData.Data.SQL\obj\Debug\OpenData.Data.SQL.dll
 D:\OpenData\Data\OpenData.Data.SQL\obj\Debug\OpenData.Data.SQL.pdb
+D:\Work\OpenData\Data\OpenData.Data.SQL\bin\Debug\log4net.xml

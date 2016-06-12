@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.5.2/",
-    "signature": "5cd8155106cbb1c9f45d11c94241e9c723c5d6bd"
+    "signature": "fab3b3d70e113d55161681d9dd909d133f8ddbb6"
   },
   "compilationOptions": {
     "defines": [
@@ -23,6 +23,7 @@
           "OpenData.Framework.Core": "1.0.0",
           "OpenData.Framework.Common": "1.0.0",
           "OpenData.Common": "1.0.0",
+          "log4net": "2.0.5",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-rc2-final",
@@ -55,6 +56,11 @@
         }
       },
       "Libuv/1.9.0-rc2-20901": {},
+      "log4net/2.0.5": {
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "1.0.0-rc2-final",
@@ -1555,6 +1561,7 @@
           "OpenData.Framework.Core": "1.0.0",
           "OpenData.Framework.Common": "1.0.0",
           "OpenData.Common": "1.0.0",
+          "log4net": "2.0.5",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-rc2-final",
@@ -1587,6 +1594,11 @@
         }
       },
       "Libuv/1.9.0-rc2-20901": {},
+      "log4net/2.0.5": {
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "1.0.0-rc2-final",
@@ -2932,7 +2944,6 @@
           "../../packages/Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll": {},
           "../../packages/Ninject.3.2.2.0/lib/net45-full/Ninject.dll": {},
           "../../packages/Owin.1.0/lib/net40/Owin.dll": {},
-          "../../packages/log4net.2.0.5/lib/net45-full/log4net.dll": {},
           "bin/Debug/OpenData.Framework.Common.dll": {}
         }
       },
@@ -3009,6 +3020,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-NW+YOuRDrlmGM6yjSRjJUqlHukDEqUTuZKVJvEzWV4LH8wEKqrmVcxTqAab87+UiQ3KOLsyaBJ3ZNdmzxFUTig=="
+    },
+    "log4net/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AEqPZz+v+OikfnR2SqRVdQPnSaLq5y9Iz1CfRQZ9kTKPYCXHG6zYmDHb7wJotICpDLMr/JqokyjiqKAjUKp0ng=="
     },
     "Microsoft.AspNetCore.Antiforgery/1.0.0-rc2-final": {
       "type": "package",

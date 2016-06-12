@@ -23,7 +23,6 @@ D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\OpenData.Common.pdb
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\OpenData.Data.Core.pdb
-D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\log4net.xml
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\MongoDB.Bson.xml
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\MongoDB.Driver.xml
 D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\MongoDB.Driver.Legacy.xml

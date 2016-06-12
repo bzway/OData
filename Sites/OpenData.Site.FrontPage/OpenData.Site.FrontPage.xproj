@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\OpenData.Common\OpenData.Common.csproj" />
     <ProjectReference Include="..\..\Data\OpenData.Data.Core\OpenData.Data.Core.csproj" />
+    <ProjectReference Include="..\..\Data\OpenData.Data.Monogo\OpenData.Data.Mongo.csproj" />
     <ProjectReference Include="..\..\Data\OpenData.Data.SQL\OpenData.Data.SQL.csproj" />
     <ProjectReference Include="..\..\Framework\OpenData.Framework.User\OpenData.Framework.Core.csproj" />
     <ProjectReference Include="..\..\Modules\Microsoft.Owin.Security.WeChat\Microsoft.Owin.Security.WeChat.csproj" />

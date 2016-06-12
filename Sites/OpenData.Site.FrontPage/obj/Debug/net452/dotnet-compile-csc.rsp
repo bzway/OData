@@ -11,6 +11,7 @@
 "D:\Work\OpenData\Sites\OpenData.Site.FrontPage\obj\Debug\net452\dotnet-compile.assemblyinfo.cs"
 -out:"D:\Work\OpenData\Sites\OpenData.Site.FrontPage\bin\Debug\net452\OpenData.Site.FrontPage.exe"
 -r:"C:\Users\adzhu\.nuget\packages\Ix-Async\1.2.5\lib\net45\System.Interactive.Async.dll"
+-r:"C:\Users\adzhu\.nuget\packages\log4net\2.0.5\lib\net45-full\log4net.dll"
 -r:"C:\Users\adzhu\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0-rc2-final\lib\net451\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\adzhu\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0-rc2-final\lib\net451\Microsoft.AspNetCore.Authentication.dll"
 -r:"C:\Users\adzhu\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0-rc2-final\lib\net451\Microsoft.AspNetCore.Authentication.Cookies.dll"

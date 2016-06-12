@@ -32,12 +32,7 @@ D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\RabbitMQ.Client.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Net.Http.Formatting.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Http.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Http.WebHost.dll
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Mvc.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Optimization.dll
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Razor.dll
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.Deployment.dll
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.dll
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.Razor.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\WebGrease.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\NPOI.dll
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\Ninject.dll

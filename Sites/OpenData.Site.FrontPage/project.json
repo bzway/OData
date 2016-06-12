@@ -2,6 +2,7 @@
   "userSecretsId": "aspnet-OpenData.Site.FrontPage-78290b23-4da2-4969-a465-7d60c398a6a2",
 
   "dependencies": {
+    "log4net": "2.0.5",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-rc2-final",
@@ -67,12 +68,18 @@
   },
 
   "frameworks": {
-    "net452": {
+    "net461": {
       "dependencies": {
         "Microsoft.Owin.Security.WeChat": {
           "target": "project"
         },
-        "OpenData.Data.Core": {
+        "OpenData.Common": {
+          "target": "project"
+        },
+        "OpenData.Data": {
+          "target": "project"
+        },
+        "OpenData.Data.Mongo": {
           "target": "project"
         },
         "OpenData.Data.SQL": {
@@ -84,10 +91,9 @@
         "OpenData.Framework.Common": {
           "target": "project"
         },
-        "OpenData.Common": {
+        "OpenData.Data.Core": {
           "target": "project"
-        },
-    
+        }
       }
     }
   },

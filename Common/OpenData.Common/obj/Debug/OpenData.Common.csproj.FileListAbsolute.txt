@@ -33,7 +33,6 @@ D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.Razor.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Work\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Work\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.csprojResolveAssemblyReference.cache
 D:\Work\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.dll
 D:\Work\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.pdb
 D:\OpenData\Common\OpenData.Common\bin\Debug\Script\Template.cs
@@ -75,3 +74,4 @@ D:\OpenData\Common\OpenData.Common\bin\Debug\System.Web.WebPages.Razor.xml
 D:\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.csprojResolveAssemblyReference.cache
 D:\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.dll
 D:\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.pdb
+D:\Work\OpenData\Common\OpenData.Common\obj\Debug\OpenData.Common.csprojResolveAssemblyReference.cache

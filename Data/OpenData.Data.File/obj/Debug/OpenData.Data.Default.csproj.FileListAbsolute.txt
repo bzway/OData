@@ -19,7 +19,6 @@ D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\OpenData.Common.pdb
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\OpenData.Data.Core.pdb
-D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\log4net.xml
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\Newtonsoft.Json.xml
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\PagedList.xml
 D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\System.Web.Mvc.xml
