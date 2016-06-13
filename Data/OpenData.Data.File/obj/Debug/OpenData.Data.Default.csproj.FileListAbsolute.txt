@@ -65,3 +65,4 @@ D:\OpenData\Data\OpenData.Data.File\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\OpenData\Data\OpenData.Data.File\obj\Debug\OpenData.Data.Default.csprojResolveAssemblyReference.cache
 D:\OpenData\Data\OpenData.Data.File\obj\Debug\OpenData.Data.JsonFile.dll
 D:\OpenData\Data\OpenData.Data.File\obj\Debug\OpenData.Data.JsonFile.pdb
+D:\Work\OpenData\Data\OpenData.Data.File\bin\Debug\log4net.xml

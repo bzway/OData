@@ -73,12 +73,7 @@ D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\RabbitMQ.Client.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Net.Http.Formatting.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Http.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Http.WebHost.xml
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Mvc.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Optimization.xml
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.Razor.xml
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.xml
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.Deployment.xml
-D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\System.Web.WebPages.Razor.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\Microsoft.Web.Infrastructure.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\NPOI.xml
 D:\Work\OpenData\Sites\OpenData.WebSite.WebApp\bin\Ninject.xml

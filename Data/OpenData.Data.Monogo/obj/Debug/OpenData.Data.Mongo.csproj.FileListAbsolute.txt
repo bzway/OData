@@ -79,3 +79,4 @@ D:\OpenData\Data\OpenData.Data.Monogo\bin\Debug\System.Web.WebPages.Deployment.x
 D:\OpenData\Data\OpenData.Data.Monogo\obj\Debug\OpenData.Data.Mongo.csprojResolveAssemblyReference.cache
 D:\OpenData\Data\OpenData.Data.Monogo\obj\Debug\OpenData.Data.Mongo.dll
 D:\OpenData\Data\OpenData.Data.Monogo\obj\Debug\OpenData.Data.Mongo.pdb
+D:\Work\OpenData\Data\OpenData.Data.Monogo\bin\Debug\log4net.xml
