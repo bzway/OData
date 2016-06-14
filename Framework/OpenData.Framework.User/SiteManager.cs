@@ -1,6 +1,7 @@
 
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
+using System.Threading;
 using System.Web;
 
 namespace OpenData.Framework.Core
@@ -20,6 +21,7 @@ namespace OpenData.Framework.Core
 
         public SiteManager(string siteID)
         {
+            Thread.CurrentThread.
             var site = this.siteService.FindSiteByID(siteID);
             if (site != null)
             {

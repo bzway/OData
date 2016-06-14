@@ -24,7 +24,7 @@ namespace OpenData.Framework.Core
 
         public static HtmlString RenderBlocks(this HtmlHelper helper, string blockName)
         {
-            SiteManager siteManager = helper.ViewBag.SiteManager;
+            SiteManager siteManager = helper.ViewContext.HttpContext.GetSiteManager();
             using (var db = siteManager.GetSiteDataBase())
             {
                 StringBuilder sb = new StringBuilder();
