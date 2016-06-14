@@ -7,7 +7,7 @@ using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Sites.FrontPage.Controllers.Connect
+namespace OpenData.Sites.FrontPage.Controllers
 {
     public class HomeController : BzwayController
     {

@@ -66,25 +66,15 @@ namespace OpenData.Framework.Common
 #if TRACE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            context.Response.Write("FrontPageMiddleware Start");
-#endif
-
-            //context.Response.Write("FrontPageMiddleware start.");
-            //var site = context.GetSiteManager().GetSite();
-
-            //if (context.Request.Uri.ToString().Contains("wechat"))
-            //{
-            //    HomeController controller = new HomeController();
-            //    controller.Index();
-            //    return;
-            //}
+            context.Response.Write("<!--Start-->");
+#endif 
 
             await Next.Invoke(context);
-            //context.Response.Write("FrontPageMiddleware End.");
+
 #if TRACE
 
             stopwatch.Stop();
-            context.Response.Write(string.Format("FrontPageMiddleware, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
+            context.Response.Write(string.Format("<!--End:{0}ms-->", stopwatch.ElapsedMilliseconds));
 #endif
         }
 

@@ -71,7 +71,7 @@ namespace OpenData.Sites.FrontPage.Controllers
             this.cache.Set(this.key + t, data, 6000);
         }
     }
-    public class WechatBaseController : BaseController
+    public class WechatBaseController : BzwayController
     {
         WechatManager wechatManager;
         public WechatManager WechatManager

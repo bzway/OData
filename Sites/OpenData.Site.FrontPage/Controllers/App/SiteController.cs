@@ -1,16 +1,16 @@
-﻿using OpenData.Framework.Core.Entity;
-using OpenData.Framework.Core;
+﻿using OpenData.Common;
 using OpenData.Data.Core;
-using System.Net;
-using System.Web.Mvc;
-using System.Collections.Generic;
-using OpenData.Common;
+using OpenData.Framework.Core;
+using OpenData.Framework.Core.Entity;
 using OpenData.Globalization;
 using OpenData.Sites.FrontPage.Models;
+using System.Collections.Generic;
+using System.Net;
+using System.Web.Mvc;
 
 namespace OpenData.Sites.FrontPage.Controllers.App
 {
-    public class SiteController : BaseController
+    public class SiteController : BzwayController
     {
         IMemberService memberService = ApplicationEngine.Current.Resolve<IMemberService>();
         ISiteService siteService = ApplicationEngine.Current.Resolve<ISiteService>();

@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace OpenData.Sites.FrontPage.Areas.Api.Controllers
 {
-    public class PublicController : BaseController
+    public class PublicController : BzwayController
     {
         WechatManager wechatManager;
         public WechatManager WechatManager

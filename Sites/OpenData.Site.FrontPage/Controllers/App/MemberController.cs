@@ -8,10 +8,11 @@ using OpenData.Data.Core;
 using OpenData.Utility;
 using OpenData.Globalization;
 using OpenData.Framework.Core.Entity;
+using OpenData.Framework.Core;
 
 namespace OpenData.Sites.FrontPage.Controllers.App
 {
-    public class MemberController : BaseController
+    public class MemberController : BzwayController
     {
 
         [Authorize(Roles = "Site")]

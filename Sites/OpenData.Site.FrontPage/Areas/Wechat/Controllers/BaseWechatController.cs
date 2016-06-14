@@ -1,9 +1,10 @@
 ﻿using OpenData.Data.Core;
+using OpenData.Framework.Core;
 using OpenData.Sites.FrontPage.Controllers;
 
 namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
 {
-    public class BaseWechatManageController : BaseController
+    public class BaseWechatManageController : BzwayController
     {
         public IDatabase db
         {

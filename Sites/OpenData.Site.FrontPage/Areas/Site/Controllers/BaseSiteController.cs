@@ -4,7 +4,7 @@ using OpenData.Data.Core;
 
 namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
-    public class BaseSiteController : BaseController
+    public class BaseSiteController : BzwayController 
     {
         public IDatabase db
         {

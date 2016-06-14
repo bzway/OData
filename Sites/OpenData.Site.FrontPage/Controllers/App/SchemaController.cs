@@ -1,12 +1,13 @@
 ﻿using OpenData.Data.Core;
+using OpenData.Framework.Core;
+using OpenData.Sites.FrontPage.Models;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using OpenData.Sites.FrontPage.Models;
 
 namespace OpenData.Sites.FrontPage.Controllers.App
 {
-    public class SchemaController : BaseController
+    public class SchemaController : BzwayController
     {
         public ActionResult Index(string siteName)
         {
