@@ -13,10 +13,10 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web;
 using System.Globalization;
-using OpenData.Site;
+using OpenData.Framework;
 
 
-namespace OpenData.Site.Form.Html
+namespace OpenData.Framework.Form.Html
 {
     public static class ValidationExtensions
     {

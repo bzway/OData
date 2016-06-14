@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace OpenData.Site.Core.Wechat
+namespace OpenData.Framework.Core.Wechat
 {
     public static class LocationUtil
     {

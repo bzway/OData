@@ -1,5 +1,5 @@
-﻿using OpenData.Site.Entity;
-using OpenData.Site.Core;
+﻿using OpenData.Framework.Entity;
+using OpenData.Framework.Core;
 using OpenData.Caching;
 using System;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Xml;
 
-namespace OpenData.Site.FrontPage.Controllers
+namespace OpenData.Framework.WebApp.Controllers
 {
     public class WechatAuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute
     {

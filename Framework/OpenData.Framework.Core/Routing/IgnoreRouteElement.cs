@@ -22,7 +22,7 @@ If not, see http://www.Bzway.com/gpl3/.
 using System;
 using System.Collections;
 using System.Configuration;
-namespace OpenData.Site.Routing
+namespace OpenData.Framework.Routing
 {
     public class IgnoreRouteElement : ConfigurationElement
     {

@@ -15,7 +15,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     /// <summary>
     /// 

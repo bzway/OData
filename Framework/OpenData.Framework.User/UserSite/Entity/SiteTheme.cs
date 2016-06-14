@@ -1,4 +1,4 @@
-﻿namespace OpenData.Site.Entity
+﻿namespace OpenData.Framework.Entity
 {
     public class SiteTheme
     {

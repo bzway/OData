@@ -1,14 +1,14 @@
-﻿using OpenData.Site.Entity;
+﻿using OpenData.Framework.Entity;
 using System.Collections.Generic;
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public interface ISiteService
     {
         Site FindSiteByDomain(string domain);
         Site FindSiteByID(string siteID);
         Site FindSiteByName(string siteName);
-        IEnumerable<Entity.Site> FindSiteByUserID(string userID);
-        void CreateOrUpdateSite(Entity.Site site, string userID);
+        IEnumerable<Site> FindSiteByUserID(string userID);
+        void CreateOrUpdateSite(Site site, string userID);
 
         void DeleteSiteByID(string siteID);
     }

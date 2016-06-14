@@ -15,7 +15,7 @@ using System.Web.Mvc;
 using System.Collections;
 using System.Web.Mvc.Html;
 using System.Linq.Expressions;
-namespace OpenData.Site.Grid2
+namespace OpenData.Framework.Grid2
 {
     public static class GridExtensions
     {

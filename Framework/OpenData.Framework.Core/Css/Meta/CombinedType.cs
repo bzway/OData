@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Site.Css.Meta
+namespace OpenData.Framework.Css.Meta
 {
     public class CombinedType : PropertyValueType
     {

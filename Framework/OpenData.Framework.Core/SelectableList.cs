@@ -12,7 +12,7 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Collections;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class SelectableList : IEnumerable<SelectListItem>, IEnumerable
     {

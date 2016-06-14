@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 
-namespace OpenData.Site.Form
+namespace OpenData.Framework.Form
 {
     public enum ValidationType
     {

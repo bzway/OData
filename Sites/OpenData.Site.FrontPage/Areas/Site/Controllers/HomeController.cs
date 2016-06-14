@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using OpenData.Site.Core;
+using OpenData.Framework.Core;
 using System.Web.Mvc;
 
-namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
 {
     public class HomeController : BaseSiteController
     {

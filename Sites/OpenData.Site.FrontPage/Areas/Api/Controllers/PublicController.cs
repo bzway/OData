@@ -1,13 +1,13 @@
-﻿using OpenData.Site.Entity;
-using OpenData.Site.Core;
-using OpenData.Site.FrontPage.Controllers;
-using OpenData.Site.FrontPage.Models;
+﻿using OpenData.Framework.Entity;
+using OpenData.Framework.Core;
+using OpenData.Framework.WebApp.Controllers;
+using OpenData.Framework.WebApp.Models;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Site.FrontPage.Areas.Api.Controllers
+namespace OpenData.Framework.WebApp.Areas.Api.Controllers
 {
     public class PublicController : BaseController
     {

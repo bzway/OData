@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace OpenData.Site.Core.Wechat.Models
+namespace OpenData.Framework.Core.Wechat.Models
 {
     /// <summary>
     /// 发送客服消息

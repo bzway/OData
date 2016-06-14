@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace OpenData.Site.Css
+namespace OpenData.Framework.Css
 {
     public class StyleSheet
     {

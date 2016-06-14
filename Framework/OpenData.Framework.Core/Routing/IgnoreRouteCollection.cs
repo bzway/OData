@@ -23,7 +23,7 @@ using System;
 using System.Collections;
 using System.Configuration;
 
-namespace OpenData.Site.Routing
+namespace OpenData.Framework.Routing
 {
     public class IgnoreRouteCollection : ConfigurationElementCollection
     {

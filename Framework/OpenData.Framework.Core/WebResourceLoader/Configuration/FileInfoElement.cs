@@ -11,7 +11,7 @@ using System.Configuration;
 using System.Security.Permissions;
 using System.Web;
 
-namespace OpenData.Site.WebResourceLoader.Configuration
+namespace OpenData.Framework.WebResourceLoader.Configuration
 {
     public sealed class FileInfoElement : ConfigurationElement
     {

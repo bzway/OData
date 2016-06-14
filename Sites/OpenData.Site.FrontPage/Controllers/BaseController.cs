@@ -1,8 +1,8 @@
-﻿using OpenData.Site.Core;
-using OpenData.Site.FrontPage.Models;
+﻿using OpenData.Framework.Core;
+using OpenData.Framework.WebApp.Models;
 using System.Collections.Generic;
 
-namespace OpenData.Site.FrontPage.Controllers
+namespace OpenData.Framework.WebApp.Controllers
 {
     public class BaseController : BzwayController
     {

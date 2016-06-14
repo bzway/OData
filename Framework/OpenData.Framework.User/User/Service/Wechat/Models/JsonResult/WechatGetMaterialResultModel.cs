@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace OpenData.Site.Core.Wechat.Models
+namespace OpenData.Framework.Core.Wechat.Models
 {
     /// <summary>
     /// 图片、语音、视频

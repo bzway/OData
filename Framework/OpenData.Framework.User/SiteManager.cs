@@ -1,9 +1,9 @@
 
 using OpenData.Data;
-using OpenData.Site.Entity;
+using OpenData.Framework.Entity;
 using System.Web;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     /// <summary>
     /// GrantRequest service
@@ -15,7 +15,7 @@ namespace OpenData.Site.Core
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         ISiteService siteService = ApplicationEngine.Current.Resolve<ISiteService>();
 
-        readonly Entity.Site site;
+        readonly Site site;
         readonly IDatabase db;
 
         public SiteManager(string siteID)

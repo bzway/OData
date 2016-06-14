@@ -1,7 +1,7 @@
 ﻿using System.IO.Compression;
 using System.Web;
 using System.Web.Mvc;
-namespace OpenData.Site
+namespace OpenData.Framework
 {
 
     /// <summary>

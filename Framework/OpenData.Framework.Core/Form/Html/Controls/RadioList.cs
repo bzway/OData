@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Site.Form.Html.Controls
+namespace OpenData.Framework.Form.Html.Controls
 {
     public class RadioList : ControlBase
     {

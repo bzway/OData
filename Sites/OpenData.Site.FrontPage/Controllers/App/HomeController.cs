@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web;
 using System.IO;
-using OpenData.Site.Core;
+using OpenData.Framework.Core;
 using OpenData.Script;
-using OpenData.Site.FrontPage.Models;
+using OpenData.Framework.WebApp.Models;
 
-namespace OpenData.Site.FrontPage.Controllers.App
+namespace OpenData.Framework.WebApp.Controllers.App
 {
     public class HomeController : BzwayController
     {

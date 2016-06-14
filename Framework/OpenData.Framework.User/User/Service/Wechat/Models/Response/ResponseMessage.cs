@@ -4,7 +4,7 @@ using System.Xml;
 
 using System.Xml.Serialization;
 using OpenData.Utility;
-namespace OpenData.Site.Core.Wechat.Models
+namespace OpenData.Framework.Core.Wechat.Models
 {
     public class ResponseMessage
     {

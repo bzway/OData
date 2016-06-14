@@ -15,7 +15,7 @@ using System.Web.UI;
 
 #endregion
 
-namespace OpenData.Site 
+namespace OpenData.Framework 
 {
 
 	public class ScriptCompressorHandler : IHttpHandler

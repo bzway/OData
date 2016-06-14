@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public class AutoCompleteController : Controller
     {

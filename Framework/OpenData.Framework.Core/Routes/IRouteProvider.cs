@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Routing;
 
-namespace OpenData.Site.Routes
+namespace OpenData.Framework.Routes
 {
     public interface IRouteProvider
     {

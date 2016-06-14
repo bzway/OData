@@ -12,10 +12,10 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.IO;
-using OpenData.Site;
+using OpenData.Framework;
 using OpenData.Globalization;
 using OpenData.Common;
-namespace OpenData.Site.Form.Html
+namespace OpenData.Framework.Form.Html
 {
     public static class HtmlCodeHelper
     {

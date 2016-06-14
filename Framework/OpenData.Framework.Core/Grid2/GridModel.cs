@@ -12,9 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 using System.Web.Mvc;
-using OpenData.Site.Grid2.Design;
+using OpenData.Framework.Grid2.Design;
 
-namespace OpenData.Site.Grid2
+namespace OpenData.Framework.Grid2
 {
     public class GridModel : IGridModel
     {

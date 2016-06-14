@@ -13,7 +13,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using OpenData.Reflection;
-namespace OpenData.Site.Grid
+namespace OpenData.Framework.Grid
 {
     public class GridColumn
     {

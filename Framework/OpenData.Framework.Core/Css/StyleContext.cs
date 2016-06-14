@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 
-namespace OpenData.Site.Css
+namespace OpenData.Framework.Css
 {
     public interface IStyleContext
     {

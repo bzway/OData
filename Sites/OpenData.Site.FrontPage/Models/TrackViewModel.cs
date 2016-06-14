@@ -1,4 +1,4 @@
-﻿namespace OpenData.Site.FrontPage.Models
+﻿namespace OpenData.Framework.WebApp.Models
 {
     public class TrackModel
     {

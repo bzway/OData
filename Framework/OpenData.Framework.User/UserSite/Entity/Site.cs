@@ -1,7 +1,7 @@
 ﻿using OpenData.Data;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenData.Site.Entity
+namespace OpenData.Framework.Entity
 {
     public partial class Site : BaseEntity
     {

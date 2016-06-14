@@ -14,7 +14,7 @@ using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 using OpenData.ComponentModel;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class BzwayDataAnnotationsModelMetadataProvider : DataAnnotationsModelMetadataProvider
     {

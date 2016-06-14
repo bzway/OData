@@ -11,10 +11,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using OpenData.Extensions;
-using OpenData.Site;
+using OpenData.Framework;
 
 
-namespace OpenData.Site.Form.Html
+namespace OpenData.Framework.Form.Html
 {
     public class GridForm : ISchemaForm
     {

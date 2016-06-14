@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(OpenData.Site.FrontPage.Startup))]
-namespace OpenData.Site.FrontPage
+[assembly: OwinStartupAttribute(typeof(OpenData.Framework.WebApp.Startup))]
+namespace OpenData.Framework.WebApp
 {
     public partial class Startup
     {

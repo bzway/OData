@@ -10,7 +10,7 @@ using System.IO;
 
 
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class ExcelResult : ViewResult
     {

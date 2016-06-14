@@ -1,7 +1,7 @@
 ﻿using OpenData.Utility;
 using System;
 
-namespace OpenData.Site.Core.Wechat.Models
+namespace OpenData.Framework.Core.Wechat.Models
 {
     /// <summary>
     /// 用户信息

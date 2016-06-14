@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace OpenData.Site.Css.Meta
+namespace OpenData.Framework.Css.Meta
 {
     public class ColorType : PropertyValueType
     {

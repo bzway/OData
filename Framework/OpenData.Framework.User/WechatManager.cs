@@ -4,17 +4,17 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
-using OpenData.Site.Core.Wechat.Models;
+using OpenData.Framework.Core.Wechat.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.IO;
 using System.Drawing;
 using System.Security.Cryptography;
-using OpenData.Site.Entity;
+using OpenData.Framework.Entity;
 using OpenData.Caching;
 using Newtonsoft.Json;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
 
     public class WechatManager

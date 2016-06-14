@@ -7,7 +7,7 @@
 // 
 #endregion
 
-namespace OpenData.Site.WebResourceLoader
+namespace OpenData.Framework.WebResourceLoader
 {
     public enum Mode
     {

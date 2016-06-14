@@ -17,7 +17,7 @@ using System.Web.Profile;
 using System.Collections;
 using System.Security.Principal;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class HttpContextBaseWrapper : HttpContextBase
     {

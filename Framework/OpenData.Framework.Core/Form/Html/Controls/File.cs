@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Site.Form.Html.Controls
+namespace OpenData.Framework.Form.Html.Controls
 {
     public class File : Input
     {
@@ -33,7 +33,7 @@ namespace OpenData.Site.Form.Html.Controls
         }
         protected override string RenderInput(IColumn column)
         {
-            return string.Format(@"<input id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ?? """")""  data-value=""@(Entity.{0} ?? """")"" class='filestyle' {2}/>", column.Name, Type, OpenData.Site.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
+            return string.Format(@"<input id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ?? """")""  data-value=""@(Entity.{0} ?? """")"" class='filestyle' {2}/>", column.Name, Type, OpenData.Framework.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
         }
     }
 }

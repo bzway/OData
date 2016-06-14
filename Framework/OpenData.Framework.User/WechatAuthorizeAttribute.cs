@@ -2,10 +2,10 @@
 using System.Web.Mvc;
 using System.Web;
 using OpenData.Extensions;
-using OpenData.Site.Entity;
+using OpenData.Framework.Entity;
 using OpenData.Utility;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public class WechatAuthorizeAttribute : FilterAttribute, IAuthorizationFilter
     {

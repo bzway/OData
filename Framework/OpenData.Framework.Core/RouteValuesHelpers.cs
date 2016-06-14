@@ -14,7 +14,7 @@ using System.Web;
 using System.Web.Routing;
 using System.Collections.Specialized;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public static class RouteValuesHelpers
     {

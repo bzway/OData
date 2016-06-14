@@ -19,7 +19,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-namespace OpenData.Site.WebResourceLoader.Configuration
+namespace OpenData.Framework.WebResourceLoader.Configuration
 {
     [ConfigurationCollection(typeof(ReferenceElement))]
     public sealed class ReferenceCollection : ConfigurationElementCollection

@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Site.ViewEngine.Razor
+namespace OpenData.Framework.ViewEngine.Razor
 {
     public class BzwayRazorEngine : IBzwayViewEngine
     {

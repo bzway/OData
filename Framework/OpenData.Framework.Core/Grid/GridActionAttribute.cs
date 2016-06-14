@@ -13,7 +13,7 @@ using System.Text;
 using System.Web.Routing;
 using System.Web.Mvc;
 
-namespace OpenData.Site.Grid
+namespace OpenData.Framework.Grid
 {
     public interface IColumnVisibleArbiter
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public static class ServiceExtension
     {

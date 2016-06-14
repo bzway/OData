@@ -16,12 +16,12 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using OpenData.Site.WebResourceLoader.Configuration;
-using OpenData.Site;
+using OpenData.Framework.WebResourceLoader.Configuration;
+using OpenData.Framework;
 using OpenData.Common;
 
 
-namespace OpenData.Site.WebResourceLoader
+namespace OpenData.Framework.WebResourceLoader
 {
     internal delegate string ReferenceFomatter(string filename, string mimeType, string attributes);
 

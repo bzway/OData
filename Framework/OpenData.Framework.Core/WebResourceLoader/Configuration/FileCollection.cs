@@ -21,7 +21,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-namespace OpenData.Site.WebResourceLoader.Configuration
+namespace OpenData.Framework.WebResourceLoader.Configuration
 {
     [ConfigurationCollection(typeof(FileInfoElement)), AspNetHostingPermission(SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]
     public sealed class FileCollection : ConfigurationElementCollection

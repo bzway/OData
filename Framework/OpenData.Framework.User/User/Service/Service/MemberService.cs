@@ -1,4 +1,4 @@
-﻿using OpenData.Site.Entity;
+﻿using OpenData.Framework.Entity;
 using OpenData.Data;
 using OpenData.Utility;
 using System;
@@ -6,10 +6,10 @@ using System.Data;
 using System.Text;
 
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
 
-    public class MemberService : OpenData.Site.Core.IMemberService
+    public class MemberService : OpenData.Framework.Core.IMemberService
     {
         #region ctor
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -176,7 +176,7 @@ namespace OpenData.Site.Core
         //    return model;
         //}
 
-        public void Import(DataSet ds, Entity.Site site)
+        public void Import(DataSet ds, Site site)
         {
             foreach (DataTable dt in ds.Tables)
             {
@@ -209,7 +209,7 @@ namespace OpenData.Site.Core
             }
         }
 
-        private string Check(DataTable dt, Entity.Site site)
+        private string Check(DataTable dt, Site site)
         {
             var errorMessage = new StringBuilder();
             //判断用户数据是否要求

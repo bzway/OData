@@ -1,10 +1,10 @@
-﻿using OpenData.Site;
+﻿using OpenData.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Site.Form.Html
+namespace OpenData.Framework.Form.Html
 {
     public class SelectableForm : ISchemaForm
     {

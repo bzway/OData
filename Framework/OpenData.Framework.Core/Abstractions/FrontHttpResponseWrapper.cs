@@ -13,7 +13,7 @@ using System.Text;
 using System.Web;
 using System.IO; 
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class FrontHttpResponseWrapper : System.Web.HttpResponseWrapper
     {

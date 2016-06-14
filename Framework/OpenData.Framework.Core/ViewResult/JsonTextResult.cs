@@ -14,7 +14,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class JsonTextResult : ContentResult
     {

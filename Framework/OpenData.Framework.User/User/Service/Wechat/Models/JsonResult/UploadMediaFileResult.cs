@@ -1,4 +1,4 @@
-﻿namespace OpenData.Site.Core.Wechat.Models
+﻿namespace OpenData.Framework.Core.Wechat.Models
 {
     /// <summary>
     /// 上传媒体文件返回结果

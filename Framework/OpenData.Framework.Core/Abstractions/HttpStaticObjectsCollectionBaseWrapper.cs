@@ -14,7 +14,7 @@ using System.Web;
 using System.Collections;
 using System.IO;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     class HttpStaticObjectsCollectionBaseWrapper : HttpStaticObjectsCollectionBase
     {

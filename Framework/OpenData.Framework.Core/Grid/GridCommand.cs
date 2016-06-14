@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Routing;
 
-namespace OpenData.Site.Grid
+namespace OpenData.Framework.Grid
 {
     public class GridCommand
     {

@@ -1,7 +1,7 @@
-﻿using OpenData.Site.Entity;
+﻿using OpenData.Framework.Entity;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenData.Site.FrontPage.Models
+namespace OpenData.Framework.WebApp.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

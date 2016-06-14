@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 
-namespace OpenData.Site.Menu.Configuration
+namespace OpenData.Framework.Menu.Configuration
 {
     public class RouteValuesElement : ConfigurationElement
     {

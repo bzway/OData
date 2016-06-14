@@ -4,7 +4,7 @@ using OpenData.Caching;
 using System.Web;
 using System.Threading;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public class BzwayController : Controller
     {

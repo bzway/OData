@@ -17,7 +17,7 @@ using System.Web.Compilation;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
  
    //extension methods for the controller to allow jsonp.

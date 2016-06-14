@@ -1,7 +1,7 @@
 ﻿using OpenData.Data;
 using System;
 
-namespace OpenData.Site.Entity
+namespace OpenData.Framework.Entity
 {
     public class User : BaseEntity
     {

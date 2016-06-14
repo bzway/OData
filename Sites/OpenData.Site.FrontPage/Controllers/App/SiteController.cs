@@ -1,14 +1,14 @@
-﻿using OpenData.Site.Entity;
-using OpenData.Site.Core;
+﻿using OpenData.Framework.Entity;
+using OpenData.Framework.Core;
 using OpenData.Data;
 using System.Net;
 using System.Web.Mvc;
 using System.Collections.Generic;
 using OpenData.Common;
 using OpenData.Globalization;
-using OpenData.Site.FrontPage.Models;
+using OpenData.Framework.WebApp.Models;
 
-namespace OpenData.Site.FrontPage.Controllers.App
+namespace OpenData.Framework.WebApp.Controllers.App
 {
     public class SiteController : BaseController
     {
@@ -21,12 +21,12 @@ namespace OpenData.Site.FrontPage.Controllers.App
             pageIndex = pageIndex ?? 1;
             pageSize = pageSize ?? 10;
 
-            var list = new List<Entity.Site>();
+            var list = new List<Site>();
             foreach (var item in this.siteService.FindSiteByUserID(this.UserManager.GetCurrentUser().ID))
             {
                 list.Add(item);
             }
-            var model = new PagedList<Entity.Site>(list, pageIndex.Value, pageSize.Value);
+            var model = new PagedList<Site>(list, pageIndex.Value, pageSize.Value);
             return View(model);
         }
 
@@ -41,7 +41,7 @@ namespace OpenData.Site.FrontPage.Controllers.App
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Entity.Site model)
+        public ActionResult Edit(Site model)
         {
             if (!ModelState.IsValid)
             {

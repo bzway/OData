@@ -14,7 +14,7 @@ using System.Web.Mvc;
 using System.Web;
 using OpenData.Reflection;
 using System.Web.Routing;
-namespace OpenData.Site.Grid
+namespace OpenData.Framework.Grid
 {
     public class GridItemValue
     {

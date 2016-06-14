@@ -14,7 +14,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace OpenData.Site.Html
+namespace OpenData.Framework.Html
 {
     public static class RadioButtonListExtensions
     {

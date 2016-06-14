@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Site.Grid
+namespace OpenData.Framework.Grid
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class GridCommandAttribute : Attribute

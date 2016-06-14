@@ -14,7 +14,7 @@ using System.Web.Routing;
 using System.Web; 
 using System.Web.Mvc;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class FrontUrlRoutingModule : UrlRoutingModule
     {

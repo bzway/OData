@@ -7,14 +7,14 @@
 // 
 #endregion
 using OpenData.Common;
-using OpenData.Site;
+using OpenData.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace OpenData.Site.Html
+namespace OpenData.Framework.Html
 {
     public static class HtmlUtility
     {

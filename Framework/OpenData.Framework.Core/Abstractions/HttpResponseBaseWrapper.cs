@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Collections.Specialized;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class HttpResponseBaseWrapper : HttpResponseBase
     {

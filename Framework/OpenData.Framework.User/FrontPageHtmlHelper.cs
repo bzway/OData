@@ -1,9 +1,9 @@
-﻿using OpenData.Site.Entity;
+﻿using OpenData.Framework.Entity;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public static class FrontPageHtmlHelper
     {

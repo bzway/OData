@@ -1,6 +1,6 @@
 ﻿using System.Web.Routing;
 
-namespace OpenData.Site.Routes
+namespace OpenData.Framework.Routes
 {
     /// <summary>
     /// Route publisher

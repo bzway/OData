@@ -6,7 +6,7 @@ using System.Web;
 using System.Threading;
 using System.Web.Mvc;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public class FrontHttpRequestWrapper : System.Web.HttpRequestWrapper
     {

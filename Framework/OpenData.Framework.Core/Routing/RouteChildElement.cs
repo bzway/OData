@@ -23,7 +23,7 @@ using System;
 using System.Configuration;
 using System.Collections.Generic;
 
-namespace OpenData.Site.Routing
+namespace OpenData.Framework.Routing
 {
 
     public class RouteChildElement : ConfigurationElement

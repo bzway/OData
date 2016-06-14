@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public static class ExcelControllerExtensions
     {

@@ -1,10 +1,10 @@
-﻿using OpenData.Site.Entity;
+﻿using OpenData.Framework.Entity;
 using OpenData.Data;
 using OpenData.Utility;
 using System;
 using System.Collections.Generic;
 
-namespace OpenData.Site.Core
+namespace OpenData.Framework.Core
 {
     public class UserService : IUserService
     {

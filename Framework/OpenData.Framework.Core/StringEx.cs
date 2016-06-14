@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     public static class StringEx
     {

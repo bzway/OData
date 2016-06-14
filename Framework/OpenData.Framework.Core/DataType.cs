@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenData.Site
+namespace OpenData.Framework
 {
     /// <summary>
     /// Use in cms.
