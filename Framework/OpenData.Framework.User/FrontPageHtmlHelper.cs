@@ -1,4 +1,5 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Data.Core;
+using OpenData.Framework.Entity;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
@@ -27,10 +28,10 @@ namespace OpenData.Framework.Core
             using (var db = siteManager.GetSiteDataBase())
             {
                 StringBuilder sb = new StringBuilder();
-                foreach (var block in db.Entity<PageBlock>().Query().Where(m => m.Name, blockName, Data.CompareType.Equal)
-                    .Where(m => m.PageId, helper.FrontPage().Id, Data.CompareType.Equal).OrderBy(m => m.OrderBy).ToList())
+                foreach (var block in db.Entity<PageBlock>().Query().Where(m => m.Name, blockName, CompareType.Equal)
+                    .Where(m => m.PageId, helper.FrontPage().Id, CompareType.Equal).OrderBy(m => m.OrderBy).ToList())
                 {
-                    var item = db.Entity<PageView>().Query().Where(m => m.Id, block.ViewId, Data.CompareType.Equal).First();
+                    var item = db.Entity<PageView>().Query().Where(m => m.Id, block.ViewId, CompareType.Equal).First();
                     if (item == null)
                     {
                         continue;
@@ -46,7 +47,7 @@ namespace OpenData.Framework.Core
                         case BlockType.DeleteView:
                         case BlockType.UpdateView:
                             var id = helper.ViewContext.HttpContext.Request.QueryString["id"];
-                            var model = db.DynamicEntity(db[item.EntityName]).Query().Where("Id", id, Data.CompareType.Equal).First();
+                            var model = db.DynamicEntity(db[item.EntityName]).Query().Where("Id", id, CompareType.Equal).First();
                             sb.Append(helper.Partial(item.Path, model));
                             break;
                         case BlockType.QueryView:
