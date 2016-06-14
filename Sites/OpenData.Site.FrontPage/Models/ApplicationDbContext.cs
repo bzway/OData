@@ -1,8 +1,8 @@
-﻿using OpenData.Data;
+﻿using OpenData.Data.Core;
 using System;
 using System.Data.Entity;
 
-namespace OpenData.Framework.WebApp.Models
+namespace OpenData.Site.FrontPage.Models
 {
 
     public class ApplicationDbContext : DbContext

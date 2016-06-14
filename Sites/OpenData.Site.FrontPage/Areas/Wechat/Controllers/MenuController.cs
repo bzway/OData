@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using OpenData.Framework.Entity;
-using OpenData.Data;
-using OpenData.Framework.Core;
+using OpenData.Site.Entity;
+using OpenData.Data.Core;
+using OpenData.Site.Core;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class MenuController : BaseWechatManageController
     {

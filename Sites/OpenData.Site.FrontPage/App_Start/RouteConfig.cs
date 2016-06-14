@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Framework.WebApp
+namespace OpenData.Site.FrontPage
 {
     public class RouteConfig
     {

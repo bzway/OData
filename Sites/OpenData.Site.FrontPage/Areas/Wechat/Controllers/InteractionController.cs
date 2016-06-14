@@ -1,8 +1,9 @@
 ﻿using System.Net;
 using System.Web.Mvc;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
+using OpenData.Data.Core;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class InteractionController : BaseWechatManageController
     {
@@ -20,7 +21,7 @@ namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (wechatUserInteraction == null)
             {
                 return HttpNotFound();
@@ -57,7 +58,7 @@ namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (wechatUserInteraction == null)
             {
                 return HttpNotFound();
@@ -87,7 +88,7 @@ namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            WechatUserInteraction wechatUserInteraction = db.Entity<WechatUserInteraction>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (wechatUserInteraction == null)
             {
                 return HttpNotFound();

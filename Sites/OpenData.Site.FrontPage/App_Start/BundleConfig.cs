@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace OpenData.Framework.WebApp
+namespace OpenData.Site.FrontPage
 {
     public class BundleConfig
     {

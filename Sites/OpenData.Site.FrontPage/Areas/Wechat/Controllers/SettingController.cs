@@ -1,12 +1,12 @@
-﻿using OpenData.Framework.Entity;
-using OpenData.Framework.Core;
-using OpenData.Data;
+﻿using OpenData.Site.Entity;
+using OpenData.Site.Core;
+using OpenData.Data.Core;
 using System;
 using System.Net;
 using System.Web.Mvc;
 using OpenData.Globalization;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class SettingController : BaseWechatManageController
     {

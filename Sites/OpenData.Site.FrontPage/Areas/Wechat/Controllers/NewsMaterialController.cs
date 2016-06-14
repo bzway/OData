@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Web.Mvc;
-using OpenData.Framework.Entity;
-using OpenData.Data;
+using OpenData.Site.Entity;
+using OpenData.Data.Core;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class NewsMaterialController : BaseWechatManageController
     {

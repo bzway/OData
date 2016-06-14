@@ -1,8 +1,8 @@
-﻿using OpenData.Framework.Core;
-using OpenData.Framework.WebApp.Controllers;
-using OpenData.Data;
+﻿using OpenData.Site.Core;
+using OpenData.Site.FrontPage.Controllers;
+using OpenData.Data.Core;
 
-namespace OpenData.Framework.WebApp.Areas.Users.Controllers
+namespace OpenData.Site.FrontPage.Areas.Users.Controllers
 {
     public class BaseUserController : BaseController
     {

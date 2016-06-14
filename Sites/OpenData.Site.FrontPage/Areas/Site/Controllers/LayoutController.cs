@@ -1,8 +1,9 @@
 ﻿using System.Net;
 using System.Web.Mvc;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
+using OpenData.Data.Core;
 
-namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
+namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
 {
     public class LayoutController : BaseSiteController
     {
@@ -21,7 +22,7 @@ namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (siteLayout == null)
             {
                 return HttpNotFound();
@@ -58,7 +59,7 @@ namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (siteLayout == null)
             {
                 return HttpNotFound();
@@ -88,7 +89,7 @@ namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, Data.CompareType.Equal).First();
+            SiteLayout siteLayout = db.Entity<SiteLayout>().Query().Where(m => m.Id, id, CompareType.Equal).First();
             if (siteLayout == null)
             {
                 return HttpNotFound();
@@ -105,6 +106,6 @@ namespace OpenData.Framework.WebApp.Areas.Sites.Controllers
             return RedirectToAction("Index");
         }
 
-     
+
     }
 }

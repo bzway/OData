@@ -1,15 +1,15 @@
-﻿using OpenData.Framework.Entity;
-using OpenData.Framework.Core;
+﻿using OpenData.Site.Entity;
+using OpenData.Site.Core;
 using OpenData.Caching;
-using OpenData.Data;
+using OpenData.Data.Core;
 using OpenData.Utility;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using OpenData.Framework.WebApp.Models;
+using OpenData.Site.FrontPage.Models;
 
-namespace OpenData.Framework.WebApp.Areas.Users.Controllers
+namespace OpenData.Site.FrontPage.Areas.Users.Controllers
 {
     public class AuthorizeController : BaseUserController
     {
@@ -226,7 +226,7 @@ namespace OpenData.Framework.WebApp.Areas.Users.Controllers
         {
             using (var db = OpenDatabase.GetDatabase())
             {
-                var site = db.Entity<Site>().Query()
+                var site = db.Entity<Entity.Site>().Query()
                     .Where(m => m.Id, appid, CompareType.Equal)
                     .Where(m => m.AppSecret, appsecret, CompareType.Equal).First();
                 if (site == null)

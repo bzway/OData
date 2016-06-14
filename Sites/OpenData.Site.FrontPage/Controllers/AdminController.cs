@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OpenData.Framework.WebApp.Controllers
+namespace OpenData.Site.FrontPage.Controllers
 {
     [Authorize]
     public class AdminController : BaseController
