@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Xml;
+using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Sites.FrontPage.Controllers
 {

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.IO;
 using OpenData.Data.Core;
+using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {

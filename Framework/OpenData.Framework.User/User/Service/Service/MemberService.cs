@@ -4,7 +4,6 @@ using OpenData.Utility;
 using System;
 using System.Data;
 using System.Text;
-using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Framework.Core
 {

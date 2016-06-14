@@ -13,7 +13,6 @@ using System.Security.Cryptography;
 using OpenData.Framework.Core.Entity;
 using OpenData.Caching;
 using Newtonsoft.Json;
-using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Framework.Core
 {

@@ -7,6 +7,7 @@ using OpenData.Sites.FrontPage.Models;
 using OpenData.Data.Core;
 using OpenData.Utility;
 using OpenData.Globalization;
+using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Sites.FrontPage.Controllers.App
 {

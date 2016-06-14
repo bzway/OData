@@ -3,6 +3,7 @@ using System.Net;
 using System.Web.Mvc;
 using OpenData.Data.Core;
 using OpenData.Framework.Core;
+using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
 {

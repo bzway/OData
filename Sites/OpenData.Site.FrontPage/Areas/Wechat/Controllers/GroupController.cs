@@ -1,4 +1,5 @@
 ﻿using OpenData.Data.Core;
+using OpenData.Framework.Core.Entity;
 using System;
 using System.Net;
 using System.Web.Mvc;

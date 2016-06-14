@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using OpenData.Framework.Core.Entity;
-using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Framework.Core
 {

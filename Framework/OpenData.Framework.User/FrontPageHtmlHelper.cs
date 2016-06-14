@@ -1,6 +1,5 @@
 ﻿using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
-using OpenData.Framework.Core.Entity;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;

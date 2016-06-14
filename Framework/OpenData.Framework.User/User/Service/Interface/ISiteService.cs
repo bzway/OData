@@ -1,5 +1,4 @@
 ﻿using OpenData.Framework.Core.Entity;
-using OpenData.Framework.Core.Entity;
 using System.Collections.Generic;
 namespace OpenData.Framework.Core
 {

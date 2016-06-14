@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using OpenData.Framework.Core.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace OpenData.Sites.FrontPage.Models
 {

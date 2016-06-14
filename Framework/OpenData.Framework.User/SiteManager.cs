@@ -1,7 +1,6 @@
 
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
-using OpenData.Framework.Core.Entity;
 using System.Web;
 
 namespace OpenData.Framework.Core
