@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using OpenData.Framework.Form.Html.Controls;
+using OpenData.Site.Form.Html.Controls;
 using System.IO;
 using System.CodeDom.Compiler;
 using System.Web;
-using OpenData.Framework;
+using OpenData.Site;
 using System.Web.Mvc;
 using OpenData.Common;
 
-namespace OpenData.Framework.Form.Html
+namespace OpenData.Site.Form.Html
 {
     public static class FormHelper
     {

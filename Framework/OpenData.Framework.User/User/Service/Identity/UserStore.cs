@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNet.Identity;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     /// <summary>
     /// Class that implements the key ASP.NET Identity user store iterfaces

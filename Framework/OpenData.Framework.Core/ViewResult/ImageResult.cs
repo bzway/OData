@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class ImageResult : ActionResult
     {

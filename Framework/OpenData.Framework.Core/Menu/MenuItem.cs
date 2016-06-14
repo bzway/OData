@@ -14,7 +14,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Collections.Specialized;
 
-namespace OpenData.Framework.Menu
+namespace OpenData.Site.Menu
 {
     public class MenuItem
     {

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class BzwayAPIController : ApiController
     {

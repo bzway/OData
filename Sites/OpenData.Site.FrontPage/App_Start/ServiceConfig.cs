@@ -1,9 +1,9 @@
 ﻿using OpenData.AppEngine.Dependency;
 using OpenData.Caching;
 using OpenData.Message;
-using OpenData.Framework.Core;
+using OpenData.Site.Core;
 
-namespace OpenData.Framework.WebApp
+namespace OpenData.Site.FrontPage
 {
     public class ServiceConfig : IDependencyRegistrar
     {

@@ -24,7 +24,7 @@ using System.Configuration;
 using System.Collections;
 
 
-namespace OpenData.Framework.Routing
+namespace OpenData.Site.Routing
 {
 
     [ConfigurationCollection(typeof(RouteConfigElement))]

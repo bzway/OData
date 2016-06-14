@@ -1,5 +1,5 @@
 ﻿using Microsoft.Owin;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
 using OpenData.Globalization;
 using OpenData.Message;
 using OpenData.Utility;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class UserIdentity
     {

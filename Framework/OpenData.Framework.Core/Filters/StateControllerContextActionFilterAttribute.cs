@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class StateControllerContextActionFilterAttribute : System.Web.Mvc.ActionFilterAttribute
     {

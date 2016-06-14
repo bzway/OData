@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace OpenData.Framework.Html
+namespace OpenData.Site.Html
 {
     public class HtmlReader
     {

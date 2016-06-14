@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace OpenData.Framework.Form.Html
+namespace OpenData.Site.Form.Html
 {
     public class UpdateForm : ISchemaForm
     {

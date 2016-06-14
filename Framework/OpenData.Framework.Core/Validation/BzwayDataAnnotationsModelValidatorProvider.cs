@@ -15,7 +15,7 @@ using System.ComponentModel.DataAnnotations;
 using OpenData.ComponentModel;
 using OpenData.Globalization;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class BzwayDataAnnotationsModelValidatorProvider : System.Web.Mvc.DataAnnotationsModelValidatorProvider
     {

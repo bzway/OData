@@ -15,7 +15,7 @@ using System.Collections;
 using System.Runtime.Serialization;
 using System.Collections.Specialized;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class HttpFileCollectionBaseWrapper : HttpFileCollectionBase
     {

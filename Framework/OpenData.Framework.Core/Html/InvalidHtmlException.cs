@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Html
+namespace OpenData.Site.Html
 {
     [Serializable]
     public class InvalidHtmlException : Exception

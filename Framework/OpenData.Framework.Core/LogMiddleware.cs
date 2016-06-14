@@ -7,7 +7,7 @@ using System.Web;
 
 
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
     public class LogOwinMiddleware : OwinMiddleware

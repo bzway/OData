@@ -15,7 +15,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Web.SessionState;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class HttpSessionStateBaseWrapper : HttpSessionStateBase
     {

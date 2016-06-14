@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.Html
+namespace OpenData.Site.Html
 {
     public static class ValidatorExtensions
     {

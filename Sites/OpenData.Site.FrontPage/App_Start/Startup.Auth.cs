@@ -1,7 +1,7 @@
 ﻿using Owin;
 using Microsoft.Owin.Security.WeChat;
 
-namespace OpenData.Framework.WebApp
+namespace OpenData.Site.FrontPage
 {
     public partial class Startup
     {

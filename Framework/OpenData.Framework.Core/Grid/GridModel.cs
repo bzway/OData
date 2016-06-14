@@ -14,7 +14,7 @@ using System.Web.Mvc;
 using System.Collections;
 using System.Web.Routing;
 
-namespace OpenData.Framework.Grid
+namespace OpenData.Site.Grid
 {
     public class GridModel
     {

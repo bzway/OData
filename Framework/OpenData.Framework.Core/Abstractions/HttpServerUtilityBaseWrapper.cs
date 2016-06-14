@@ -14,7 +14,7 @@ using System.Web;
 using System.IO;
 using System.Collections.Specialized;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class HttpServerUtilityBaseWrapper : HttpServerUtilityBase
     {

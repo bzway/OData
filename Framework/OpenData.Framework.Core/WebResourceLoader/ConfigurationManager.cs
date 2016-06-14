@@ -10,9 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using OpenData.Framework.WebResourceLoader.Configuration;
+using OpenData.Site.WebResourceLoader.Configuration;
 
-namespace OpenData.Framework.WebResourceLoader
+namespace OpenData.Site.WebResourceLoader
 {
     public static class ConfigurationManager
     {

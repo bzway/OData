@@ -1,7 +1,7 @@
 ﻿
 using OpenData.Data;
 
-namespace OpenData.Framework.Entity
+namespace OpenData.Site.Entity
 {
 
     public class WechatMenu : BaseEntity

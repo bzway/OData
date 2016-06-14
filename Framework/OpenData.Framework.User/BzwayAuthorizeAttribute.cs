@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using System.Net;
 using System.Linq;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class BzwayAuthorizeAttribute : FilterAttribute, IAuthorizationFilter
     {

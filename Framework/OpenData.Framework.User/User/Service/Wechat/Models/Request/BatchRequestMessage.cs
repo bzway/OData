@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenData.Framework.Core.Wechat.Models
+namespace OpenData.Site.Core.Wechat.Models
 {
     public class BatchRequestMessage
     {

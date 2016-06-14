@@ -12,9 +12,9 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Web.Mvc;
-using OpenData.Framework.ViewEngine.Razor;
+using OpenData.Site.ViewEngine.Razor;
 
-namespace OpenData.Framework.ViewEngine
+namespace OpenData.Site.ViewEngine
 {
     public interface IBzwayViewEngine
     {

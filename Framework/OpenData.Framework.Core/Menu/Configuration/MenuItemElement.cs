@@ -14,7 +14,7 @@ using System.Configuration;
 using System.Collections.Specialized;
 using OpenData.Collections;
 
-namespace OpenData.Framework.Menu.Configuration
+namespace OpenData.Site.Menu.Configuration
 {
     public class MenuItemElement : ConfigurationElement
     {

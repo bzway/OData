@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     /// <summary>
     /// 

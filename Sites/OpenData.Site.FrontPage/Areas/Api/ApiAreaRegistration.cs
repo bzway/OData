@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OpenData.Framework.WebApp.Areas.Api
+namespace OpenData.Site.FrontPage.Areas.Api
 {
     public class ApiAreaRegistration : AreaRegistration
     {

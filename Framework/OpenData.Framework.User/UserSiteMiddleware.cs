@@ -2,12 +2,12 @@
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class UserSiteMiddleware
     {

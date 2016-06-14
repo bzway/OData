@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.WebResourceLoader
+namespace OpenData.Site.WebResourceLoader
 {
     public class WebResourceException : Exception
     {

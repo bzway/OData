@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Menu
+namespace OpenData.Site.Menu
 {
     public interface IMenuItems : IEnumerable<MenuItem>
     {        

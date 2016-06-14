@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Framework.Form.Html.Controls
+namespace OpenData.Site.Form.Html.Controls
 {
     public class InputNumber : ControlBase
     {
@@ -28,7 +28,7 @@ namespace OpenData.Framework.Form.Html.Controls
         protected override string RenderInput(IColumn column)
         {
             
-            return string.Format(@"<input id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ?? """")"" {2} value-type=""{3}""/>", column.Name, Name, OpenData.Framework.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column),"float");
+            return string.Format(@"<input id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ?? """")"" {2} value-type=""{3}""/>", column.Name, Name, OpenData.Site.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column),"float");
         }
 
 

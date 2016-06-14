@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace OpenData.Framework.Core.Wechat.Models
+namespace OpenData.Site.Core.Wechat.Models
 {
     /// <summary>
     /// GetMenu返回的Json结果

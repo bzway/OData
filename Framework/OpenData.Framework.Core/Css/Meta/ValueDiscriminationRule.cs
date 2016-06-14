@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Css.Meta
+namespace OpenData.Site.Css.Meta
 {
     public class ValueDiscriminationRule : ShorthandRule
     {

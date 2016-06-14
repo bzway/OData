@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace OpenData.Framework.Form.Html
+namespace OpenData.Site.Form.Html
 {
     internal class DummyView : IView, IViewDataContainer
     {

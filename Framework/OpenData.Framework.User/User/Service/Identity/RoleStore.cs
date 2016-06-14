@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using OpenData.Framework.Entity;
-namespace OpenData.Framework.Core
+using OpenData.Site.Entity;
+namespace OpenData.Site.Core
 {
     /// <summary>
     /// Class that implements the key ASP.NET Identity role store iterfaces

@@ -1,13 +1,13 @@
-﻿using OpenData.Framework.Core;
+﻿using OpenData.Site.Core;
 using OpenData.Script;
-using OpenData.Framework.WebApp.Models;
+using OpenData.Site.FrontPage.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.WebApp.Controllers.Connect
+namespace OpenData.Site.FrontPage.Controllers.Connect
 {
     public class HomeController : BzwayController
     {

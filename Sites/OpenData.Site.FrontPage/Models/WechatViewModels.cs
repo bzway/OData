@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OpenData.Framework.WebApp.Models
+namespace OpenData.Site.FrontPage.Models
 {
     public class FakeViewModel
     {

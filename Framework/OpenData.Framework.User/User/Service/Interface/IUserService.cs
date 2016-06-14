@@ -1,6 +1,6 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Site.Entity;
 using System.Collections.Generic;
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public interface IUserService
     {

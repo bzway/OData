@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace OpenData.Framework.Form.Html.Controls
+namespace OpenData.Site.Form.Html.Controls
 {
     public class Date : Input
     {
@@ -27,7 +27,7 @@ namespace OpenData.Framework.Form.Html.Controls
 
         protected override string RenderInput(IColumn column)
         {
-            string input = string.Format(@"<input class=""long"" id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ==null ? """" : Entity.{0}.ToLocalTime().ToShortDateString())"" {2}/>", column.Name, Type, OpenData.Framework.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
+            string input = string.Format(@"<input class=""long"" id=""{0}"" name=""{0}"" type=""{1}"" value=""@(Entity.{0} ==null ? """" : Entity.{0}.ToLocalTime().ToShortDateString())"" {2}/>", column.Name, Type, OpenData.Site.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
             return input + string.Format(@"<script language=""javascript"" type=""text/javascript"">$(function(){{$(""#{0}"").datepicker();}});</script>", column.Name);
         }
     }

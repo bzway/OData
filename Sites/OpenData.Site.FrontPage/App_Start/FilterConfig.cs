@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OpenData.Framework.WebApp
+namespace OpenData.Site.FrontPage
 {
     public class FilterConfig
     {

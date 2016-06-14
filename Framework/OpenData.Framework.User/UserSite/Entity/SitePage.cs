@@ -1,7 +1,7 @@
 ﻿using OpenData.Data;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenData.Framework.Entity
+namespace OpenData.Site.Entity
 {
     public enum TargetType
     {

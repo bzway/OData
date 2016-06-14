@@ -1,4 +1,4 @@
-﻿namespace OpenData.Framework.Core.Wechat.Models
+﻿namespace OpenData.Site.Core.Wechat.Models
 {
     /// <summary>
     /// access_token请求后的JSON返回格式

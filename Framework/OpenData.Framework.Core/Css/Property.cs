@@ -12,9 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using OpenData.Framework.Css.Meta;
+using OpenData.Site.Css.Meta;
 
-namespace OpenData.Framework.Css
+namespace OpenData.Site.Css
 {
     public class Property
     {

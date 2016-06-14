@@ -1,9 +1,9 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Site.Entity;
 using System.ComponentModel.DataAnnotations;
 using System;
 using OpenData.Common;
 
-namespace OpenData.Framework.WebApp.Models
+namespace OpenData.Site.FrontPage.Models
 {
     public class MemberProfileViewModel
     {

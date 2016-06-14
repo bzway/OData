@@ -1,9 +1,9 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Site.Entity;
 using OpenData.Data;
 using System;
 using System.Data;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class CardService
     {

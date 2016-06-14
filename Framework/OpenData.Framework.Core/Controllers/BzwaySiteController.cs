@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using OpenData.Caching;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     public class BzwaySiteController : Controller
     {

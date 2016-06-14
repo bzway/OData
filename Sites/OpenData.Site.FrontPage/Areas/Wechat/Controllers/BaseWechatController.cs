@@ -1,7 +1,7 @@
 ﻿using OpenData.Data;
-using OpenData.Framework.WebApp.Controllers;
+using OpenData.Site.FrontPage.Controllers;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class BaseWechatManageController : BaseController
     {

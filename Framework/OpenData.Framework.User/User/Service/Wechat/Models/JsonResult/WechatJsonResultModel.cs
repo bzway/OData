@@ -1,4 +1,4 @@
-﻿namespace OpenData.Framework.Core.Wechat.Models
+﻿namespace OpenData.Site.Core.Wechat.Models
 {
     /// <summary>
     /// JSON返回结果

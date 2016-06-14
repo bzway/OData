@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using OpenData.Framework.Core.Wechat.Models;
+using OpenData.Site.Core.Wechat.Models;
 
-namespace OpenData.Framework.Core.Wechat
+namespace OpenData.Site.Core.Wechat
 {
     /// <summary>
     /// 获取菜单时候的完整结构，用于接收微信服务器返回的Json信息

@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Grid2.Design
+namespace OpenData.Site.Grid2.Design
 {
     public class GridAttribute : Attribute
     {

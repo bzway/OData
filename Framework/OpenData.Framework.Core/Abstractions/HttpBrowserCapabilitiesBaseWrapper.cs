@@ -15,7 +15,7 @@ using System.Web.UI;
 using System.IO;
 using System.Collections;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class HttpBrowserCapabilitiesBaseWrapper : HttpBrowserCapabilitiesBase
     {

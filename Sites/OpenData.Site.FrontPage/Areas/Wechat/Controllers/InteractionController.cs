@@ -1,8 +1,8 @@
 ﻿using System.Net;
 using System.Web.Mvc;
-using OpenData.Framework.Entity;
+using OpenData.Site.Entity;
 
-namespace OpenData.Framework.WebApp.Areas.Wechats.Controllers
+namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
 {
     public class InteractionController : BaseWechatManageController
     {

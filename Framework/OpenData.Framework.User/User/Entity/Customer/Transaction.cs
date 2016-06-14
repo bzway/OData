@@ -1,7 +1,7 @@
 using OpenData.Data;
 using System;
 
-namespace OpenData.Framework.Entity
+namespace OpenData.Site.Entity
 {
     public class Transaction : BaseEntity
     {

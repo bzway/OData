@@ -1,8 +1,8 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Site.Entity;
 using System;
 using System.Collections.Generic;
 
-namespace OpenData.Framework.Core.Wechat.Models
+namespace OpenData.Site.Core.Wechat.Models
 {
 
     public class WechatGetUserReadResultModel : WechatJsonResultModel

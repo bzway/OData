@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace OpenData.Framework.Form.Html.Controls
+namespace OpenData.Site.Form.Html.Controls
 {
     public class CLEditor : ControlBase
     {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Site.Core
 {
     internal class Menu
     {

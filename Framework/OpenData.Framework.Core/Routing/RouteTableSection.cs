@@ -26,7 +26,7 @@ using System.Configuration;
 using System.Collections;
 
 
-namespace OpenData.Framework.Routing
+namespace OpenData.Site.Routing
 {
     public class RouteTableSection : ConfigurationSection
     {

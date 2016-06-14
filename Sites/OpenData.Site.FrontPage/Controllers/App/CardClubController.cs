@@ -3,11 +3,11 @@ using System;
 using System.Web.Mvc;
 using OpenData.Globalization;
 using OpenData.Utility;
-using OpenData.Framework.WebApp.Models;
-using OpenData.Framework.Core;
-using OpenData.Framework.Entity;
+using OpenData.Site.FrontPage.Models;
+using OpenData.Site.Core;
+using OpenData.Site.Entity;
 
-namespace OpenData.Framework.WebApp.Controllers.App
+namespace OpenData.Site.FrontPage.Controllers.App
 {
     public class CardClubController : BzwayController
     {

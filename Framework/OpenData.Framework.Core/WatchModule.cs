@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Framework
+namespace OpenData.Site
 {
     public class WatchModule : IHttpModule
     {

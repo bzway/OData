@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Form.Html.Controls
+namespace OpenData.Site.Form.Html.Controls
 {
     public class TextArea : ControlBase
     {
@@ -22,7 +22,7 @@ namespace OpenData.Framework.Form.Html.Controls
 
         protected override string RenderInput(IColumn column)
         {
-            return string.Format(@"<textarea class=""extra-large"" name=""{0}"" {1}>@(Entity.{0} ?? """")</textarea> ", column.Name, OpenData.Framework.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
+            return string.Format(@"<textarea class=""extra-large"" name=""{0}"" {1}>@(Entity.{0} ?? """")</textarea> ", column.Name, OpenData.Site.Form.Html.ValidationExtensions.GetUnobtrusiveValidationAttributeString(column));
         }
     }
 }

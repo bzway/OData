@@ -1,7 +1,7 @@
 ﻿
 using Newtonsoft.Json;
 
-namespace OpenData.Framework.Core.Wechat.Models
+namespace OpenData.Site.Core.Wechat.Models
 {
     public class GroupBatchRequestMessage
     {
