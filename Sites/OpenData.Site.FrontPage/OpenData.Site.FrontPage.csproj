@@ -1470,9 +1470,9 @@
       <Project>{508b7ec2-dae8-4ef5-bd0f-13539b189367}</Project>
       <Name>OpenData.Data.SQL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Modules\Microsoft.Owin.Security.WeChat\Microsoft.Owin.Security.WeChat.csproj">
+    <ProjectReference Include="..\..\Modules\OpenData.Security.WeChat\OpenData.Security.WeChat.csproj">
       <Project>{5fe33a48-0bfa-40b7-a2d6-2999b9f00417}</Project>
-      <Name>Microsoft.Owin.Security.WeChat</Name>
+      <Name>OpenData.Security.WeChat</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Framework\OpenData.Framework.User\OpenData.Framework.Core.csproj">
       <Project>{f3281193-f250-4e79-840b-93b60b0992ee}</Project>

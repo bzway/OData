@@ -1,9 +1,10 @@
+using Microsoft.Owin;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.Security.Claims;
-namespace Microsoft.Owin.Security.WeChat
+namespace OpenData.Security.WeChat
 {
     public class WeChatAuthenticatedContext : BaseContext
     {

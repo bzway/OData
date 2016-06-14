@@ -30,6 +30,7 @@ namespace OpenData.Framework.Common
 #if TRACE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
+            context.HttpContext.Response.Write("ExecuteResult Start.</br>");
 #endif
             base.ExecuteResult(context);
 #if TRACE

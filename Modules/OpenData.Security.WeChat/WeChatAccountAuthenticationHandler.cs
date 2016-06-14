@@ -1,4 +1,6 @@
+using Microsoft.Owin;
 using Microsoft.Owin.Logging;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -8,7 +10,7 @@ using System.IO;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
-namespace Microsoft.Owin.Security.WeChat
+namespace OpenData.Security.WeChat
 {
 	internal class WeChatAccountAuthenticationHandler : AuthenticationHandler<WeChatAuthenticationOptions>
 	{

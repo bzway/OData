@@ -1,8 +1,7 @@
-using System;
 using System.Threading.Tasks;
-namespace Microsoft.Owin.Security.WeChat
+namespace OpenData.Security.WeChat
 {
-	public interface IWeChatAuthenticationProvider
+    public interface IWeChatAuthenticationProvider
 	{
 		Task Authenticated(WeChatAuthenticatedContext context);
 		Task ReturnEndpoint(WeChatReturnEndpointContext context);

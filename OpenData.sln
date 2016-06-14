@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Data.Default", "Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B8390689-26E6-46DE-9672-EAFADCD12B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Owin.Security.WeChat", "Modules\Microsoft.Owin.Security.WeChat\Microsoft.Owin.Security.WeChat.csproj", "{5FE33A48-0BFA-40B7-A2D6-2999B9F00417}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Security.WeChat", "Modules\OpenData.Security.WeChat\OpenData.Security.WeChat.csproj", "{5FE33A48-0BFA-40B7-A2D6-2999B9F00417}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sites", "Sites", "{E9CB29EC-FECB-4770-9113-8B4A8A0BC587}"
 EndProject
@@ -431,8 +431,8 @@ Global
 		{F3281193-F250-4E79-840B-93B60B0992EE} = {B8390689-26E6-46DE-9672-EAFADCD12B88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = KLS.vsmdi

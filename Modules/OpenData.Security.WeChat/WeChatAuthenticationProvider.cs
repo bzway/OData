@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-namespace Microsoft.Owin.Security.WeChat
+namespace OpenData.Security.WeChat
 {
 	public class WeChatAuthenticationProvider : IWeChatAuthenticationProvider
 	{

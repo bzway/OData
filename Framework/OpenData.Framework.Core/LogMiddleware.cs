@@ -66,6 +66,7 @@ namespace OpenData.Framework.Common
 #if TRACE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
+            context.Response.Write("FrontPageMiddleware Start");
 #endif
 
             //context.Response.Write("FrontPageMiddleware start.");
@@ -77,12 +78,13 @@ namespace OpenData.Framework.Common
             //    controller.Index();
             //    return;
             //}
+
             await Next.Invoke(context);
             //context.Response.Write("FrontPageMiddleware End.");
 #if TRACE
 
             stopwatch.Stop();
-            context.Response.Write(string.Format("ExecuteResult, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
+            context.Response.Write(string.Format("FrontPageMiddleware, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
 #endif
         }
 

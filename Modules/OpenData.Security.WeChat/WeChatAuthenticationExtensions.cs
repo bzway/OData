@@ -1,9 +1,9 @@
 using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.WeChat;
+using OpenData.Security.WeChat;
 using System;
 namespace Owin
 {
-	public static class WeChatAuthenticationExtensions
+    public static class WeChatAuthenticationExtensions
 	{
 		public static void UseWeChatAuthentication(this IAppBuilder app, WeChatAuthenticationOptions options)
 		{
