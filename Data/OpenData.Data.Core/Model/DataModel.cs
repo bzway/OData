@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenData.Data.Model
+namespace OpenData.Data.Core.Model
 { 
     public class DataModel
     {

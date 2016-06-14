@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public abstract class OpenDatabase : IDatabase
     {

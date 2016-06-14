@@ -8,7 +8,7 @@ using System.Text;
 using System.Xml.Serialization;
 
 
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public class Schema
     {

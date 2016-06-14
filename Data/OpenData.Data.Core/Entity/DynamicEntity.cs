@@ -6,7 +6,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public partial class DynamicEntity : DynamicObject
     {

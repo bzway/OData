@@ -1,5 +1,5 @@
-﻿using OpenData.Data.Query;
-using OpenData.Data.Query.OpenExpressions;
+﻿using OpenData.Data.Core.Query;
+using OpenData.Data.Core.Query.OpenExpressions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public interface IRepository<TSource>
     {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public interface IMapper
     {

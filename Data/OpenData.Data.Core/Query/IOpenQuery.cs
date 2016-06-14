@@ -1,9 +1,9 @@
 ﻿using OpenData.Common;
-using OpenData.Data.Query.OpenExpressions;
+using OpenData.Data.Core.Query.OpenExpressions;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-namespace OpenData.Data.Query
+namespace OpenData.Data.Core.Query
 {
     public interface IOpenQuery<T>
     {

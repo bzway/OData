@@ -1,9 +1,9 @@
-using OpenData.Data;
+using OpenData.Data.Core;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public class RelatedEntity : BaseEntity, IRelatedEntity
     {

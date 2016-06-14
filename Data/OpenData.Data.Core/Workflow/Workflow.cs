@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public partial class Workflow : DynamicEntity
     { 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public enum CompareType
     {

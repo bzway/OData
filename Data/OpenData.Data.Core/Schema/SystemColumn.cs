@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 
 
-namespace OpenData.Data
+namespace OpenData.Data.Core
 {
     public class SystemColumn
     {
