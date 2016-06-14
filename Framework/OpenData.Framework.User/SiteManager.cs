@@ -1,5 +1,5 @@
 
-using OpenData.Data;
+using OpenData.Data.Core;
 using OpenData.Framework.Entity;
 using System.Web;
 

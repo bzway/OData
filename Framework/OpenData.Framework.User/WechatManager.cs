@@ -1,4 +1,4 @@
-﻿using OpenData.Data;
+﻿using OpenData.Data.Core;
 using OpenData.Utility;
 using System;
 using System.Text;

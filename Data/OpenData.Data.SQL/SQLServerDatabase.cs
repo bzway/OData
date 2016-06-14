@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using OpenData.Data;
+using OpenData.Data.Core;
 using OpenData.Utility;
 using System.Data;
 using System.Reflection;

@@ -1,5 +1,5 @@
 ﻿
-using OpenData.Data;
+using OpenData.Data.Core;
 
 namespace OpenData.Framework.Entity
 {

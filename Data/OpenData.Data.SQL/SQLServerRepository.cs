@@ -1,5 +1,5 @@
 ﻿using OpenData.Common;
-using OpenData.Data;
+using OpenData.Data.Core;
 using OpenData.Data.Query;
 using OpenData.Data.Query.OpenExpressions;
 using OpenData.Utility;

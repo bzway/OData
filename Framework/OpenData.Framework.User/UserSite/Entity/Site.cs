@@ -1,4 +1,4 @@
-﻿using OpenData.Data;
+﻿using OpenData.Data.Core;
 using System.ComponentModel.DataAnnotations;
 
 namespace OpenData.Framework.Entity

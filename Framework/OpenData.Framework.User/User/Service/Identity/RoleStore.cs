@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
-using OpenData.Data;
+using OpenData.Data.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
