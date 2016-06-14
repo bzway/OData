@@ -227,8 +227,8 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             using (var db = OpenDatabase.GetDatabase())
             {
                 var site = db.Entity<Site>().Query()
-                    .Where(m => m.Id, (object)appid, (CompareType)CompareType.Equal)
-                    .Where(m => m.AppSecret, (object)appsecret, (CompareType)CompareType.Equal).First();
+                    .Where(m => m.Id, appid, CompareType.Equal)
+                    .Where(m => m.AppSecret, appsecret, CompareType.Equal).First();
                 if (site == null)
                 {
                     return Json(new
