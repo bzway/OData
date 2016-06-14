@@ -10,7 +10,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            var userId = this.UserManager.GetCurrentUser().ID;
+            var userId = this.User.GetCurrentUser().ID;
             var list = this.SiteService.FindSiteByUserID(userId);
             return View(list);
         }

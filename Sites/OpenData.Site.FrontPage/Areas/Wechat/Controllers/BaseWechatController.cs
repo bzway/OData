@@ -10,7 +10,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
         {
             get
             {
-                return this.SiteManager.GetSiteDataBase();
+                return this.Site.GetSiteDataBase();
             }
         }
 

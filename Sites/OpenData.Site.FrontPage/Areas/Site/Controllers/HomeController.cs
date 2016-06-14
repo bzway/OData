@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
@@ -11,7 +12,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
         {
             if (string.IsNullOrEmpty(id))
             {
-                var site = this.SiteService.FindSiteByUserID(this.UserManager.GetCurrentUser().ID).FirstOrDefault();
+                var site = this.SiteService.FindSiteByUserID(this.User.GetCurrentUser().ID).FirstOrDefault();
                 if (site == null)
                 {
                     return Redirect("/User");
@@ -20,9 +21,20 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             }
             this.CurrentSite = id;
 
-            return View(this.SiteManager.GetSite());
+            return View(this.Site.GetSite());
         }
 
+        public void Modules()
+        {
+            HttpApplication httpApps = ControllerContext.HttpContext.ApplicationInstance;
+            // 获取所有 http module
+            HttpModuleCollection httpModules = httpApps.Modules;
 
+            Response.Write(string.Format("一共有{0}个 HttpModule</br>", httpModules.Count.ToString()));
+            foreach (string activeModule in httpModules.AllKeys)
+            {
+                Response.Write(activeModule + "</br>");
+            }
+        }
     }
 }

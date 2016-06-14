@@ -119,7 +119,7 @@ namespace OpenData.Sites.FrontPage.Controllers
                     log.InfoFormat("parameter missed：id:{0},signature:{1},echostr:{2},timestamp:{3},nonce:{4}", id, signature, echostr, timestamp, nonce);
                     return Content("");
                 }
-                var db = this.SiteManager.GetSiteDataBase();
+                var db = this.Site.GetSiteDataBase();
                 if (db == null)
                 {
                     log.Info("database missed:" + this.HttpContext.GetOwinContext().Request.Host.Value);

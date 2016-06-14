@@ -163,7 +163,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             //var titleNode = doc.GetElementbyId("activity-name");
             //var textNode = doc.GetElementbyId("js_content");
             //return Content(textNode.InnerHtml);
-            var list = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query().ToList();
+            var list = this.Site.GetSiteDataBase().Entity<SitePage>().Query().ToList();
 
             return View(list);
         }
@@ -175,7 +175,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SitePage sitePage = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query()
+            SitePage sitePage = this.Site.GetSiteDataBase().Entity<SitePage>().Query()
                 .Where(mbox => mbox.Id, id, CompareType.Equal).First();
             if (sitePage == null)
             {
@@ -199,7 +199,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.SiteManager.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
+                this.Site.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
                 return RedirectToAction("Index");
             }
 
@@ -213,7 +213,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SitePage sitePage = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
+            SitePage sitePage = this.Site.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
             if (sitePage == null)
             {
                 return HttpNotFound();
@@ -230,7 +230,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.SiteManager.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
+                this.Site.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
                 return RedirectToAction("Index");
             }
             return View(sitePage);
@@ -243,7 +243,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            this.SiteManager.GetSiteDataBase().Entity<SitePage>().Delete(id);
+            this.Site.GetSiteDataBase().Entity<SitePage>().Delete(id);
             return RedirectToAction("Index");
         }
     }

@@ -10,7 +10,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
         [Authorize(Roles = "Site")]
         public ActionResult Index()
         {
-            var userId = this.UserManager.GetCurrentUser().ID;
+            var userId = this.User.GetCurrentUser().ID;
             var model = this.SiteService.FindSiteByUserID(userId);
             return View(model);
         }
@@ -32,7 +32,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
                 return View(model);
             }
 
-            this.SiteService.CreateOrUpdateSite(model, this.UserManager.GetCurrentUser().ID);
+            this.SiteService.CreateOrUpdateSite(model, this.User.GetCurrentUser().ID);
             return RedirectToAction("Index");
         }
 

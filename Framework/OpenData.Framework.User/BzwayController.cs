@@ -7,12 +7,13 @@ using System.Collections.Generic;
 
 namespace OpenData.Framework.Core
 {
+    [HandleError]
     public class BzwayController : Controller
     {
         static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         UserManager userManager;
 
-        public UserManager UserManager
+        public new UserManager User
         {
             get
             {
@@ -107,7 +108,7 @@ namespace OpenData.Framework.Core
         }
 
         SiteManager siteManager;
-        public SiteManager SiteManager
+        public SiteManager Site
         {
             get
             {

@@ -10,7 +10,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
         {
             get
             {
-                return this.SiteManager.GetSiteDataBase();
+                return this.Site.GetSiteDataBase();
             }
         }
         public string CurrentSite

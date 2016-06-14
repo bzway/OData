@@ -12,7 +12,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 
         public ActionResult Index()
         {
-            var list = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query().ToList();
+            var list = this.Site.GetSiteDataBase().Entity<SitePage>().Query().ToList();
             return View(list);
         }
         // GET: Site/Page/Details/5
@@ -22,7 +22,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SitePage sitePage = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
+            SitePage sitePage = this.Site.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
             if (sitePage == null)
             {
                 return HttpNotFound();
@@ -37,9 +37,9 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 EnableScript = false,
                 EnableTheming = false,
-                CreatedBy = this.UserManager.GetCurrentUser().ID,
+                CreatedBy = this.User.GetCurrentUser().ID,
                 CreatedOn = DateTime.UtcNow,
-                UpdatedBy = this.UserManager.GetCurrentUser().ID,
+                UpdatedBy = this.User.GetCurrentUser().ID,
                 UpdatedOn = DateTime.UtcNow,
                 AllowedRole = string.Empty,
                 Author = string.Empty,
@@ -78,7 +78,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             if (ModelState.IsValid)
             {
                 //sitePage.Content = HttpUtility.HtmlDecode(sitePage.Content);
-                this.SiteManager.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
+                this.Site.GetSiteDataBase().Entity<SitePage>().Insert(sitePage);
                 return RedirectToAction("Index");
             }
 
@@ -92,7 +92,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SitePage sitePage = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query()
+            SitePage sitePage = this.Site.GetSiteDataBase().Entity<SitePage>().Query()
                 .Where(mbox => mbox.Id, id, CompareType.Equal)
                 .First();
             if (sitePage == null)
@@ -114,7 +114,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 sitePage.Content = HttpUtility.HtmlDecode(sitePage.Content);
 
-                this.SiteManager.GetSiteDataBase().Entity<SitePage>().Update(sitePage);
+                this.Site.GetSiteDataBase().Entity<SitePage>().Update(sitePage);
                 return RedirectToAction("Index");
             }
             return View(sitePage);
@@ -127,7 +127,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SitePage sitePage = this.SiteManager.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
+            SitePage sitePage = this.Site.GetSiteDataBase().Entity<SitePage>().Query().Where(mbox => mbox.Id, id, CompareType.Equal).First();
             if (sitePage == null)
             {
                 return HttpNotFound();
@@ -140,7 +140,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            this.SiteManager.GetSiteDataBase().Entity<SitePage>().Delete(id);
+            this.Site.GetSiteDataBase().Entity<SitePage>().Delete(id);
             return RedirectToAction("Index");
         }
         [HttpPost]

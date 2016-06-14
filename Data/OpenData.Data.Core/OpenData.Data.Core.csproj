@@ -65,6 +65,7 @@
     <Compile Include="Interface\ITransaction.cs" />
     <Compile Include="Interface\ISchema.cs" />
     <Compile Include="Model\DataModel.cs" />
+    <Compile Include="Model\IDataModel.cs" />
     <Compile Include="OpenDatabase.cs">
       <SubType>Code</SubType>
     </Compile>

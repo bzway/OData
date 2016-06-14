@@ -44,13 +44,13 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             {
                 return View(model);
             }
-            var result = await this.UserManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe);
+            var result = await this.User.PasswordSignInAsync(model.Email, model.Password, model.RememberMe);
             switch (result)
             {
                 case LoginStatus.Success:
                     var code = Guid.NewGuid().ToString("N");
                     returnUrl = string.Format("{0}&code={1}", returnUrl, code);
-                    ApplicationEngine.Current.Resolve<ICacheManager>().Set(code, this.UserManager.GetCurrentUser().Token, 60 * 10);
+                    ApplicationEngine.Current.Resolve<ICacheManager>().Set(code, this.User.GetCurrentUser().Token, 60 * 10);
                     return Redirect(returnUrl);
                 case LoginStatus.LockedOut:
                     return View("Lockout");
@@ -72,14 +72,14 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
         public ActionResult SendEmailCode(string returnUrl, bool? rememberMe)
         {
             rememberMe = rememberMe ?? true;
-            this.UserManager.SendEDMValidationCodeAsync(null, returnUrl);
+            this.User.SendEDMValidationCodeAsync(null, returnUrl);
             return RedirectToAction("VerifyCode", new { ReturnUrl = returnUrl, RememberMe = rememberMe.Value, Provider = "email" });
         }
 
         public ActionResult SendPhoneCode(string returnUrl, bool? rememberMe)
         {
             rememberMe = rememberMe ?? true;
-            this.UserManager.SendSMSValidationCodeAsync(null, returnUrl);
+            this.User.SendSMSValidationCodeAsync(null, returnUrl);
             return RedirectToAction("VerifyCode", new { ReturnUrl = returnUrl, RememberMe = rememberMe.Value, Provider = "phone" });
         }
         public ActionResult VerifyCode(string returnUrl, string provider, bool rememberMe, string code)
@@ -113,7 +113,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             //        ModelState.AddModelError("", "Invalid code.");
             //        return View(model);
             //}
-            LoginStatus result = await this.UserManager.ValidateCodeAsync(model.Provider, model.Code, model.RememberMe);
+            LoginStatus result = await this.User.ValidateCodeAsync(model.Provider, model.Code, model.RememberMe);
             switch (result)
             {
                 case LoginStatus.Success:
@@ -144,7 +144,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff(string returnUrl)
         {
-            this.UserManager.RemoveAuthCookies();
+            this.User.RemoveAuthCookies();
             if (string.IsNullOrEmpty(returnUrl))
             {
                 return RedirectToAction("Index", "Home");
@@ -158,7 +158,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             {
                 returnUrl += "/User/";
             }
-            if (this.UserManager.GetCurrentUser() == null)
+            if (this.User.GetCurrentUser() == null)
             {
                 if (returnUrl.Contains("?"))
                 {
@@ -187,13 +187,13 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             var code = Guid.NewGuid().ToString("N");
 
             var accessToken = Guid.NewGuid().ToString("N");
-            var openID = Cryptor.EncryptMD5(this.UserManager.GetCurrentUser().ID + appid);
+            var openID = Cryptor.EncryptMD5(this.User.GetCurrentUser().ID + appid);
             var expiredTime = DateTime.UtcNow.AddHours(2);
             SiteManager siteManager = new SiteManager(appid);
             var db = siteManager.GetSiteDataBase();
             var siteAuth = db.Entity<SiteAuth>().Query()
                 .Where(m => m.AppID, appid, CompareType.Equal)
-                .Where(m => m.UserID, this.UserManager.GetCurrentUser().ID, CompareType.Equal)
+                .Where(m => m.UserID, this.User.GetCurrentUser().ID, CompareType.Equal)
                 .First();
             if (siteAuth != null)
             {
@@ -205,13 +205,13 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
                 Status = 0,
                 ExpiredTime = expiredTime,
                 CreatedOn = DateTime.UtcNow,
-                UpdatedBy = this.UserManager.GetCurrentUser().ID,
+                UpdatedBy = this.User.GetCurrentUser().ID,
                 UpdatedOn = DateTime.UtcNow,
                 AppID = appid,
-                CreatedBy = this.UserManager.GetCurrentUser().ID,
+                CreatedBy = this.User.GetCurrentUser().ID,
                 OpenID = openID,
                 Scope = scope,
-                UserID = this.UserManager.GetCurrentUser().ID,
+                UserID = this.User.GetCurrentUser().ID,
                 Id = code,
                 AccessToken = accessToken,
             };

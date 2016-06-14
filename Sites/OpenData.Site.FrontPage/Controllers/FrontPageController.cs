@@ -15,7 +15,7 @@ namespace OpenData.Sites.FrontPage.Controllers
         public ActionResult Index(string PageUrl)
         {
             //get webpage according to PageUrl which is a friendly name of the web page created by user.
-            var page = this.SiteManager.GetSitePage(PageUrl);
+            var page = this.Site.GetSitePage(PageUrl);
             if (page == null)
             {
                 return HttpNotFound();
@@ -23,8 +23,8 @@ namespace OpenData.Sites.FrontPage.Controllers
             //get page view according to file extension which can identify the view enginer.
             FrontViewResult view = new FrontViewResult(this.ControllerContext, page.FileExtension, page.VirtualPath, page.MasterVirtualPath);
             view.ViewBag.Page = page;
-            view.ViewBag.SiteManager = this.SiteManager;
-            view.ViewBag.UserManager = this.UserManager;
+            view.ViewBag.SiteManager = this.Site;
+            view.ViewBag.UserManager = this.User;
             return view;
         }
     }

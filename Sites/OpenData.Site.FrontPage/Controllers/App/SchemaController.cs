@@ -15,7 +15,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var list = db.ToList();
                 return View(list);
@@ -27,7 +27,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var schema = db[schemaName];
                 return View(schema.AllColumns.OrderBy(m => m.Name).ToList());
@@ -40,7 +40,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var model = db[schemaName].AllColumns.Where(m => m.Name == columnName).FirstOrDefault();
                 if (model == null)
@@ -68,7 +68,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return View(model);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 Schema schema = Schema.EntitySchema(model.Name, model.Name);
                 db.RefreshSchema(schema);
@@ -97,7 +97,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
         {
             if (ModelState.IsValid)
             {
-                using (var db = this.SiteManager.GetSiteDataBase())
+                using (var db = this.Site.GetSiteDataBase())
                 {
 
                     db[schemaName].AddColumn(column);
@@ -116,7 +116,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var model = db[schemaName].AllColumns.Where(m => m.Name == columnName).FirstOrDefault();
                 if (model == null)
@@ -138,7 +138,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return View(column);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 db[schemaName].AddColumn(column);
                 db.RefreshSchema(db[schemaName]);
@@ -153,7 +153,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var model = db[schemaName].AllColumns.Where(m => m.Name == columnName).FirstOrDefault();
                 if (model == null)
@@ -169,7 +169,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string siteName, string schemaName, string columnName)
         {
-            using (var db = this.SiteManager.GetSiteDataBase())
+            using (var db = this.Site.GetSiteDataBase())
             {
                 var column = db[schemaName].AllColumns.Where(m => m.Name == columnName).FirstOrDefault();
                 if (column != null)

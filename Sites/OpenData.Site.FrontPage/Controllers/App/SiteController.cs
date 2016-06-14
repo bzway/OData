@@ -22,7 +22,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             pageSize = pageSize ?? 10;
 
             var list = new List<Site>();
-            foreach (var item in this.siteService.FindSiteByUserID(this.UserManager.GetCurrentUser().ID))
+            foreach (var item in this.siteService.FindSiteByUserID(this.User.GetCurrentUser().ID))
             {
                 list.Add(item);
             }
@@ -48,7 +48,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
                 return View(model);
             }
 
-            this.siteService.CreateOrUpdateSite(model, this.UserManager.GetCurrentUser().ID);
+            this.siteService.CreateOrUpdateSite(model, this.User.GetCurrentUser().ID);
             return RedirectToAction("Index");
         }
 
