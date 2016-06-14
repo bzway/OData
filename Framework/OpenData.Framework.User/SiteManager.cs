@@ -21,7 +21,6 @@ namespace OpenData.Framework.Core
 
         public SiteManager(string siteID)
         {
-            Thread.CurrentThread.
             var site = this.siteService.FindSiteByID(siteID);
             if (site != null)
             {

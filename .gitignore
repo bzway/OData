@@ -36,3 +36,4 @@ project.lock.json
 /Tests/DataTest/obj
 /Sites/OpenData.Site.FrontPage/App_Data
 /Sites/OpenData.Site.FrontPage/*.user
+/Sites/OpenData.Site.FrontPage/log
