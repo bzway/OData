@@ -2,10 +2,10 @@
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using OpenData.Site.Entity;
 using OpenData.Data.Core;
+using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
     public class PageController : BaseSiteController
     {

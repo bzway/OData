@@ -1,5 +1,5 @@
 ﻿using OpenData.Data.Core;
-using OpenData.Framework.Entity;
+using OpenData.Framework.Core.Entity;
 namespace OpenData.Framework.Core
 {
     public interface IMemberService

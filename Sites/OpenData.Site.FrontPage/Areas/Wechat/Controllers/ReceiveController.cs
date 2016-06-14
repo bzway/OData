@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using OpenData.Site.Entity;
 using OpenData.Script;
-using OpenData.Site.FrontPage.Models;
-using OpenData.Site.Core.Wechat.Models;
-using OpenData.Site.FrontPage.Controllers;
+
 using HtmlAgilityPack;
 using System.Threading.Tasks;
+using OpenData.Sites.FrontPage.Controllers;
+using OpenData.Framework.Core.Wechat.Models;
+using OpenData.Sites.FrontPage.Models;
+using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Site.FrontPage.Areas.Wechats.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
 {
     public class ReceiveController : WechatBaseController
     {

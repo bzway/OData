@@ -1,7 +1,7 @@
 ﻿using OpenData.Globalization;
 
 
-namespace OpenData.Framework.Entity
+namespace OpenData.Framework.Core.Entity
 {
     public enum GenderType
     {

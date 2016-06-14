@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web;
 using OpenData.Extensions;
-using OpenData.Framework.Entity;
+using OpenData.Framework.Core.Entity;
 using OpenData.Utility;
 
 namespace OpenData.Framework.Core

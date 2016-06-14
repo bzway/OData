@@ -1,8 +1,8 @@
-﻿using OpenData.Site.Core;
-using OpenData.Site.FrontPage.Controllers;
+﻿using OpenData.Framework.Core;
+using OpenData.Sites.FrontPage.Controllers;
 using OpenData.Data.Core;
 
-namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
     public class BaseSiteController : BaseController
     {

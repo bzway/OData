@@ -1,9 +1,8 @@
 ﻿using System.Net;
 using System.Web.Mvc;
-using OpenData.Site.Entity;
 using OpenData.Data.Core;
 
-namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
     public class LayoutController : BaseSiteController
     {

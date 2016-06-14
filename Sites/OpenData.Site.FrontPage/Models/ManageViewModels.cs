@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 
-namespace OpenData.Site.FrontPage.Models
+namespace OpenData.Sites.FrontPage.Models
 {
 
 

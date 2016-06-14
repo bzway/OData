@@ -1,8 +1,8 @@
-﻿using System.Net;
+﻿using OpenData.Framework.Core.Entity;
+using System.Net;
 using System.Web.Mvc;
-using OpenData.Site.Entity;
 
-namespace OpenData.Site.FrontPage.Areas.Users.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
     public class SiteController : BaseUserController
     {
@@ -25,7 +25,7 @@ namespace OpenData.Site.FrontPage.Areas.Users.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Entity.Site model)
+        public ActionResult Edit(Site model)
         {
             if (!ModelState.IsValid)
             {

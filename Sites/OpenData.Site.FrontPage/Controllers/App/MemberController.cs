@@ -3,14 +3,12 @@ using System.Data;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
-using OpenData.Site.Core;
-using OpenData.Site.FrontPage.Models;
-using OpenData.Site.Entity;
+using OpenData.Sites.FrontPage.Models;
 using OpenData.Data.Core;
 using OpenData.Utility;
 using OpenData.Globalization;
 
-namespace OpenData.Site.FrontPage.Controllers.App
+namespace OpenData.Sites.FrontPage.Controllers.App
 {
     public class MemberController : BaseController
     {
@@ -39,7 +37,7 @@ namespace OpenData.Site.FrontPage.Controllers.App
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(OpenData.Site.Entity.User model)
+        public ActionResult Create(User model)
         {
             if (!ModelState.IsValid)
             {
@@ -72,7 +70,7 @@ namespace OpenData.Site.FrontPage.Controllers.App
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(OpenData.Site.Entity.User model, string id)
+        public ActionResult Edit(User model, string id)
         {
             if (!ModelState.IsValid)
             {

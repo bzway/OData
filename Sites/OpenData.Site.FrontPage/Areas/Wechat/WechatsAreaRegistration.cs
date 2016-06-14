@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OpenData.Site.FrontPage.Areas.Wechats
+namespace OpenData.Sites.FrontPage.Areas.Wechats
 {
     public class WechatsAreaRegistration : AreaRegistration
     {

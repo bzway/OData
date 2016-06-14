@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using OpenData.Site.FrontPage.Models;
+using OpenData.Sites.FrontPage.Models;
 
-namespace OpenData.Site.FrontPage.Controllers.App
+namespace OpenData.Sites.FrontPage.Controllers.App
 {
     public class SchemaController : BaseController
     {

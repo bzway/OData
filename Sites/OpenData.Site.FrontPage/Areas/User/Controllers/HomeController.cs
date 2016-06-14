@@ -1,9 +1,8 @@
-﻿using OpenData.Site.Core;
-using System;
+﻿using System;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Site.FrontPage.Areas.Users.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
 
     public class HomeController : BaseUserController

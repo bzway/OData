@@ -1,10 +1,10 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Framework.Core.Entity;
 using OpenData.Data.Core;
 using OpenData.Utility;
 using System;
 using System.Data;
 using System.Text;
-
+using OpenData.Framework.Core.Entity;
 
 namespace OpenData.Framework.Core
 {

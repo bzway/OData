@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Web;
 
-namespace OpenData.Site.FrontPage
+namespace OpenData.Sites.FrontPage
 {
     public static class Log4NetConfig
     {

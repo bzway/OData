@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using OpenData.Site.Entity;
 using System.IO;
 using OpenData.Data.Core;
 
-namespace OpenData.Site.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
     public class FileController : BaseSiteController
     {

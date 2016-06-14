@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
-using OpenData.Framework.Entity;
+using OpenData.Framework.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -267,9 +267,9 @@ namespace OpenData.Framework.Core
                 throw new ArgumentException("Argument cannot be null or empty: roleName.");
             }
 
-            
-                //userRolesTable.Insert(user, roleId);
-           
+
+            //userRolesTable.Insert(user, roleId);
+
 
             return Task.FromResult<object>(null);
         }
@@ -305,7 +305,7 @@ namespace OpenData.Framework.Core
             if (string.IsNullOrEmpty(role))
             {
                 throw new ArgumentNullException("role");
-            } 
+            }
             return Task.FromResult<bool>(false);
         }
 
@@ -354,7 +354,7 @@ namespace OpenData.Framework.Core
         /// <returns></returns>
         public Task<bool> HasPasswordAsync(TUser user)
         {
-            string  hasPassword = null;
+            string hasPassword = null;
             return Task.FromResult<bool>(Boolean.Parse(hasPassword.ToString()));
         }
 

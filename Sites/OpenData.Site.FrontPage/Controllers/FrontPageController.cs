@@ -1,13 +1,13 @@
-﻿using OpenData.Site.Core;
+﻿using OpenData.Framework.Core;
 using System.Web.Mvc;
 using System.Web;
 using System.Web.Mvc.Html;
-using OpenData.Site.Entity;
 using System.Text;
-using OpenData.Site.Common;
+using OpenData.Framework.Common;
 using OpenData.Data.Core;
+using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Site.FrontPage.Controllers
+namespace OpenData.Sites.FrontPage.Controllers
 {
     public class FrontPageController : BzwayController
     {
@@ -40,7 +40,7 @@ namespace OpenData.Site.FrontPage.Controllers
 
 }
 
-namespace OpenData.Site.FrontPage
+namespace OpenData.Sites.FrontPage
 {
     public static class FrontPageHtmlHelper
     {

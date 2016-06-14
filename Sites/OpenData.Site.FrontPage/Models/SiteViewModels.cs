@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using OpenData.Site.Entity;
 
-namespace OpenData.Site.FrontPage.Models
+namespace OpenData.Sites.FrontPage.Models
 {
     public class UserSiteViewModel
     {

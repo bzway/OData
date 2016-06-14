@@ -155,6 +155,7 @@
     <Compile Include="BzwayAuthorizeAttribute.cs" />
     <Compile Include="BzwayController.cs" />
     <Compile Include="UserSiteMiddleware.cs" />
+    <Compile Include="UserSite\Entity\SiteFile.cs" />
     <Compile Include="User\Entity\Customer\Member.cs" />
     <Compile Include="User\Entity\Customer\Transaction.cs" />
     <Compile Include="User\Entity\Customer\UserPoint.cs" />

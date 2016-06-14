@@ -1,15 +1,15 @@
-﻿using OpenData.Site.Entity;
-using OpenData.Site.Core;
-using OpenData.Caching;
+﻿using OpenData.Caching;
 using OpenData.Data.Core;
 using OpenData.Utility;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using OpenData.Site.FrontPage.Models;
+using OpenData.Sites.FrontPage.Models;
+using OpenData.Framework.Core;
+using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Site.FrontPage.Areas.Users.Controllers
+namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
     public class AuthorizeController : BaseUserController
     {
@@ -68,14 +68,14 @@ namespace OpenData.Site.FrontPage.Areas.Users.Controllers
             }
         }
 
-        
+
         public ActionResult SendEmailCode(string returnUrl, bool? rememberMe)
         {
             rememberMe = rememberMe ?? true;
             this.UserManager.SendEDMValidationCodeAsync(null, returnUrl);
             return RedirectToAction("VerifyCode", new { ReturnUrl = returnUrl, RememberMe = rememberMe.Value, Provider = "email" });
         }
-       
+
         public ActionResult SendPhoneCode(string returnUrl, bool? rememberMe)
         {
             rememberMe = rememberMe ?? true;
@@ -226,9 +226,9 @@ namespace OpenData.Site.FrontPage.Areas.Users.Controllers
         {
             using (var db = OpenDatabase.GetDatabase())
             {
-                var site = db.Entity<Entity.Site>().Query()
-                    .Where(m => m.Id, appid, CompareType.Equal)
-                    .Where(m => m.AppSecret, appsecret, CompareType.Equal).First();
+                var site = db.Entity<Site>().Query()
+                    .Where(m => m.Id, (object)appid, (CompareType)CompareType.Equal)
+                    .Where(m => m.AppSecret, (object)appsecret, (CompareType)CompareType.Equal).First();
                 if (site == null)
                 {
                     return Json(new

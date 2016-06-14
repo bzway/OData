@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Bzway.Business.Model
+namespace OpenData.Framework.Core.Entity
 {
 
     public class SiteFile

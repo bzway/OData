@@ -1,5 +1,5 @@
 ﻿using Microsoft.Owin;
-using OpenData.Framework.Entity;
+using OpenData.Framework.Core.Entity;
 using OpenData.Globalization;
 using OpenData.Message;
 using OpenData.Utility;

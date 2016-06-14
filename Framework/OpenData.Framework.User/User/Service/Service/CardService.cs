@@ -1,4 +1,4 @@
-﻿using OpenData.Framework.Entity;
+﻿using OpenData.Framework.Core.Entity;
 using OpenData.Data.Core;
 using System;
 using System.Data;

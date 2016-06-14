@@ -1,7 +1,7 @@
 ﻿using OpenData.Data.Core;
 using System;
 
-namespace OpenData.Framework.Entity
+namespace OpenData.Framework.Core.Entity
 {
     public partial class SiteAuth : BaseEntity
     {

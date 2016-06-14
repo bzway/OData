@@ -2,7 +2,7 @@
 using OpenData.Data.Core;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenData.Site.FrontPage.Models
+namespace OpenData.Sites.FrontPage.Models
 {
     public class SearchViewModel
     {
