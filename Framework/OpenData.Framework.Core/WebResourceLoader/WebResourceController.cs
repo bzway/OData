@@ -14,8 +14,8 @@ using System.IO.Compression;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using OpenData.Framework.WebResourceLoader.Configuration;
-namespace OpenData.Framework.WebResourceLoader
+using OpenData.Framework.Common.WebResourceLoader.Configuration;
+namespace OpenData.Framework.Common.WebResourceLoader
 {
     public class WebResourceController : Controller
     {

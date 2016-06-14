@@ -25,7 +25,7 @@ using System.Web.Routing;
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace OpenData.Framework.Routing
+namespace OpenData.Framework.Common.Routing
 {
     public class RouteTableRegister
     {

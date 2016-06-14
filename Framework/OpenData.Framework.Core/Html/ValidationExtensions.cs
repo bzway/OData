@@ -16,7 +16,7 @@ using System.Web.Mvc.Html;
 using System.Globalization;
 using System.Web.Routing;
 
-namespace OpenData.Framework.Html
+namespace OpenData.Framework.Common.Html
 {
     public static class ValidationExtensions
     {

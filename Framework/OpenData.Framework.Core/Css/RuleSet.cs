@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace OpenData.Framework.Css
+namespace OpenData.Framework.Common.Css
 {
     public class RuleSet : Statement
     {

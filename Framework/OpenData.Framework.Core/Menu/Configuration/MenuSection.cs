@@ -13,7 +13,7 @@ using System.Text;
 using System.Configuration;
 using OpenData.Configuration;
 
-namespace OpenData.Framework.Menu.Configuration
+namespace OpenData.Framework.Common.Menu.Configuration
 {
     public class MenuSection : FileConfigurationSection
     {

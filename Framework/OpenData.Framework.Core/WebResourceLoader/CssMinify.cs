@@ -20,7 +20,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.WebResourceLoader
+namespace OpenData.Framework.Common.WebResourceLoader
 {
     public class CSSMinify
     {

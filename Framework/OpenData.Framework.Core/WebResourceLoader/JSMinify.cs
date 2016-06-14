@@ -17,7 +17,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.WebResourceLoader
+namespace OpenData.Framework.Common.WebResourceLoader
 {
     public class JSMinify
     {

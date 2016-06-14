@@ -15,7 +15,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Compilation;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public static class ResourceHtmlHelper
     {

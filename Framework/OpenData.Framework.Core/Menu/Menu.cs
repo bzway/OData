@@ -15,7 +15,7 @@ using OpenData.Collections;
 using System.Web.Routing;
 
 
-namespace OpenData.Framework.Menu
+namespace OpenData.Framework.Common.Menu
 {
     public class MenuTemplate
     {

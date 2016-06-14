@@ -15,7 +15,7 @@ using OpenData.Globalization;
 using System.Web.Routing;
 using System.Reflection;
 using System.ComponentModel;
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public interface ISelectListDataSource
     {

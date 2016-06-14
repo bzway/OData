@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using OpenData.Reflection;
 using OpenData.Data; 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class EntityModelBinder : DefaultModelBinder
     {

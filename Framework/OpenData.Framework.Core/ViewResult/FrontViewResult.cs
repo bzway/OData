@@ -7,11 +7,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Text;
 using System.IO;
-using OpenData.Framework.ViewEngine;
+using OpenData.Framework.Common.ViewEngine;
 
 
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class FrontViewResult : ViewResult
     {

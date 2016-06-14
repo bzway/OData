@@ -15,7 +15,7 @@ using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class ModelClientMetadataBuilder<TModel> : ModelClientMetadataBuilder
     {

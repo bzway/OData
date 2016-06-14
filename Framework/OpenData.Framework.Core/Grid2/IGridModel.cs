@@ -11,11 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using OpenData.Framework.Grid2.Design;
+using OpenData.Framework.Common.Grid2.Design;
 using System.Web.Mvc;
 using System.Collections;
 
-namespace OpenData.Framework.Grid2
+namespace OpenData.Framework.Common.Grid2
 {
     public interface IGridModel
     {

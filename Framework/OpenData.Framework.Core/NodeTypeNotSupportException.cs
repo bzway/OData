@@ -9,7 +9,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     /// <summary>
     /// 

@@ -7,7 +7,7 @@
 // 
 #endregion
 using OpenData.Common;
-using OpenData.Framework;
+using OpenData.Framework.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc; 
 
-namespace OpenData.Framework.Html
+namespace OpenData.Framework.Common.Html
 {
     public static class HtmlExtensions
     {

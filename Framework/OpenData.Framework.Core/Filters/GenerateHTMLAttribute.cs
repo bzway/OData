@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     /// <summary>
     /// 生成静态文件

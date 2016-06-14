@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Framework.Core
+namespace OpenData.Framework.Common.Core
 {
 
     public sealed class ControllerTypeCache

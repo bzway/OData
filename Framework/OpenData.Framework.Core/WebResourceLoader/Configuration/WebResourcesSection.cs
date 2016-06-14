@@ -11,7 +11,7 @@ using System.Web;
 using System.Security.Permissions;
 using OpenData.Configuration;
 
-namespace OpenData.Framework.WebResourceLoader.Configuration
+namespace OpenData.Framework.Common.WebResourceLoader.Configuration
 {
 
     public sealed class WebResourcesSection : FileConfigurationSection

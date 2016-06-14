@@ -43,7 +43,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace OpenData.Framework.Script
+namespace OpenData.Framework.Common.Script
 {
     public class JSMin
     {

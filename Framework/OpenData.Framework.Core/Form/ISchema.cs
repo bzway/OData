@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Form
+namespace OpenData.Framework.Common.Form
 {
     public interface ISchema
     {

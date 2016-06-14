@@ -13,7 +13,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
 	public class SelectListItemTree : SelectListItem
 	{

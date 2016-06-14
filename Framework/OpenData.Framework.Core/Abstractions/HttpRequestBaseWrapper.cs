@@ -15,7 +15,7 @@ using System.Security.Principal;
 using System.IO;
 using System.Web;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class HttpRequestBaseWrapper : HttpRequestBase
     {

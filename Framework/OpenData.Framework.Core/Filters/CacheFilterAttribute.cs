@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class CacheFilterAttribute : ActionFilterAttribute
     {

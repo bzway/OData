@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using OpenData.Reflection;
-namespace OpenData.Framework.Grid2
+namespace OpenData.Framework.Common.Grid2
 {
     public interface IGridItem
     {

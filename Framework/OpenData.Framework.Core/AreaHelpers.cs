@@ -13,10 +13,10 @@ using System.Text;
 using System.Web.Routing;
 using System.Web.Mvc;
 using System.IO;
-using OpenData.Framework;
+using OpenData.Framework.Common;
 using OpenData.Common;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public static class AreaHelpers
     {

@@ -13,7 +13,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Framework.Menu
+namespace OpenData.Framework.Common.Menu
 {
     public class MenuItemTemplate : MenuItem, IMenuItemContainer
     {

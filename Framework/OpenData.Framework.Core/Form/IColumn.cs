@@ -11,9 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
-using OpenData.Framework;
+using OpenData.Framework.Common;
 
-namespace OpenData.Framework.Form
+namespace OpenData.Framework.Common.Form
 {
     [Serializable]
     [DataContract]

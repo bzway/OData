@@ -10,7 +10,7 @@ using System.Configuration;
 using System.Web;
 using System.Security.Permissions;
 
-namespace OpenData.Framework.WebResourceLoader.Configuration
+namespace OpenData.Framework.Common.WebResourceLoader.Configuration
 {
     public class ReferenceElement : ConfigurationElement
     {

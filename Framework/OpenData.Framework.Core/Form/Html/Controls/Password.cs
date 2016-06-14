@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Framework.Form.Html.Controls
+namespace OpenData.Framework.Common.Form.Html.Controls
 {
     public class Password : Input
     {

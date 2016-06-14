@@ -1,4 +1,4 @@
-﻿using OpenData.Framework.Routes;
+﻿using OpenData.Framework.Common.Routes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using System.IO;
 using OpenData.Utility;
 using System.IO.Compression;
 
-namespace OpenData.Framework.Resource
+namespace OpenData.Framework.Common.Resource
 {
     public class ResourceRoutting : Controller, IRouteProvider
     {

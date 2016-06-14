@@ -13,7 +13,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.Grid
+namespace OpenData.Framework.Common.Grid
 {
     public interface IItemColumnRender
     {

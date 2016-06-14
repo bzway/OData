@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {   
     public static class ModelMetadataExtensions
     {

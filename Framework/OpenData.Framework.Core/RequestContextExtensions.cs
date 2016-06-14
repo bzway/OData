@@ -13,7 +13,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public static class RequestContextExtensions
     {

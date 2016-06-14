@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace OpenData.Framework
+namespace OpenData.Framework.Common
 {
     public class AggregateHtmlString : IHtmlString
     {

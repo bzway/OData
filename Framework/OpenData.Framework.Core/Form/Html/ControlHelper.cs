@@ -1,6 +1,6 @@
 ﻿using OpenData.Common;
-using OpenData.Framework;
-using OpenData.Framework.Form.Html.Controls;
+using OpenData.Framework.Common;
+using OpenData.Framework.Common.Form.Html.Controls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.Form.Html
+namespace OpenData.Framework.Common.Form.Html
 {
     public static class ControlHelper
     {
@@ -28,7 +28,7 @@ namespace OpenData.Framework.Form.Html
             RegisterControl(new InputFloat());
             RegisterControl(new CheckBox());
             RegisterControl(new Date());
-            RegisterControl(new OpenData.Framework.Form.Html.Controls.File());
+            RegisterControl(new OpenData.Framework.Common.Form.Html.Controls.File());
             //RegisterControl(new ImageCrop());
             RegisterControl(new Display());
             RegisterControl(new Hidden());
@@ -76,7 +76,7 @@ namespace OpenData.Framework.Form.Html
             var controlNames = controls.Keys.AsEnumerable();
 
 
-            if (OpenData.Framework.TrustLevelUtility.CurrentTrustLevel == AspNetHostingPermissionLevel.Unrestricted)
+            if (OpenData.Framework.Common.TrustLevelUtility.CurrentTrustLevel == AspNetHostingPermissionLevel.Unrestricted)
             {
                 if (Directory.Exists(TemplateDir))
                 {

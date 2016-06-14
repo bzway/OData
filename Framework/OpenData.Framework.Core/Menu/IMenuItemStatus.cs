@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
-namespace OpenData.Framework.Menu
+namespace OpenData.Framework.Common.Menu
 {
     public interface IMenuItemStatus
     {

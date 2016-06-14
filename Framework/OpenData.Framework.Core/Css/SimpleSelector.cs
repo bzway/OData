@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenData.Framework.Css
+namespace OpenData.Framework.Common.Css
 {
     public class SimpleSelector
     {

@@ -18,7 +18,7 @@ using System.Web.Compilation;
 using System.Web.Configuration;
 using System.Web.Script.Serialization;
 
-namespace OpenData.Framework.Script.Serialization
+namespace OpenData.Framework.Common.Script.Serialization
 {
     public static class JsonHelper
     {
