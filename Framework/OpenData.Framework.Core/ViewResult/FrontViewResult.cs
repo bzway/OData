@@ -8,8 +8,7 @@ using System.Web.Mvc;
 using System.Text;
 using System.IO;
 using OpenData.Framework.Common.ViewEngine;
-
-
+using System.Diagnostics;
 
 namespace OpenData.Framework.Common
 {
@@ -28,12 +27,12 @@ namespace OpenData.Framework.Common
         }
         public override void ExecuteResult(ControllerContext context)
         {
-#if Page_Trace
+#if TRACE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 #endif
             base.ExecuteResult(context);
-#if Page_Trace
+#if TRACE
             stopwatch.Stop();
             context.HttpContext.Response.Write(string.Format("ExecuteResult, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
 #endif

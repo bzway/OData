@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
+using System.Collections.Concurrent;
 
 namespace OpenData.Data.Core
 {
     public abstract class OpenDatabase : IDatabase
     {
         #region ctor
-        static Dictionary<string, Dictionary<string, Schema>> cache = new Dictionary<string, Dictionary<string, Schema>>();
+        static ConcurrentDictionary<string, Dictionary<string, Schema>> cache = new ConcurrentDictionary<string, Dictionary<string, Schema>>();
         protected string ConnectionString;
         protected string DatabaseName;
         protected Dictionary<string, Schema> dictionary
@@ -49,7 +49,7 @@ namespace OpenData.Data.Core
                         dict.Add(schema.Name, schema);
                     }
                     //将Schema缓存到本地
-                    cache.Add(key, dict);
+                    cache[key] = dict;
                 }
                 return cache[key];
             }

@@ -9,6 +9,7 @@ using System.Web;
 
 namespace OpenData.Framework.Common
 {
+    using System.Diagnostics;
     using AppFunc = Func<IDictionary<string, object>, Task>;
     public class LogOwinMiddleware : OwinMiddleware
     {
@@ -27,7 +28,7 @@ namespace OpenData.Framework.Common
 
 
 
-    
+
 
     public class LogMiddleware
     {
@@ -61,9 +62,15 @@ namespace OpenData.Framework.Common
 
         public async override Task Invoke(IOwinContext context)
         {
+
+#if TRACE
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+#endif
+
             //context.Response.Write("FrontPageMiddleware start.");
             //var site = context.GetSiteManager().GetSite();
-            
+
             //if (context.Request.Uri.ToString().Contains("wechat"))
             //{
             //    HomeController controller = new HomeController();
@@ -72,6 +79,11 @@ namespace OpenData.Framework.Common
             //}
             await Next.Invoke(context);
             //context.Response.Write("FrontPageMiddleware End.");
+#if TRACE
+
+            stopwatch.Stop();
+            context.Response.Write(string.Format("ExecuteResult, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
+#endif
         }
 
     }

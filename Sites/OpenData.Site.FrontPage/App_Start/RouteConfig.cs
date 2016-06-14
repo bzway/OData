@@ -14,7 +14,7 @@ namespace OpenData.Sites.FrontPage
                 name: "Page",
                 url: "{*PageUrl}",
                 defaults: new { controller = "FrontPage", action = "Index", PageUrl = "" },
-                namespaces: new[] { "Bzway.WebSite.WebApp.Controllers" }
+                namespaces: new[] { "OpenData.Sites.FrontPage" }
             );
         }
     }

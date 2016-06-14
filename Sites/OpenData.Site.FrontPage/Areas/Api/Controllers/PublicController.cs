@@ -1,4 +1,5 @@
 ﻿using OpenData.Framework.Core;
+using OpenData.Framework.Core.Entity;
 using OpenData.Sites.FrontPage.Controllers;
 using OpenData.Sites.FrontPage.Models;
 using System;
