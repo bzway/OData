@@ -1,12 +1,11 @@
 ﻿using OpenData.Common;
 using OpenData.Data.Core;
-using OpenData.Data.Query;
-using OpenData.Data.Query.OpenExpressions;
+using OpenData.Data.Core.Query;
+using OpenData.Data.Core.Query.OpenExpressions;
 using OpenData.Utility;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 

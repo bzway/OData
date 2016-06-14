@@ -1,12 +1,12 @@
-﻿using OpenData.Data.Query;
-using OpenData.Data.Query.OpenExpressions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.IO;
 using OpenData.Utility;
 using OpenData.Common;
+using OpenData.Data.Core.Query;
+using OpenData.Data.Core.Query.OpenExpressions;
+using OpenData.Data.Core;
 
 namespace OpenData.Data.Default
 {

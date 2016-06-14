@@ -1,5 +1,6 @@
 ﻿using OpenData.AppEngine.Dependency;
 using OpenData.Caching;
+using OpenData.Data.Core;
 using OpenData.Message;
 using System.Web;
 namespace OpenData.Data.SQLServer

@@ -1,12 +1,13 @@
-﻿using OpenData.Data.Query;
-using OpenData.Data.Query.OpenExpressions;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using OpenData.Common;
+using OpenData.Data.Core.Query;
+using OpenData.Data.Core.Query.OpenExpressions;
+using OpenData.Data.Core;
+
 namespace OpenData.Data.Mongo
 {
     public class BaseEntityMongoRepository<T> : IRepository<T> where T : new()
