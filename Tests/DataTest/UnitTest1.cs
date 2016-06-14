@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using Bzway.Data;
+using OpenData.Data.Core;
+
 namespace DataTest
 {
     [TestClass]

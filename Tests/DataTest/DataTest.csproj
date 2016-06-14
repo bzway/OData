@@ -60,21 +60,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\OpenData.Common.csproj">
+    <ProjectReference Include="..\..\Common\OpenData.Common\OpenData.Common.csproj">
       <Project>{2eaef878-041b-4365-8cbf-0a7038b68468}</Project>
       <Name>OpenData.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\Data.File\OpenData.Data.File.csproj">
+    <ProjectReference Include="..\..\Data\OpenData.Data.File\OpenData.Data.Default.csproj">
       <Project>{1f735b03-e2c3-43ee-8d30-dff41b037e26}</Project>
-      <Name>OpenData.Data.File</Name>
+      <Name>OpenData.Data.Default</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\Data.SQL\OpenData.Data.SQL.csproj">
+    <ProjectReference Include="..\..\Data\OpenData.Data.SQL\OpenData.Data.SQL.csproj">
       <Project>{508b7ec2-dae8-4ef5-bd0f-13539b189367}</Project>
       <Name>OpenData.Data.SQL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\Data\OpenData.Data.csproj">
+    <ProjectReference Include="..\..\Data\OpenData.Data.Core\OpenData.Data.Core.csproj">
       <Project>{dd3dca24-67ff-4555-a803-5d14335822f6}</Project>
-      <Name>OpenData.Data</Name>
+      <Name>OpenData.Data.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
