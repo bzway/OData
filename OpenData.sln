@@ -33,6 +33,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sites", "Sites", "{E9CB29EC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Framework.Core", "Framework\OpenData.Framework.User\OpenData.Framework.Core.csproj", "{F3281193-F250-4E79-840B-93B60B0992EE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CB55E2C-F230-4EE2-95A0-425E8A513376}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		clear.bat = clear.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -425,8 +431,8 @@ Global
 		{F3281193-F250-4E79-840B-93B60B0992EE} = {B8390689-26E6-46DE-9672-EAFADCD12B88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 		VisualSVNWorkingCopyRoot = .
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = KLS.vsmdi

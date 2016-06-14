@@ -1,4 +1,14 @@
-bin
-obj
-.vs
+[Oo]bj/
+[Bb]in/
+.vs/
+.nuget/
+.build/
+packages/
+bower_components/
+node_modules/
+debugSettings.json
+project.lock.json
+*.user
 *.suo
+*.cache
+*.docstates
