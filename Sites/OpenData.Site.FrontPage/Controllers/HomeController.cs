@@ -7,7 +7,7 @@ using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Sites.FrontPage.Controllers.Connect
+namespace OpenData.Sites.FrontPage.Controllers
 {
     public class HomeController : BzwayController
     {
@@ -19,26 +19,11 @@ namespace OpenData.Sites.FrontPage.Controllers.Connect
         {
             return Content(string.Format(@"<iframe src='{0}' style='width: 100%; height:99%; border: none; ' frameborder='0' scrolling='auto'></iframe>", url));
         }
-        public void Modules()
-        {
-            HttpApplication httpApps = ControllerContext.HttpContext.ApplicationInstance;
-            // 获取所有 http module
-            HttpModuleCollection httpModules = httpApps.Modules;
 
-            Response.Write(string.Format("一共有{0}个 HttpModule</br>", httpModules.Count.ToString()));
-            foreach (string activeModule in httpModules.AllKeys)
-            {
-                Response.Write(activeModule + "</br>");
-            }
-        }
 
         public ActionResult upload()
         {
-
-
-
             var r = new List<ViewDataUploadFilesResult>();
-
             foreach (string file in Request.Files)
             {
                 var statuses = new List<ViewDataUploadFilesResult>();

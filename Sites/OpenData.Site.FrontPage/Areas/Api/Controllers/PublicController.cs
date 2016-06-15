@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace OpenData.Sites.FrontPage.Areas.Api.Controllers
 {
-    public class PublicController : BaseController
+    public class PublicController : BzwayController
     {
         WechatManager wechatManager;
         public WechatManager WechatManager
@@ -37,7 +37,7 @@ namespace OpenData.Sites.FrontPage.Areas.Api.Controllers
             var userLanguages = string.Join(";", this.Request.UserLanguages);
             var ipAddress = this.Request.UserHostAddress;
             var urlReferer = this.Request.Headers["Referer"];
-            var wechatOfficialAccount = this.SiteManager.GetSiteDataBase().Entity<WechatOfficialAccount>().Query().Where(m => m.Id == id).First();
+            var wechatOfficialAccount = this.Site.GetSiteDataBase().Entity<WechatOfficialAccount>().Query().Where(m => m.Id == id).First();
             if (wechatOfficialAccount == null)
             {
 

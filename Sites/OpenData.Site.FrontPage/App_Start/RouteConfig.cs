@@ -13,8 +13,7 @@ namespace OpenData.Sites.FrontPage
             routes.MapRoute(
                 name: "Page",
                 url: "{*PageUrl}",
-                defaults: new { controller = "FrontPage", action = "Index", PageUrl = "" },
-                namespaces: new[] { "OpenData.Sites.FrontPage" }
+                defaults: new { controller = "FrontPage", action = "Index", PageUrl = "" }
             );
         }
     }

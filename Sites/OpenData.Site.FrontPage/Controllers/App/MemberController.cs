@@ -8,10 +8,11 @@ using OpenData.Data.Core;
 using OpenData.Utility;
 using OpenData.Globalization;
 using OpenData.Framework.Core.Entity;
+using OpenData.Framework.Core;
 
 namespace OpenData.Sites.FrontPage.Controllers.App
 {
-    public class MemberController : BaseController
+    public class MemberController : BzwayController
     {
 
         [Authorize(Roles = "Site")]
@@ -60,7 +61,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
 
             using (var db = OpenDatabase.GetDatabase())
             {
-                var model = db.Entity<User>().Query().Where(m => m.Id, this.UserManager.GetCurrentUser().DecryptAES(id), CompareType.Equal).First();
+                var model = db.Entity<User>().Query().Where(m => m.Id, this.User.GetCurrentUser().DecryptAES(id), CompareType.Equal).First();
                 if (model == null)
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -224,13 +225,13 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             }
             if (this.Request.Files.Count == 0)
             {
-                this.ModelState.AddModelError("", "No file uploaded".Localize(this.SiteManager.GetSite().Name));
+                this.ModelState.AddModelError("", "No file uploaded".Localize(this.Site.GetSite().Name));
                 return View(model);
             }
             var file = this.Request.Files[0];
             if (file == null || file.ContentLength == 0)
             {
-                this.ModelState.AddModelError("", "No file uploaded".Localize(this.SiteManager.GetSite().Name));
+                this.ModelState.AddModelError("", "No file uploaded".Localize(this.Site.GetSite().Name));
                 return View(model);
             }
             string originalName = file.FileName;
@@ -238,18 +239,18 @@ namespace OpenData.Sites.FrontPage.Controllers.App
 
             if (fileExtension != ".xls" && fileExtension != ".xlsx" && fileExtension != ".csv")
             {
-                this.ModelState.AddModelError("", "File Format is not supported".Localize(this.SiteManager.GetSite().Name));
+                this.ModelState.AddModelError("", "File Format is not supported".Localize(this.Site.GetSite().Name));
                 return View(model);
             }
             //限制上传大小为20M
             int size = 20 * 1024 * 1024;
             if (file.ContentLength > size)
             {
-                this.ModelState.AddModelError("", "File is too big to support".Localize(this.SiteManager.GetSite().Name));
+                this.ModelState.AddModelError("", "File is too big to support".Localize(this.Site.GetSite().Name));
                 return View(model);
             }
 
-            string dir = AppDomain.CurrentDomain.BaseDirectory + "UpLoad\\" + this.SiteManager.GetSite().Name + "\\";//上传文件目录
+            string dir = AppDomain.CurrentDomain.BaseDirectory + "UpLoad\\" + this.Site.GetSite().Name + "\\";//上传文件目录
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
@@ -268,10 +269,10 @@ namespace OpenData.Sites.FrontPage.Controllers.App
             }
             if (ds == null || ds.Tables.Count == 0)
             {
-                this.ModelState.AddModelError("", "No data in the file".Localize(this.SiteManager.GetSite().Name));
+                this.ModelState.AddModelError("", "No data in the file".Localize(this.Site.GetSite().Name));
                 return View(model);
             }
-            this.SiteManager.GetMemberService().Import(ds, this.SiteManager.GetSite());
+            this.Site.GetMemberService().Import(ds, this.Site.GetSite());
             return View("Close");
         }
     }

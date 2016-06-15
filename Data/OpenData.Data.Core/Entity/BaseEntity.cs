@@ -23,9 +23,6 @@ namespace OpenData.Data.Core
         //public virtual bool HasWorkflow { get; set; }
     }
 
- 
-
-
     public interface IEntity : IEntity<string>
     { }
     public interface IEntity<TKey>

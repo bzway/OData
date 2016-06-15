@@ -36,7 +36,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
 
         public override ActionResult ProcessText(string Content, string MsgId)
         {
-            this.SiteManager.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
+            this.Site.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
             {
                 //UpdatedOn = null,
                 //CreatedBy = this.OpenID,
@@ -112,7 +112,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
         }
         public override ActionResult ProcessScan(string scanKey, string Ticket)
         {
-            this.SiteManager.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
+            this.Site.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
             {
                 //UpdatedOn = null,
                 //CreatedBy = this.OpenID,
@@ -129,7 +129,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
         }
         public override ActionResult ProcessScanSubscribe(string scanKey, string Ticket)
         {
-            this.SiteManager.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
+            this.Site.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
             {
                 //UpdatedOn = null,
                 //CreatedBy = this.OpenID,
@@ -147,7 +147,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
         }
         public override ActionResult ProcessSubscribe()
         {
-            this.SiteManager.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
+            this.Site.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
             {
                 //UpdatedOn = null,
                 //CreatedBy = this.OpenID,
@@ -165,7 +165,7 @@ namespace OpenData.Sites.FrontPage.Areas.Wechats.Controllers
 
         public override ActionResult ProcessImage(string PicUrl, string MediaId, string MsgId)
         {
-            this.SiteManager.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
+            this.Site.GetSiteDataBase().Entity<WechatUserInteraction>().Insert(new WechatUserInteraction()
             {
                 //UpdatedOn = null,
                 //CreatedBy = this.OpenID,

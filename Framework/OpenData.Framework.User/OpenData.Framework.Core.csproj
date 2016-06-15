@@ -158,6 +158,7 @@
     <Compile Include="FrontPageMiddleware.cs" />
     <Compile Include="UserSiteMiddleware.cs" />
     <Compile Include="UserSite\Entity\SiteFile.cs" />
+    <Compile Include="UserSite\Model\Site.cs" />
     <Compile Include="User\Entity\Customer\Member.cs" />
     <Compile Include="User\Entity\Customer\Transaction.cs" />
     <Compile Include="User\Entity\Customer\UserPoint.cs" />
@@ -252,7 +253,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserSite\Model\" />
     <Folder Include="UserSite\Service\" />
     <Folder Include="User\Entity\User\" />
     <Folder Include="User\Model\" />
