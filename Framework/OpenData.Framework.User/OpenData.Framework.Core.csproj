@@ -154,6 +154,8 @@
   <ItemGroup>
     <Compile Include="BzwayAuthorizeAttribute.cs" />
     <Compile Include="BzwayController.cs" />
+    <Compile Include="BzwayControllerFactory.cs" />
+    <Compile Include="FrontPageMiddleware.cs" />
     <Compile Include="UserSiteMiddleware.cs" />
     <Compile Include="UserSite\Entity\SiteFile.cs" />
     <Compile Include="User\Entity\Customer\Member.cs" />

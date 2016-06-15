@@ -1,18 +1,7 @@
-﻿#region License
-// 
-// Copyright (c) 2013, Bzway team
-// 
-// Licensed under the BSD License
-// See the file LICENSE.txt for details.
-// 
-#endregion
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Ninject;
-using Ninject.Syntax;
-using OpenData.AppEngine.Dependency.InRequestScope;
+using Autofac;
+
 namespace OpenData.AppEngine.Dependency
 {
     /// <summary>
@@ -21,19 +10,19 @@ namespace OpenData.AppEngine.Dependency
     /// </summary>
     public class ContainerManager : IDisposable
     {
-        private IKernel _container;
+        private IContainer _container;
 
         public ContainerManager()
         {
-            _container = new StandardKernel();
+            _container = new ContainerBuilder().Build();
 
-            _container.Settings.Set("InjectAttribute", typeof(InjectAttribute));
+
         }
 
         /// <summary>
         /// Ninject
         /// </summary>
-        public IKernel Container
+        public IContainer Container
         {
             get { return _container; }
         }
@@ -74,7 +63,17 @@ namespace OpenData.AppEngine.Dependency
 
         public virtual void AddComponent(Type service, Type implementation, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
         {
-            _container.Bind(service).To(implementation).PerLifeStyle(lifeStyle).MapKey(key).ReplaceExisting(service);
+            ContainerBuilder builder = new ContainerBuilder();
+            if (string.IsNullOrEmpty(key))
+            {
+                builder.RegisterInstance(implementation).As(service).OwnedByLifetimeScope();
+            }
+            else
+            {
+                builder.RegisterInstance(implementation).As(service).Named(key, service).OwnedByLifetimeScope();
+
+            }
+            builder.Update(_container);
         }
 
         public virtual void AddComponentInstance<TService>(object instance, string key = "")
@@ -87,43 +86,46 @@ namespace OpenData.AppEngine.Dependency
         }
         public virtual void AddComponentInstance(Type service, object instance, string key = "")
         {
-            _container.Bind(service).ToConstant(instance).MapKey(key).ReplaceExisting(service);
+            ContainerBuilder builder = new ContainerBuilder();
+
+            if (string.IsNullOrEmpty(key))
+            {
+                builder.RegisterInstance(instance).As(service).OwnedByLifetimeScope();
+            }
+            else
+            {
+                builder.RegisterInstance(instance).As(service).Named(key, service).OwnedByLifetimeScope();
+            }
+
+            builder.Update(_container);
         }
 
         public virtual T Resolve<T>(string key = "") where T : class
         {
             if (string.IsNullOrEmpty(key))
             {
-                return _container.Get<T>();
+                return _container.Resolve<T>();
             }
-            return _container.Get<T>(key);
+            return _container.ResolveNamed<T>(key);
         }
 
         public virtual object Resolve(Type type, string key = "")
         {
             if (string.IsNullOrEmpty(key))
             {
-                return _container.Get(type);
+                return _container.Resolve(type);
             }
-            return _container.Get(type, key);
+            return _container.ResolveNamed(key, type);
         }
 
         #region ResolveAll
         public virtual T[] ResolveAll<T>(string key = "")
         {
-            if (string.IsNullOrEmpty(key))
-            {
-                return _container.GetAll<T>().ToArray();
-            }
-            return _container.GetAll<T>(key).ToArray();
+            return null;
         }
         public virtual object[] ResolveAll(Type type, string key = "")
         {
-            if (string.IsNullOrEmpty(key))
-            {
-                return _container.GetAll(type).ToArray();
-            }
-            return _container.GetAll(type, key).ToArray();
+            return null;
         }
         #endregion
 
@@ -132,18 +134,26 @@ namespace OpenData.AppEngine.Dependency
         {
             if (string.IsNullOrEmpty(key))
             {
-                return _container.TryGet<T>();
+                T o;
+                _container.TryResolve<T>(out o);
+                return o;
             }
-            return _container.TryGet<T>(key);
+            object ob;
+            _container.TryResolveNamed(key, typeof(T), out ob);
+            return (T)ob;
         }
 
         public virtual object TryResolve(Type type, string key = "")
         {
             if (string.IsNullOrEmpty(key))
             {
-                return _container.TryGet(type);
+                object o;
+                _container.TryResolve(type, out o);
+                return o;
             }
-            return _container.TryGet(type, key);
+            object ob;
+            _container.TryResolveNamed(key, type, out ob);
+            return ob;
         }
 
         #endregion
@@ -176,52 +186,12 @@ namespace OpenData.AppEngine.Dependency
 
         public void Dispose()
         {
-            if (this._container != null && !this._container.IsDisposed)
+            if (this._container != null)
             {
                 this._container.Dispose();
             }
 
             this._container = null;
-        }
-    }
-    public static class ContainerManagerExtensions
-    {
-        public static IBindingNamedWithOrOnSyntax<T> PerLifeStyle<T>(this IBindingWhenInNamedWithOrOnSyntax<T> binding, ComponentLifeStyle lifeStyle)
-        {
-            switch (lifeStyle)
-            {
-                case ComponentLifeStyle.Singleton:
-                    return binding.InSingletonScope();
-                case ComponentLifeStyle.InThreadScope:
-                    return binding.InThreadScope();
-                case ComponentLifeStyle.InRequestScope:
-                    return binding.InRequestScope();
-                case ComponentLifeStyle.Transient:
-                default:
-                    return binding.InTransientScope();
-            }
-        }
-        public static IBindingSyntax MapKey<T>(this IBindingNamedSyntax<T> binding, string key)
-        {
-            IBindingSyntax bindingSyntax = binding;
-            if (!string.IsNullOrEmpty(key))
-            {
-                bindingSyntax = binding.Named(key);
-            }
-
-            return bindingSyntax;
-        }
-        public static void ReplaceExisting(this IBindingSyntax bindingInSyntax, Type type)
-        {
-            var kernel = bindingInSyntax.Kernel;
-            var bindingsToRemove = kernel.GetBindings(type).Where(b => string.Equals(b.Metadata.Name, bindingInSyntax.BindingConfiguration.Metadata.Name, StringComparison.Ordinal));
-            foreach (var bindingToRemove in bindingsToRemove)
-            {
-                kernel.RemoveBinding(bindingToRemove);
-            }
-
-            var binding = new Ninject.Planning.Bindings.Binding(type, bindingInSyntax.BindingConfiguration);
-            kernel.AddBinding(binding);
         }
     }
 }

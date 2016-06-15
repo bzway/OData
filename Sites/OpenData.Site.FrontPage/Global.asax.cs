@@ -1,4 +1,6 @@
-﻿using OpenData.Message;
+﻿using OpenData.Framework.Common;
+using OpenData.Framework.Core;
+using OpenData.Message;
 using RabbitMQ.Client;
 using System;
 using System.Text;
@@ -21,10 +23,10 @@ namespace OpenData.Sites.FrontPage
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //var controllerFactory = new BzwayControllerFactory();
-            //ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-            //ModelMetadataProviders.Current = new BzwayDataAnnotationsModelMetadataProvider() { };
-            //ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
+            var controllerFactory = new BzwayControllerFactory();
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+            ModelMetadataProviders.Current = new BzwayDataAnnotationsModelMetadataProvider() { };
+            ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
 
 
