@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using Ninject;
+
 using OpenData.AppEngine.Dependency;
 
 namespace OpenData.AppEngine

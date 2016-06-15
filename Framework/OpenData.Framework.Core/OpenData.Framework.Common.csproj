@@ -45,6 +45,10 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
@@ -143,6 +147,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppEngine.cs" />
     <Compile Include="Form\ColumnValidation.cs" />
     <Compile Include="Form\Html\ControlHelper.cs" />
     <Compile Include="Form\Html\Controls\CheckBox.cs" />
@@ -179,6 +184,7 @@
     <Compile Include="Form\Html\ValidationExtensions.cs" />
     <Compile Include="Form\IColumn.cs" />
     <Compile Include="Form\ISchema.cs" />
+    <Compile Include="Middleware\LogOwinMiddleware.cs" />
     <Compile Include="ViewResult\JsonResultData.cs" />
     <Compile Include="AggregateHtmlString.cs" />
     <Compile Include="ViewResult\FrontViewResult.cs" />
@@ -189,7 +195,7 @@
     <Compile Include="Abstractions\FrontHttpResponseWrapper.cs" />
     <Compile Include="Abstractions\FrontRequestChannel.cs" />
     <Compile Include="FrontUrlRoutingModule.cs" />
-    <Compile Include="LogMiddleware.cs" />
+    <Compile Include="Middleware\LogMiddleware.cs" />
     <Compile Include="DataType.cs" />
     <Compile Include="Validation\EntityModelBinder.cs" />
     <Compile Include="Filters\CacheFilterAttribute.cs" />
@@ -197,7 +203,6 @@
     <Compile Include="Filters\GenerateHTMLAttribute.cs" />
     <Compile Include="Filters\SiteAttribute.cs" />
     <Compile Include="Controllers\BzwayAPIController.cs" />
-    <Compile Include="Controllers\BzwayControllerFactory.cs" />
     <Compile Include="Controllers\BzwaySiteController.cs" />
     <Compile Include="Resource\ResourceRoutting.cs" />
     <Compile Include="Routes\IRouteProvider.cs" />
