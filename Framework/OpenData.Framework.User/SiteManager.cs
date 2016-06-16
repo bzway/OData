@@ -3,6 +3,7 @@ using Autofac;
 using OpenData.Common.AppEngine;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
+using System.Threading;
 using System.Web;
 
 namespace OpenData.Framework.Core
