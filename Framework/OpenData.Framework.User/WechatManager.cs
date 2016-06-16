@@ -13,6 +13,8 @@ using System.Security.Cryptography;
 using OpenData.Framework.Core.Entity;
 using OpenData.Caching;
 using Newtonsoft.Json;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Framework.Core
 {
@@ -22,7 +24,7 @@ namespace OpenData.Framework.Core
 
         #region ctor
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        readonly ICacheManager cache = ApplicationEngine.Current.Resolve<ICacheManager>();
+        readonly ICacheManager cache = ApplicationEngine.Current.Default.Resolve<ICacheManager>();
 
         readonly IDatabase db;
         public WechatManager(IDatabase db, string uuid)

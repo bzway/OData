@@ -4,6 +4,9 @@ using OpenData.Utility;
 using System;
 using System.Data;
 using System.Text;
+using OpenData.Common.AppEngine;
+using Autofac;
+using OpenData.Message;
 
 namespace OpenData.Framework.Core
 {
@@ -13,7 +16,7 @@ namespace OpenData.Framework.Core
         #region ctor
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         readonly static string LocalMemberTableName = "Member";
-        IUserService userService = ApplicationEngine.Current.Resolve<IUserService>();
+        IUserService userService = ApplicationEngine.Current.Default.Resolve<IUserService>();
         //readonly IOwinContext context;
         public MemberService(/*IOwinContext context*/)
         {
@@ -36,37 +39,37 @@ namespace OpenData.Framework.Core
                     var user =
                         //new ViewUser()
                         new User()
-                    {
-                        UserName = email,
-                        Province = enity.Province,
-                        NickName = enity.NickName,
-                        Country = enity.Country,
-                        Name = enity.Name,
-                        Birthday = enity.Birthday,
-                        City = enity.City,
-                        Distinct = enity.Distinct,
-                        Gender = enity.Gender,
-                        Grade = GradeType.Crystal,
-                        IsLocked = false,
-                        IsLunarBirthday = false,
-                        LockedTime = null,
-                        IsConfirmed = false,
-                        Password = null,
-                        Roles = string.Empty,
-                    };
+                        {
+                            UserName = email,
+                            Province = enity.Province,
+                            NickName = enity.NickName,
+                            Country = enity.Country,
+                            Name = enity.Name,
+                            Birthday = enity.Birthday,
+                            City = enity.City,
+                            Distinct = enity.Distinct,
+                            Gender = enity.Gender,
+                            Grade = GradeType.Crystal,
+                            IsLocked = false,
+                            IsLunarBirthday = false,
+                            LockedTime = null,
+                            IsConfirmed = false,
+                            Password = null,
+                            Roles = string.Empty,
+                        };
                     db.Entity<User>().Insert(user);
                     userEmail =
                         new UserEmail()
-                    //new ViewUserEmail()
-                    {
-                        ValidateTime = DateTime.UtcNow,
-                        UserID = userID,
-                        Email = email,
-                        IsConfirmed = false,
-                        ValidateCode = ValidateCodeGenerator.CreateRandomCode(6),
-                    };
+                        //new ViewUserEmail()
+                        {
+                            ValidateTime = DateTime.UtcNow,
+                            UserID = userID,
+                            Email = email,
+                            IsConfirmed = false,
+                            ValidateCode = ValidateCodeGenerator.CreateRandomCode(6),
+                        };
                     db.Entity<UserEmail>().Insert(userEmail);
-                    userPhone =                        new UserPhone()
+                    userPhone = new UserPhone()
                     {
                         UserID = userID,
                         IsConfirmed = false,
@@ -75,8 +78,8 @@ namespace OpenData.Framework.Core
                         ValidateCode = ValidateCodeGenerator.CreateRandomCode(6),
                     };
                     db.Entity<UserPhone>().Insert(userPhone);
-                    ApplicationEngine.Current.Resolve<OpenData.Message.ISMTPService>().SendMail("", email, "", "");
-                    ApplicationEngine.Current.Resolve<OpenData.Message.ISMSService>().Send("", phoneNumber, "", "");
+                    ApplicationEngine.Current.Default.Resolve<ISMTPService>().SendMail("", email, "", "");
+                    ApplicationEngine.Current.Default.Resolve<ISMSService>().Send("", phoneNumber, "", "");
                 }
                 #endregion
                 using (var db = OpenDatabase.GetDatabase("", "test"))

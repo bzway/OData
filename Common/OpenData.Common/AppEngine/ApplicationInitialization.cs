@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenData.AppEngine
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// 

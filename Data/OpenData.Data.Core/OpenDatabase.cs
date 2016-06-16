@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Collections.Concurrent;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Data.Core
 {
@@ -65,7 +67,7 @@ namespace OpenData.Data.Core
             {
                 providerName = "Default";
             }
-            var db = ApplicationEngine.Current.Resolve<IDatabase>(providerName);
+            var db = ApplicationEngine.Current.Default.ResolveNamed<IDatabase>(providerName);
             return db.Clone(ConnectionString, DatabaseName);
         }
         public abstract IDatabase Clone(string ConnectionString, string DatabaseName);

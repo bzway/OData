@@ -1,17 +1,9 @@
-﻿#region License
-// 
-// Copyright (c) 2013, Bzway team
-// 
-// Licensed under the BSD License
-// See the file LICENSE.txt for details.
-// 
-#endregion
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
 
-namespace OpenData.AppEngine.Dependency
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// Registers service in the inversion of container upon start.
@@ -19,9 +11,8 @@ namespace OpenData.AppEngine.Dependency
     public class DependencyAttributeRegistrator
     {
         private readonly ITypeFinder _finder;
-        private readonly ContainerManager _containerManager;
-
-        public DependencyAttributeRegistrator(ITypeFinder finder, ContainerManager containerManager)
+        private readonly IContainerManager _containerManager;
+        public DependencyAttributeRegistrator(IContainerManager containerManager, ITypeFinder finder)
         {
             this._finder = finder;
             this._containerManager = containerManager;
@@ -48,7 +39,7 @@ namespace OpenData.AppEngine.Dependency
             foreach (var info in services)
             {
                 Type serviceType = info.Attribute.ServiceType ?? info.DecoratedType;
-                _containerManager.AddComponent(serviceType, info.DecoratedType, info.Attribute.Key, info.Attribute.LifeStyle);
+                _containerManager.RegisterType(serviceType, info.DecoratedType, info.Attribute.Key, info.Attribute.LifeStyle);
             }
         }
 

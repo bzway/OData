@@ -161,47 +161,27 @@
     <Compile Include="AppEngine\ApplicationInitialization.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\DefaultEngine.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="AppEngine\DependencyResolver.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\Dependency\AttributeInfo.cs">
+    <Compile Include="AppEngine\AttributeInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\Dependency\ComponentLifeStyle.cs">
+    <Compile Include="AppEngine\ComponentLifeStyle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\Dependency\ContainerManager.cs">
+    <Compile Include="AppEngine\DependencyAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\Dependency\DependencyAttribute.cs">
+    <Compile Include="AppEngine\DependencyAttributeRegistrator.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppEngine\Dependency\DependencyAttributeRegistrator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\Dependency\IDependencyRegistrar.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\Dependency\InjectAttribute.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\Dependency\InRequestScope\OnePerRequestHttpModule.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\Dependency\InRequestScope\RequestScopeExtensionMethod.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\Dependency\NinjectWebCommonStartupTask.cs">
+    <Compile Include="AppEngine\IContainer.cs" />
+    <Compile Include="AppEngine\IDependencyRegistrar.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ApplicationEngineConfiguration.cs" />
-    <Compile Include="ApplicationEngine.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppEngine\IEngine.cs">
+    <Compile Include="AppEngine\ApplicationEngine.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppEngine\IStartupTask.cs">

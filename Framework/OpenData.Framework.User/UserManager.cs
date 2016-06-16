@@ -1,4 +1,6 @@
-﻿using Microsoft.Owin;
+﻿using Autofac;
+using Microsoft.Owin;
+using OpenData.Common.AppEngine;
 using OpenData.Framework.Core.Entity;
 using OpenData.Globalization;
 using OpenData.Message;
@@ -68,9 +70,9 @@ namespace OpenData.Framework.Core
         static readonly string PasswordKey = "BzwayIdentity";
         static readonly DateTime BaseDate = new DateTime(2010, 4, 22);
         readonly IOwinContext context;
-        IUserService userService = ApplicationEngine.Current.Resolve<IUserService>();
-        ISMSService smsService = ApplicationEngine.Current.Resolve<ISMSService>();
-        ISMTPService smtpService = ApplicationEngine.Current.Resolve<ISMTPService>();
+        IUserService userService = ApplicationEngine.Current.Default.Resolve<IUserService>();
+        ISMSService smsService = ApplicationEngine.Current.Default.Resolve<ISMSService>();
+        ISMTPService smtpService = ApplicationEngine.Current.Default.Resolve<ISMTPService>();
         public UserManager(HttpContextBase context)
         {
             this.context = context.GetOwinContext();

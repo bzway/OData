@@ -8,7 +8,7 @@
 #endregion
 using System;
 
-namespace OpenData.AppEngine.Dependency
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// Markes a service that is registered in automatically registered in inversion of control container.

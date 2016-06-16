@@ -8,7 +8,7 @@
 #endregion
 using System;
 
-namespace OpenData.AppEngine.Dependency
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// Maps an attribute to the type it decorates.

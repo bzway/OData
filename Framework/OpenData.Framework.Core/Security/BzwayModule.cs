@@ -1,14 +1,10 @@
-﻿using OpenData.Web;
-using OpenData.Utility;
-using System;
-using System.ComponentModel;
-using System.Configuration;
+﻿using System;
 using System.Security.Principal;
-using System.Text;
 using System.Threading;
 using System.Web;
 
-namespace OpenData.Security
+
+namespace OpenData.Framework.Common
 {
     public class BzwayModule : IHttpModule, IDisposable
     {

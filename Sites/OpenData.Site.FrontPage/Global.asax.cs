@@ -4,6 +4,7 @@ using OpenData.Message;
 using RabbitMQ.Client;
 using System;
 using System.Text;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -29,7 +30,7 @@ namespace OpenData.Sites.FrontPage
             ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
 
-
+   
             //ViewEngines.Engines.Clear();
             //ViewEngines.Engines.Add(new BzwayViewEngine());
             Log4NetConfig.Register(this);

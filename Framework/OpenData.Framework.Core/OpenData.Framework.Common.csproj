@@ -185,6 +185,11 @@
     <Compile Include="Form\IColumn.cs" />
     <Compile Include="Form\ISchema.cs" />
     <Compile Include="Middleware\LogOwinMiddleware.cs" />
+    <Compile Include="Security\BzwayAuthentication.cs" />
+    <Compile Include="Security\BzwayIdentity.cs" />
+    <Compile Include="Security\BzwayModule.cs" />
+    <Compile Include="Security\BzwayPrincipal.cs" />
+    <Compile Include="Security\Extensions.cs" />
     <Compile Include="ViewResult\JsonResultData.cs" />
     <Compile Include="AggregateHtmlString.cs" />
     <Compile Include="ViewResult\FrontViewResult.cs" />
@@ -386,8 +391,6 @@
       <Name>OpenData.Data.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Security\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

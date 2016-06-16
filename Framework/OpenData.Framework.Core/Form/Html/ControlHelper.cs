@@ -1,4 +1,6 @@
-﻿using OpenData.Common;
+﻿using Autofac;
+using OpenData.Common;
+using OpenData.Common.AppEngine;
 using OpenData.Framework.Common;
 using OpenData.Framework.Common.Form.Html.Controls;
 using System;
@@ -19,7 +21,7 @@ namespace OpenData.Framework.Common.Form.Html
 
         static ControlHelper()
         {
-            var baseDir = ApplicationEngine.Current.Resolve<IBaseDir>();
+            var baseDir = ApplicationEngine.Current.Default.Resolve<IBaseDir>();
             TemplateDir = Path.Combine(baseDir.AppDataPhysicalPath, "ContentType_Templates", "Controls");
             TemplateVirtualPath = UrlUtility.Combine(baseDir.AppDataVirutalPath, "ContentType_Templates", "Controls");
 

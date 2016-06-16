@@ -6,8 +6,9 @@
 // See the file LICENSE.txt for details.
 // 
 #endregion
-using OpenData.AppEngine;
-using OpenData.AppEngine.Dependency;
+
+using Autofac;
+using OpenData.Common.AppEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace OpenData.Framework.Common.Core
             {
                 return null;
             }
-            return (IController)ApplicationEngine.Current.Resolve(controllerType);
+            return (IController)ApplicationEngine.Current.Default.Resolve(controllerType);
         }
     }
 }

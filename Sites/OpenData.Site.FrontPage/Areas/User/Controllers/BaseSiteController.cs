@@ -1,6 +1,8 @@
 ﻿using OpenData.Framework.Core;
 using OpenData.Sites.FrontPage.Controllers;
 using OpenData.Data.Core;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
@@ -37,7 +39,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
             {
                 if (siteService == null)
                 {
-                    siteService = ApplicationEngine.Current.Resolve<ISiteService>();
+                    siteService = ApplicationEngine.Current.Default.Resolve<ISiteService>();
                 }
                 return siteService;
             }

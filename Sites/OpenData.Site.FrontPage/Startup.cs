@@ -3,8 +3,9 @@ using Microsoft.Owin;
 using OpenData.Framework.Common;
 using OpenData.Framework.Core;
 using Owin;
+using System.Web.Mvc;
 
-[assembly: OwinStartupAttribute(typeof(OpenData.Sites.FrontPage.Startup))]
+[assembly: OwinStartup(typeof(OpenData.Sites.FrontPage.Startup))]
 
 namespace OpenData.Sites.FrontPage
 {
@@ -12,11 +13,12 @@ namespace OpenData.Sites.FrontPage
     {
         public void Configuration(IAppBuilder app)
         {
+            app.Use<LogMiddleware>();
+            app.Use<UserIdentityMiddleware>();
+            app.Use<SiteMiddleware>();
             app.Use<FrontPageMiddleware>();
             ConfigureAuth(app);
-
-            //var builder = new ContainerBuilder();
-            //var container = builder.Build();
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));}
         }
     }
 }

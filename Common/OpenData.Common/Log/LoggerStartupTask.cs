@@ -1,5 +1,5 @@
-﻿
-using OpenData.AppEngine;
+﻿using Autofac;
+using OpenData.Common.AppEngine;
 using System.Data.SqlClient;
 
 namespace OpenData.Log
@@ -122,7 +122,7 @@ namespace OpenData.Log
             END
 
             ";
-                var ConnectionString = ApplicationEngine.Current.Resolve<string>("ConnectionString");
+                var ConnectionString = ApplicationEngine.Current.Default.ResolveNamed<string>("ConnectionString");
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     using (SqlCommand cmd = connection.CreateCommand())

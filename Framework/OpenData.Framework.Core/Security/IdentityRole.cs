@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
+﻿using System;
 
-namespace OpenData.Security.Identity
+namespace OpenData.Framework.Common
 {
     /// <summary>
     /// Class that implements the ASP.NET Identity

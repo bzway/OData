@@ -7,7 +7,9 @@
 // 
 #endregion
 
-namespace OpenData.AppEngine
+using Autofac;
+
+namespace OpenData.Common.AppEngine
 {
     public class ITypeActivtorStartupTask : IStartupTask
     {
@@ -15,7 +17,7 @@ namespace OpenData.AppEngine
         {
             TypeActivator.CreateInstanceMethod = (type) =>
             {
-                return ApplicationEngine.Current.Resolve(type);
+                return ApplicationEngine.Current.Default.Resolve(type);
             };
         }
 

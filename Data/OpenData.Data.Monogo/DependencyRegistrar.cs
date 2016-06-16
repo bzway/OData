@@ -1,4 +1,4 @@
-﻿using OpenData.AppEngine.Dependency;
+﻿using OpenData.Common.AppEngine;
 using OpenData.Caching;
 using OpenData.Data.Core;
 using OpenData.Message;
@@ -8,9 +8,9 @@ namespace OpenData.Data.Mongo
     public class DependencyRegistrar : IDependencyRegistrar
     {
 
-        public void Register(ContainerManager containerManager, AppEngine.ITypeFinder typeFinder)
+        public void Register(IContainerManager containerManager, ITypeFinder typeFinder)
         {
-            containerManager.AddComponent<IDatabase, MongoDatabase>("MongoDB");
+            containerManager.RegisterType<IDatabase, MongoDatabase>("MongoDB");
         }
 
         public int Order

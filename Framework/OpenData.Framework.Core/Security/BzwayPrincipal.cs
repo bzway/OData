@@ -1,13 +1,7 @@
-﻿using OpenData.Utility;
-using System;
-using System.ComponentModel;
-using System.Configuration;
-using System.Security.Principal;
-using System.Text;
-using System.Threading;
-using System.Web;
+﻿using System.Security.Principal;
 
-namespace OpenData.Security
+
+namespace OpenData.Framework.Common
 {
      public class BzwayPrincipal : IPrincipal
     {

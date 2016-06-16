@@ -1,4 +1,6 @@
-﻿using OpenData.Common;
+﻿using Autofac;
+using OpenData.Common;
+using OpenData.Common.AppEngine;
 using OpenData.Data.Core;
 using OpenData.Framework.Core;
 using OpenData.Framework.Core.Entity;
@@ -12,8 +14,8 @@ namespace OpenData.Sites.FrontPage.Controllers.App
 {
     public class SiteController : BzwayController
     {
-        IMemberService memberService = ApplicationEngine.Current.Resolve<IMemberService>();
-        ISiteService siteService = ApplicationEngine.Current.Resolve<ISiteService>();
+        IMemberService memberService = ApplicationEngine.Current.Default.Resolve<IMemberService>();
+        ISiteService siteService = ApplicationEngine.Current.Default.Resolve<ISiteService>();
 
         [Authorize(Roles = "Site")]
         public ActionResult Index(int? pageIndex, int? pageSize)

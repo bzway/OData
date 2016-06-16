@@ -9,6 +9,8 @@ using System.Web;
 using OpenData.Framework.Common;
 using System.Web.Mvc;
 using OpenData.Common;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Framework.Common.Form.Html
 {
@@ -22,7 +24,7 @@ namespace OpenData.Framework.Common.Form.Html
 
         static FormHelper()
         {
-            var baseDir = ApplicationEngine.Current.Resolve<IBaseDir>();
+            var baseDir = ApplicationEngine.Current.Default.Resolve<IBaseDir>();
             TemplateDir = Path.Combine(baseDir.AppDataPhysicalPath, "ContentType_Templates", "Forms");
             TemplateVirtualPath = UrlUtility.Combine(baseDir.AppDataVirutalPath, "ContentType_Templates", "Forms");
 

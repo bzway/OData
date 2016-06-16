@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace OpenData.AppEngine
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// Classes implementing this interface provide information about types 

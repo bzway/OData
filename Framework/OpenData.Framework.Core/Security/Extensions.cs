@@ -1,6 +1,6 @@
 ﻿using System.Security.Principal;
 
-namespace OpenData.Security
+namespace OpenData.Framework.Common
 {
     public static class Extensions
     {

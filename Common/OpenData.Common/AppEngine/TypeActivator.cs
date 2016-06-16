@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenData.AppEngine
+namespace OpenData.Common.AppEngine
 {
     public class TypeActivator
     {

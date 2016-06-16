@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Xml;
 using OpenData.Framework.Core.Entity;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Sites.FrontPage.Controllers
 {
@@ -25,7 +27,7 @@ namespace OpenData.Sites.FrontPage.Controllers
                 }
                 var wechatManager = httpContext.GetWechatManager(uuid.ToString());
                 var state = DateTime.Now.Ticks.ToString();
-                ApplicationEngine.Current.Resolve<ICacheManager>().Set(state, 0, 10);
+                ApplicationEngine.Current.Default.Resolve<ICacheManager>().Set(state, 0, 10);
                 httpContext.Response.Redirect(wechatManager.TryGetAuthorizeUrl(httpContext.Request.Url.Host + "/Wechat/Wechat/Auth?return_url=" + httpContext.Request.Url, state));
                 return false;
             }
@@ -58,7 +60,7 @@ namespace OpenData.Sites.FrontPage.Controllers
         public WechatContext(string openId)
         {
             this.key = openId;
-            this.cache = ApplicationEngine.Current.Resolve<ICacheManager>();
+            this.cache = ApplicationEngine.Current.Default.Resolve<ICacheManager>();
         }
         public T Get<T>()
         {
@@ -98,7 +100,7 @@ namespace OpenData.Sites.FrontPage.Controllers
             {
                 return HttpNotFound();
             }
-            if (!ApplicationEngine.Current.Resolve<ICacheManager>().IsSet(state))
+            if (!ApplicationEngine.Current.Default.Resolve<ICacheManager>().IsSet(state))
             {
                 return HttpNotFound();
             }

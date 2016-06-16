@@ -1,4 +1,6 @@
 
+using Autofac;
+using OpenData.Common.AppEngine;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
 using System.Web;
@@ -13,7 +15,7 @@ namespace OpenData.Framework.Core
 
         #region ctor
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        ISiteService siteService = ApplicationEngine.Current.Resolve<ISiteService>();
+        ISiteService siteService = ApplicationEngine.Current.Default.Resolve<ISiteService>();
 
         readonly Site site;
         readonly IDatabase db;

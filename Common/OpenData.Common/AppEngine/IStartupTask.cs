@@ -1,14 +1,6 @@
-﻿#region License
-// 
-// Copyright (c) 2013, Bzway team
-// 
-// Licensed under the BSD License
-// See the file LICENSE.txt for details.
-// 
-#endregion
-namespace OpenData.AppEngine
+﻿namespace OpenData.Common.AppEngine
 {
-    public interface IStartupTask 
+    public interface IStartupTask
     {
         void Execute();
 

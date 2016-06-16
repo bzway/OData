@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OpenData.AppEngine
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// A statically compiled "singleton" used to store objects throughout the 

@@ -1,12 +1,12 @@
-﻿using OpenData.AppEngine.Dependency;
+﻿using OpenData.Common.AppEngine;
 using OpenData.Data.Core;
 namespace OpenData.Data.Default
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {
-        public void Register(ContainerManager containerManager, AppEngine.ITypeFinder typeFinder)
+        public void Register(IContainerManager containerManager, ITypeFinder typeFinder)
         {
-            containerManager.AddComponent<IDatabase, FileDatabase>("Default");
+            containerManager.RegisterType<IDatabase, FileDatabase>("Default");
         }
         public int Order
         {

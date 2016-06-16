@@ -1,5 +1,5 @@
-﻿using OpenData.AppEngine;
-using OpenData.AppEngine.Dependency;
+﻿
+using OpenData.Common.AppEngine;
 using System.Configuration;
 
 
@@ -9,7 +9,7 @@ namespace OpenData.Log
     {
         private string ConnectionString;
 
-        public void Register(ContainerManager builder, ITypeFinder typeFinder)
+        public void Register(IContainerManager builder, ITypeFinder typeFinder)
         {
             try
             {

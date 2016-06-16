@@ -6,7 +6,7 @@
 // See the file LICENSE.txt for details.
 // 
 #endregion
-namespace OpenData.AppEngine.Dependency
+namespace OpenData.Common.AppEngine
 {
     public enum ComponentLifeStyle
     {

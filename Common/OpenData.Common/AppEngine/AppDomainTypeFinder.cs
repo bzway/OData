@@ -14,7 +14,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace OpenData.AppEngine
+namespace OpenData.Common.AppEngine
 {
     /// <summary>
     /// A class that finds types needed by looping assemblies in the 

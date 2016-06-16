@@ -1,14 +1,4 @@
-﻿#region License
-// 
-// Copyright (c) 2013, Bzway team
-// 
-// Licensed under the BSD License
-// See the file LICENSE.txt for details.
-// 
-#endregion
-using OpenData.AppEngine;
-using OpenData.AppEngine.Dependency;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;

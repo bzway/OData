@@ -1,10 +1,8 @@
-﻿using OpenData.Web;
-using System;
-using System.Security.Principal;
+﻿using System;
 using System.Web;
-using System.Web.Security;
 
-namespace OpenData.Security
+
+namespace OpenData.Framework.Common
 {
     public sealed class BzwayAuthentication
     {

@@ -4,6 +4,8 @@ using OpenData.Caching;
 using System.Web;
 using System.Threading;
 using System.Collections.Generic;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Framework.Core
 {
@@ -82,7 +84,7 @@ namespace OpenData.Framework.Core
         public bool NeedVerificationCode(string key)
         {
             key += GetIP();
-            var c = ApplicationEngine.Current.Resolve<ICacheManager>();
+            var c = ApplicationEngine.Current.Default.Resolve<ICacheManager>();
             var count = c.Get<int>(key);
             count++;
             c.Set(key, count, 1);

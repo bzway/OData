@@ -1,14 +1,9 @@
 ﻿using OpenData.Utility;
-using OpenData.Utility;
 using System;
-using System.ComponentModel;
-using System.Configuration;
 using System.Security.Principal;
 using System.Text;
-using System.Threading;
-using System.Web;
 
-namespace OpenData.Security
+namespace OpenData.Framework.Common
 {
     public class BzwayIdentity : IIdentity
     {

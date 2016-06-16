@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using OpenData.Sites.FrontPage.Models;
 using OpenData.Framework.Core;
 using OpenData.Framework.Core.Entity;
+using OpenData.Common.AppEngine;
+using Autofac;
 
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
@@ -50,7 +52,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
                 case LoginStatus.Success:
                     var code = Guid.NewGuid().ToString("N");
                     returnUrl = string.Format("{0}&code={1}", returnUrl, code);
-                    ApplicationEngine.Current.Resolve<ICacheManager>().Set(code, this.User.GetCurrentUser().Token, 60 * 10);
+                    ApplicationEngine.Current.Default.Resolve<ICacheManager>().Set(code, this.User.GetCurrentUser().Token, 60 * 10);
                     return Redirect(returnUrl);
                 case LoginStatus.LockedOut:
                     return View("Lockout");
@@ -216,7 +218,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
                 AccessToken = accessToken,
             };
             db.Entity<SiteAuth>().Insert(siteAuth);
-            ApplicationEngine.Current.Resolve<ICacheManager>().Set(code, siteAuth, 10 * 60);
+            ApplicationEngine.Current.Default.Resolve<ICacheManager>().Set(code, siteAuth, 10 * 60);
 
             return Redirect(string.Format("{0}&state={1}&code={2}&ErrorCode={3}&ErrorMessage={4}", returnUrl, state, code, (int)ErrorCode.Success, ErrorCode.Success));
         }
