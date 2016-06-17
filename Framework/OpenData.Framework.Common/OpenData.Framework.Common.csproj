@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B02AD5CF-B0CA-4123-AEF6-5D69B0EA7266}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenData.Framework.Common</RootNamespace>
+    <AssemblyName>OpenData.Framework.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="log4net">
+      <HintPath>..\..\Lib\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppEngine.cs" />
+    <Compile Include="Form\ColumnValidation.cs" />
+    <Compile Include="Form\Html\ControlHelper.cs" />
+    <Compile Include="Form\Html\Controls\CheckBox.cs" />
+    <Compile Include="Form\Html\Controls\CheckBoxList.cs" />
+    <Compile Include="Form\Html\Controls\CLEditor.cs" />
+    <Compile Include="Form\Html\Controls\ControlBase.cs" />
+    <Compile Include="Form\Html\Controls\Date.cs" />
+    <Compile Include="Form\Html\Controls\Display.cs" />
+    <Compile Include="Form\Html\Controls\DropDownList.cs" />
+    <Compile Include="Form\Html\Controls\Empty.cs" />
+    <Compile Include="Form\Html\Controls\File.cs" />
+    <Compile Include="Form\Html\Controls\Hidden.cs" />
+    <Compile Include="Form\Html\Controls\HighlightEditor.cs" />
+    <Compile Include="Form\Html\Controls\IControl.cs" />
+    <Compile Include="Form\Html\Controls\Input.cs" />
+    <Compile Include="Form\Html\Controls\InputFloat.cs" />
+    <Compile Include="Form\Html\Controls\InputInt32.cs" />
+    <Compile Include="Form\Html\Controls\InputNumber.cs" />
+    <Compile Include="Form\Html\Controls\Password.cs" />
+    <Compile Include="Form\Html\Controls\RadioList.cs" />
+    <Compile Include="Form\Html\Controls\TextArea.cs" />
+    <Compile Include="Form\Html\Controls\TextBox.cs" />
+    <Compile Include="Form\Html\Controls\Tinymce.cs" />
+    <Compile Include="Form\Html\CreateForm.cs" />
+    <Compile Include="Form\Html\DetailForm.cs" />
+    <Compile Include="Form\Html\FormHelper.cs" />
+    <Compile Include="Form\Html\GridForm.cs" />
+    <Compile Include="Form\Html\HtmlCodeHelper.cs" />
+    <Compile Include="Form\Html\ISchemaForm.cs" />
+    <Compile Include="Form\Html\ListForm.cs" />
+    <Compile Include="Form\Html\RazorViewHelper.cs" />
+    <Compile Include="Form\Html\SelectableForm.cs" />
+    <Compile Include="Form\Html\UpdateForm.cs" />
+    <Compile Include="Form\Html\ValidationExtensions.cs" />
+    <Compile Include="Form\IColumn.cs" />
+    <Compile Include="Form\ISchema.cs" />
+    <Compile Include="Middleware\LogOwinMiddleware.cs" />
+    <Compile Include="Security\BzwayAuthentication.cs" />
+    <Compile Include="Security\BzwayIdentity.cs" />
+    <Compile Include="Security\BzwayModule.cs" />
+    <Compile Include="Security\BzwayPrincipal.cs" />
+    <Compile Include="Security\Extensions.cs" />
+    <Compile Include="ViewResult\JsonResultData.cs" />
+    <Compile Include="AggregateHtmlString.cs" />
+    <Compile Include="ViewResult\FrontViewResult.cs" />
+    <Compile Include="ViewResult\ExcelResult.cs" />
+    <Compile Include="Controllers\ExcelControllerExtensions.cs" />
+    <Compile Include="Abstractions\FrontHttpContextWrapper.cs" />
+    <Compile Include="Abstractions\FrontHttpRequestWrapper.cs" />
+    <Compile Include="Abstractions\FrontHttpResponseWrapper.cs" />
+    <Compile Include="Abstractions\FrontRequestChannel.cs" />
+    <Compile Include="FrontUrlRoutingModule.cs" />
+    <Compile Include="Middleware\LogMiddleware.cs" />
+    <Compile Include="DataType.cs" />
+    <Compile Include="Validation\EntityModelBinder.cs" />
+    <Compile Include="Filters\CacheFilterAttribute.cs" />
+    <Compile Include="Filters\CompressFilterAttribute.cs" />
+    <Compile Include="Filters\GenerateHTMLAttribute.cs" />
+    <Compile Include="Filters\SiteAttribute.cs" />
+    <Compile Include="Controllers\BzwayAPIController.cs" />
+    <Compile Include="Controllers\BzwaySiteController.cs" />
+    <Compile Include="Resource\ResourceRoutting.cs" />
+    <Compile Include="Routes\IRouteProvider.cs" />
+    <Compile Include="Routes\IRoutePublisher.cs" />
+    <Compile Include="Routes\RoutePublisher.cs" />
+    <Compile Include="ViewResult\JsonpResultContollerExtensions.cs" />
+    <Compile Include="ViewResult\WrappedView.cs" />
+    <Compile Include="ViewResult\NestedContainerViewEngine.cs" />
+    <Compile Include="Filters\StateControllerContextActionFilterAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptCompressorHandler.cs" />
+    <Compile Include="Abstractions\HttpApplicationStateBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpBrowserCapabilitiesBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpCachePolicyBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpContextBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpFileCollectionBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpRequestBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpResponseBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpServerUtilityBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpSessionStateBaseWrapper.cs" />
+    <Compile Include="Abstractions\HttpStaticObjectsCollectionBaseWrapper.cs" />
+    <Compile Include="Controllers\ControllerFactory.cs" />
+    <Compile Include="Css\AtRule.cs" />
+    <Compile Include="Css\AttributeSelector.cs" />
+    <Compile Include="Css\ColonCommentCollection.cs" />
+    <Compile Include="Css\Combiner.cs" />
+    <Compile Include="Css\Combiner.IDom.cs" />
+    <Compile Include="Css\Combiner.NodeStyle.cs" />
+    <Compile Include="Css\Comment.cs" />
+    <Compile Include="Css\Declaration.cs" />
+    <Compile Include="Css\InvalidReadingCallException.cs" />
+    <Compile Include="Css\InvalidStructureException.cs" />
+    <Compile Include="Css\Meta\BackgroundShorthandRule.cs" />
+    <Compile Include="Css\Meta\BorderPositionShorthandRule.cs" />
+    <Compile Include="Css\Meta\ColorType.cs" />
+    <Compile Include="Css\Meta\CombinedType.cs" />
+    <Compile Include="Css\Meta\EnumType.cs" />
+    <Compile Include="Css\Meta\FontFamilyType.cs" />
+    <Compile Include="Css\Meta\FontShorthandRule.cs" />
+    <Compile Include="Css\Meta\LengthType.cs" />
+    <Compile Include="Css\Meta\PositionDescriminationRule.cs" />
+    <Compile Include="Css\Meta\PositionShorthandRule.cs" />
+    <Compile Include="Css\Meta\PropertyMeta.cs" />
+    <Compile Include="Css\Meta\PropertyMeta.IntegratedMetas.cs" />
+    <Compile Include="Css\Meta\PropertyMetaCollection.cs" />
+    <Compile Include="Css\Meta\PropertyValueType.cs" />
+    <Compile Include="Css\Meta\ShorthandRule.cs" />
+    <Compile Include="Css\Meta\ShorthandType.cs" />
+    <Compile Include="Css\Meta\SizeType.cs" />
+    <Compile Include="Css\Meta\UrlType.cs" />
+    <Compile Include="Css\Meta\ValueDiscriminationRule.cs" />
+    <Compile Include="Css\Node.cs" />
+    <Compile Include="Css\Property.cs" />
+    <Compile Include="Css\RuleSet.cs" />
+    <Compile Include="Css\Selector.cs" />
+    <Compile Include="Css\SelectorCombinator.cs" />
+    <Compile Include="Css\SelectorGroup.cs" />
+    <Compile Include="Css\SelectorReader.cs" />
+    <Compile Include="Css\SelectorType.cs" />
+    <Compile Include="Css\SimpleSelector.cs" />
+    <Compile Include="Css\SimpleSelectorChain.cs" />
+    <Compile Include="Css\SplitOptions.cs" />
+    <Compile Include="Css\Statement.cs" />
+    <Compile Include="Css\StyleContext.cs" />
+    <Compile Include="Css\StyleSheet.cs" />
+    <Compile Include="Css\StyleSheetReader.cs" />
+    <Compile Include="Html\HtmlReader.cs" />
+    <Compile Include="Html\HtmlUtility.cs" />
+    <Compile Include="Html\InvalidHtmlException.cs" />
+    <Compile Include="IHtmlStringComparer.cs" />
+    <Compile Include="AreaHelpers.cs" />
+    <Compile Include="Controllers\AutoCompleteController.cs" />
+    <Compile Include="Validation\BzwayDataAnnotationsModelMetadataProvider.cs" />
+    <Compile Include="Validation\BzwayModelMetadata.cs" />
+    <Compile Include="DataSourceAttribute.cs" />
+    <Compile Include="Grid2\Design\GridActionAttribute.cs" />
+    <Compile Include="Grid2\Design\GridAttribute.cs" />
+    <Compile Include="Grid2\Design\GridColumnAttribute.cs" />
+    <Compile Include="Grid2\GridExtensions.cs" />
+    <Compile Include="Grid2\GridModel.cs" />
+    <Compile Include="Grid2\IGridColumn.cs" />
+    <Compile Include="Grid2\IGridItem.cs" />
+    <Compile Include="Grid2\IGridItemColumn.cs" />
+    <Compile Include="Grid2\IGridModel.cs" />
+    <Compile Include="Grid\GridAction.cs" />
+    <Compile Include="Grid\GridActionAttribute.cs" />
+    <Compile Include="Grid\GridAttribute.cs" />
+    <Compile Include="Grid\GridColumn.cs" />
+    <Compile Include="Grid\GridColumnAttribute.cs" />
+    <Compile Include="Grid\GridCommand.cs" />
+    <Compile Include="Grid\GridCommandAttribute.cs" />
+    <Compile Include="Grid\GridExtensions.cs" />
+    <Compile Include="Grid\GridItem.cs" />
+    <Compile Include="Grid\GridItemAction.cs" />
+    <Compile Include="Grid\GridModel.cs" />
+    <Compile Include="Grid\IColumnHeaderRender.cs" />
+    <Compile Include="Grid\IGridItemActionRender.cs" />
+    <Compile Include="Grid\IItemColumnRender.cs" />
+    <Compile Include="Grid\PageSizeAttribute.cs" />
+    <Compile Include="Grid\PageSizeCommand.cs" />
+    <Compile Include="Html\HtmlExtensions.cs" />
+    <Compile Include="Html\RadioButtonListExtensions.cs" />
+    <Compile Include="Html\ValidationExtensions.cs" />
+    <Compile Include="Html\ValidatorExtensions.cs" />
+    <Compile Include="ViewResult\ImageResult.cs" />
+    <Compile Include="ISelectListDataSource.cs" />
+    <Compile Include="ViewResult\JsonpResult.cs" />
+    <Compile Include="ViewResult\JsonTextResult.cs" />
+    <Compile Include="Menu\Configuration\MenuItemElement.cs" />
+    <Compile Include="Menu\Configuration\MenuItemElementCollection.cs" />
+    <Compile Include="Menu\Configuration\MenuSection.cs" />
+    <Compile Include="Menu\Configuration\RouteValuesElement.cs" />
+    <Compile Include="Menu\IMenuItem.cs" />
+    <Compile Include="Menu\IMenuItemContainer.cs" />
+    <Compile Include="Menu\IMenuItemInitializer.cs" />
+    <Compile Include="Menu\IMenuItems.cs" />
+    <Compile Include="Menu\IMenuItemStatus.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\MenuItemTemplate.cs" />
+    <Compile Include="Validation\ModelClientMetadataBuilder.cs" />
+    <Compile Include="Validation\ModelMetadataExtensions.cs" />
+    <Compile Include="Validation\ModelStateDictionaryExtenstions.cs" />
+    <Compile Include="NodeTypeNotSupportException.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="Html\ResourceHtmlHelper.cs" />
+    <Compile Include="RouteValuesHelpers.cs" />
+    <Compile Include="Routing\IgnoreRouteCollection.cs" />
+    <Compile Include="Routing\IgnoreRouteElement.cs" />
+    <Compile Include="Routing\RouteChildElement.cs" />
+    <Compile Include="Routing\RouteCollection.cs" />
+    <Compile Include="Routing\RouteConfigElement.cs" />
+    <Compile Include="Routing\RouteTableRegister.cs" />
+    <Compile Include="Routing\RouteTableSection.cs" />
+    <Compile Include="SelectableList.cs" />
+    <Compile Include="SelectListItemTree.cs" />
+    <Compile Include="Validation\BzwayDataAnnotationsModelValidatorProvider.cs" />
+    <Compile Include="ViewContextExtensions.cs" />
+    <Compile Include="ViewDataDictionaryExtensions.cs" />
+    <Compile Include="WebResourceLoader\ConfigurationManager.cs" />
+    <Compile Include="WebResourceLoader\Configuration\FileCollection.cs" />
+    <Compile Include="WebResourceLoader\Configuration\FileInfoElement.cs" />
+    <Compile Include="WebResourceLoader\Configuration\ReferenceCollection.cs" />
+    <Compile Include="WebResourceLoader\Configuration\ReferenceElement.cs" />
+    <Compile Include="WebResourceLoader\Configuration\WebResourcesSection.cs" />
+    <Compile Include="WebResourceLoader\CssMinify.cs" />
+    <Compile Include="WebResourceLoader\JSMinify.cs" />
+    <Compile Include="WebResourceLoader\Mode.cs" />
+    <Compile Include="WebResourceLoader\MvcExtensions.cs" />
+    <Compile Include="WebResourceLoader\WebResourceController.cs" />
+    <Compile Include="WebResourceLoader\WebResourceException.cs" />
+    <Compile Include="ResourceStatus.cs" />
+    <Compile Include="Routing\BoundUrl.cs" />
+    <Compile Include="Routing\ContentPathSegment.cs" />
+    <Compile Include="Routing\LiteralSubsegment.cs" />
+    <Compile Include="Routing\ParameterSubsegment.cs" />
+    <Compile Include="Routing\ParsedRoute.cs" />
+    <Compile Include="Routing\PathSegment.cs" />
+    <Compile Include="Routing\PathSubsegment.cs" />
+    <Compile Include="Routing\RouteParser.cs" />
+    <Compile Include="Routing\SeparatorPathSegment.cs" />
+    <Compile Include="Script\JSMin.cs" />
+    <Compile Include="Script\Serialization\JsonHelper.cs" />
+    <Compile Include="StringEx.cs" />
+    <Compile Include="TrustLevelUtility.cs" />
+    <Compile Include="ViewEngine\Razor\BzwayRazorEngine.cs" />
+    <Compile Include="ViewEngine\ViewEngineManager.cs" />
+    <Compile Include="WatchModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\OpenData.Common\OpenData.Common.csproj">
+      <Project>{2eaef878-041b-4365-8cbf-0a7038b68468}</Project>
+      <Name>OpenData.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\OpenData.Data.Core\OpenData.Data.Core.csproj">
+      <Project>{dd3dca24-67ff-4555-a803-5d14335822f6}</Project>
+      <Name>OpenData.Data.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
