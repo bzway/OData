@@ -611,6 +611,7 @@
     <Content Include="Content\themes\metro\window.css" />
     <Content Include="Content\themes\mobile.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="welcome.html" />
     <Content Include="Temp\demo.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

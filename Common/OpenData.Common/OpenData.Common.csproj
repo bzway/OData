@@ -161,6 +161,7 @@
     <Compile Include="AppEngine\ApplicationInitialization.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AppEngine\ContainerManager.cs" />
     <Compile Include="AppEngine\DependencyResolver.cs">
       <SubType>Code</SubType>
     </Compile>

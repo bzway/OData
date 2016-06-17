@@ -32,6 +32,7 @@ namespace OpenData.Common.AppEngine
                 if (_this == null)
                 {
                     var containerBuilder = new ContainerBuilder();
+                    containerBuilder.RegisterAssemblyModules(AppDomain.CurrentDomain.GetAssemblies());
                     this.container = containerBuilder.Build();
                 }
             }

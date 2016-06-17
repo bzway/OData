@@ -1,5 +1,6 @@
 ﻿
 using Autofac;
+using Autofac.Core;
 
 namespace OpenData.Common.AppEngine
 {

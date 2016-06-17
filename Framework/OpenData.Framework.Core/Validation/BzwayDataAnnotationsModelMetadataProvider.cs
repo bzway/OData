@@ -57,7 +57,9 @@ namespace OpenData.Framework.Common
     {
         public override IEnumerable<ModelValidator> GetValidators(ModelMetadata metadata, ControllerContext context)
         {
-            throw new NotImplementedException();
+            List<ModelValidator> list = new List<ModelValidator>();
+            list.Add(new MyModelValidator(metadata, context));
+            return list;
         }
         public class MyModelValidator : ModelValidator
         {
@@ -70,8 +72,6 @@ namespace OpenData.Framework.Common
             {
                 throw new NotImplementedException();
             }
-
         }
     }
-
 }

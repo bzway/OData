@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using Autofac;
+using Autofac.Core;
+using Autofac.Core.Lifetime;
+using Autofac.Core.Resolving;
 
 namespace OpenData.Common.AppEngine
 {
-    public interface IContainerManager : IContainer
+    public interface IContainerManager
     {
         void RegisterInstance(Type service, object instance, string key = "");
         void RegisterInstance<TService>(object instance, string key = "");

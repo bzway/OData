@@ -8,33 +8,30 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+[assembly: PreApplicationStartMethod(typeof(OpenData.Sites.FrontPage.start), "run")]
 namespace OpenData.Sites.FrontPage
 {
+
     public class MvcApplication : System.Web.HttpApplication
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         protected void Application_Start()
         {
-            //SohuSMTPService smtp = new SohuSMTPService();
-            //smtp.SendMail("adm.zhu@bzway.com", "zhumingwu@126.com;zhumingwu@hotmail.com", "测试邮件", "这是一个测试邮件<a href='http://bzway.com'>click here</a>");
-            //publishMessage();
-            //receiveMessage();
+
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            var controllerFactory = new BzwayControllerFactory();
-            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+            ControllerBuilder.Current.SetControllerFactory(new BzwayControllerFactory());
             ModelMetadataProviders.Current = new BzwayDataAnnotationsModelMetadataProvider() { };
             ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
-
-   
             //ViewEngines.Engines.Clear();
             //ViewEngines.Engines.Add(new BzwayViewEngine());
             Log4NetConfig.Register(this);
+           
         }
+
         protected void Application_Error(object sender, EventArgs e)
         {
             var ex = Server.GetLastError().GetBaseException();
@@ -72,8 +69,6 @@ namespace OpenData.Sites.FrontPage
             }
         }
 
-
-
         public static void receiveMessage()
         {
             ConnectionFactory factory = new ConnectionFactory();
@@ -102,6 +97,15 @@ namespace OpenData.Sites.FrontPage
                     }
                 }
             }
+        }
+    }
+
+    public class start
+    {
+        public static void run()
+        {
+            var i = 0;
+            i++;
         }
     }
 }
