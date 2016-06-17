@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Data.SQL", "Data\O
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{38308183-43B4-4353-981A-3BFECE982A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Framework.Common", "Framework\OpenData.Framework.Core\OpenData.Framework.Common.csproj", "{B02AD5CF-B0CA-4123-AEF6-5D69B0EA7266}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Framework.Common", "Framework\OpenData.Framework.Common\OpenData.Framework.Common.csproj", "{B02AD5CF-B0CA-4123-AEF6-5D69B0EA7266}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Data.Default", "Data\OpenData.Data.File\OpenData.Data.Default.csproj", "{1F735B03-E2C3-43EE-8D30-DFF41B037E26}"
 EndProject
@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Security.WeChat", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sites", "Sites", "{E9CB29EC-FECB-4770-9113-8B4A8A0BC587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Framework.Core", "Framework\OpenData.Framework.User\OpenData.Framework.Core.csproj", "{F3281193-F250-4E79-840B-93B60B0992EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenData.Framework.Core", "Framework\OpenData.Framework.Core\OpenData.Framework.Core.csproj", "{F3281193-F250-4E79-840B-93B60B0992EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTest", "Tests\DataTest\DataTest.csproj", "{A1A80CB2-5381-451D-9F66-5AC3AA4823CD}"
 EndProject
