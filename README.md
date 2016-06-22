@@ -1,6 +1,6 @@
 ﻿# Bzway
 用科技（尤其互联信息技术）解决现实商业。主要聚焦移动互联，整合线上线下。 利用开放数据库和动态内容管理快速构建新的项目。
-
+技术的运用可能是企业战略与成功程度的重要区分指标
 # OpenData开放数据库
 通过OpenDatabase定义Entity > Schema > Layout管理所有系统数据
 db=>Entity=>Schema=>Layout=>View
