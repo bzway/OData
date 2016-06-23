@@ -17,9 +17,9 @@ namespace OpenData.Sites.FrontPage
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         protected void Application_Start()
         {
-
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Log4NetConfig.Register(this);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ControllerBuilder.Current.SetControllerFactory(new BzwayControllerFactory());
@@ -28,8 +28,7 @@ namespace OpenData.Sites.FrontPage
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
             //ViewEngines.Engines.Clear();
             //ViewEngines.Engines.Add(new BzwayViewEngine());
-            Log4NetConfig.Register(this);
-           
+
         }
 
         protected void Application_Error(object sender, EventArgs e)
@@ -104,8 +103,9 @@ namespace OpenData.Sites.FrontPage
     {
         public static void run()
         {
-            var i = 0;
-            i++;
+            
+          
+
         }
     }
 }

@@ -7,20 +7,12 @@
 // 
 #endregion
 
-using Autofac;
 using Microsoft.Owin;
-using OpenData.Common.AppEngine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using OpenData.Common.Caching;
 using System.Threading.Tasks;
-using System.Web.Mvc;
-using System.Web.Routing;
 
 namespace OpenData.Framework.Core
 {
-
     public class FrontPageMiddleware : OwinMiddleware
     {
         public FrontPageMiddleware(OwinMiddleware next)
@@ -29,7 +21,6 @@ namespace OpenData.Framework.Core
         }
         public async override Task Invoke(IOwinContext context)
         {
-            var sessionId = context.Request.Cookies["_session"];
             await Next.Invoke(context);
         }
     }

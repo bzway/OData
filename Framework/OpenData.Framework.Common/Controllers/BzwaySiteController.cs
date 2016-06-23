@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using OpenData.Caching;
+using OpenData.Common.Caching;
 
 namespace OpenData.Framework.Common.Core
 {

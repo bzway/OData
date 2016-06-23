@@ -16,7 +16,7 @@ using System.Web.Mvc;
 
 namespace OpenData.Common.AppEngine
 {
-    public class DependencyResolver : IDependencyResolver
+    public class CustomDependencyResolver : IDependencyResolver
     {
         public object GetService(Type serviceType)
         {
@@ -26,6 +26,24 @@ namespace OpenData.Common.AppEngine
         public IEnumerable<object> GetServices(Type serviceType)
         {
             return ApplicationEngine.Current.Default.ResolveKeyed<IEnumerable<object>>(serviceType);
+        }
+    }
+
+    public class MvcDependencyResolver : IDependencyResolver
+    {
+        IDependencyResolver dependencyResolver;
+        public MvcDependencyResolver(IDependencyResolver dependencyResolver)
+        {
+            this.dependencyResolver = dependencyResolver;
+        }
+        public object GetService(Type serviceType)
+        {
+            return this.dependencyResolver.GetService(serviceType);
+        }
+
+        public IEnumerable<object> GetServices(Type serviceType)
+        {
+            return this.dependencyResolver.GetServices(serviceType);
         }
     }
 }

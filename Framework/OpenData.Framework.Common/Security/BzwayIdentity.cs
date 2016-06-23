@@ -5,42 +5,15 @@ using System.Text;
 
 namespace OpenData.Framework.Common
 {
-    public class BzwayIdentity : IIdentity
+    public class UserIdentity : IIdentity
     {
         public string ID { get; set; }
-        public string Secret { get; set; }
+        public string Name { get; set; }
         public string Roles { get; set; }
+        public int In { get; set; }
+        public LockType Locked { get; set; }
+        public string Token { get; set; }
 
-        public BzwayIdentity() { }
-        public BzwayIdentity(string data) { Parse(data); }
-
-        public BzwayIdentity Parse(string data)
-        {
-            try
-            {
-                data = Cryptor.DecryptAES(data, "BzwayIdentity");
-                string[] ds = data.Split('|');
-                this.ID = ds[0];
-                this.Secret = ds[1];
-                this.Roles = ds[2];
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return this;
-        }
-        string s = "|";
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(ID);
-            sb.Append(s);
-            sb.Append(Secret);
-            sb.Append(s);
-            sb.Append(Roles);
-            return Cryptor.EncryptAES(sb.ToString(), "BzwayIdentity");
-        }
         public string AuthenticationType
         {
             get { return "Form"; }
@@ -51,12 +24,12 @@ namespace OpenData.Framework.Common
             get { return !string.IsNullOrEmpty(this.ID); }
         }
 
-        /// <summary>
-        /// User Name, can retrieve user info from system db
-        /// </summary>
-        public string Name
-        {
-            get { return this.ID; }
-        }
+    }
+    public enum LockType
+    {
+        None = 0,
+        MobilePhone = 1,
+        Email = 2,
+        Information = 3,
     }
 }

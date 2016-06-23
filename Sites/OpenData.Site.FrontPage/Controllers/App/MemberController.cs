@@ -61,7 +61,7 @@ namespace OpenData.Sites.FrontPage.Controllers.App
 
             using (var db = OpenDatabase.GetDatabase())
             {
-                var model = db.Entity<User>().Query().Where(m => m.Id, this.User.GetCurrentUser().DecryptAES(id), CompareType.Equal).First();
+                var model = db.Entity<User>().Query().Where(m => m.Id, this.User.GetCurrentUser().ID, CompareType.Equal).First();
                 if (model == null)
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

@@ -1,5 +1,5 @@
 ﻿using OpenData.Framework.Core;
-using OpenData.Caching;
+using OpenData.Common.Caching;
 using System;
 using System.Linq;
 using System.Security.Cryptography;

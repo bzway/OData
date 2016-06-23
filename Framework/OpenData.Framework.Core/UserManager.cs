@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Microsoft.Owin;
 using OpenData.Common.AppEngine;
+using OpenData.Framework.Common;
 using OpenData.Framework.Core.Entity;
 using OpenData.Globalization;
 using OpenData.Message;
@@ -12,32 +13,8 @@ using System.Web;
 
 namespace OpenData.Framework.Core
 {
-    public class UserIdentity
-    {
-        public string ID { get; set; }
-        public string Name { get; set; }
-        public string Roles { get; set; }
-        public int In { get; set; }
-        public LockType Locked { get; set; }
-        public string Token { get; set; }
-        public string EncryptAES(string input)
-        {
-            var r = DateTime.Now.Ticks % 30;
-            return input.Insert((int)r, this.ID);
-        }
-
-        public string DecryptAES(string input)
-        {
-            return input.Replace(this.ID, "");
-        }
-    }
-    public enum LockType
-    {
-        None = 0,
-        MobilePhone = 1,
-        Email = 2,
-        Information = 3,
-    }
+   
+  
     public enum LoginStatus
     {
         // Summary:
@@ -76,6 +53,10 @@ namespace OpenData.Framework.Core
         public UserManager(HttpContextBase context)
         {
             this.context = context.GetOwinContext();
+        }
+        public UserManager(IOwinContext context)
+        {
+            this.context = context;
         }
         #endregion
         #region PasswordSignIn

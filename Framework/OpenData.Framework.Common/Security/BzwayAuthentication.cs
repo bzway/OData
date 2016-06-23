@@ -55,7 +55,7 @@ namespace OpenData.Framework.Common
         /// <param name="cookiePath">The cookie path for the forms-authentication ticket.</param>
         /// <exception cref="T:System.Web.HttpException">
         ///   <see cref="P:System.Web.Security.FormsAuthentication.RequireSSL" /> is true and <see cref="P:System.Web.HttpRequest.IsSecureConnection" /> is false.</exception>
-        public static void SetAuthCookie(BzwayIdentity ticket, bool createPersistentCookie=true, string cookiePath = "/")
+        public static void SetAuthCookie(UserIdentity ticket, bool createPersistentCookie=true, string cookiePath = "/")
         {
             var httpContext = HttpContext.Current;
             HttpCookie authenticationCookie = new HttpCookie("OpenID");

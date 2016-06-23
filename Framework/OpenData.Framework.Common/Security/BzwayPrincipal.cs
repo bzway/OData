@@ -1,31 +1,44 @@
-﻿using System.Security.Principal;
-
+﻿using Microsoft.Owin;
+using OpenData.Utility;
+using System.Security.Principal;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace OpenData.Framework.Common
 {
-     public class BzwayPrincipal : IPrincipal
+    public class BzwayPrincipal : IPrincipal
     {
-        public BzwayPrincipal(string data)
+        private static readonly string SessionKey = "Bzway.Session";
+        private static readonly string PasswordKey = "passwordKey";
+        private readonly IDictionary<string, string> cookies;
+        private UserIdentity identity;
+
+        public BzwayPrincipal(IDictionary<string, string> cookies)
         {
-            this.BzwayIdentity = new BzwayIdentity(data);
+            this.cookies = cookies;
         }
-        private BzwayIdentity BzwayIdentity { get; set; }
         public IIdentity Identity
         {
             get
             {
-                return this.BzwayIdentity;
+                if (this.identity == null)
+                {
+                    var data = cookies[SessionKey];
+                    data = Cryptor.DecryptAES(data, PasswordKey);
+                    this.identity = SerializationHelper.DeserializeObjectJson<UserIdentity>(data);
+                }
+                return this.identity;
             }
         }
 
         public bool IsInRole(string role)
         {
-            return this.BzwayIdentity.Roles.Contains(role);
+            return this.identity.Roles.Contains(role);
         }
         public override string ToString()
         {
-            return this.BzwayIdentity.Name;
+            return this.identity.Name;
         }
     }
-     
+
 }

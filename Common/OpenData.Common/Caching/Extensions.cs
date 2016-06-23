@@ -1,4 +1,3 @@
-using OpenData.Caching;
 using System;
 
 namespace OpenData.Common.Caching
