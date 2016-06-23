@@ -56,8 +56,44 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "H5", "Temps\H5\", "{16801D1
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49659"
 	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49659"
+		Debug.AspNetCompiler.PhysicalPath = "Temps\H5\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49659\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49659"
+		Release.AspNetCompiler.PhysicalPath = "Temps\H5\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49659\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49659"
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "metronic.bootstrap", "Temps\metronic.bootstrap\", "{EB13C39A-CCE8-41CB-B9B2-83A10152B174}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49661"
+		Debug.AspNetCompiler.PhysicalPath = "Temps\metronic.bootstrap\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49661\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49661"
+		Release.AspNetCompiler.PhysicalPath = "Temps\metronic.bootstrap\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49661\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49661"
+	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49661"
@@ -96,6 +132,24 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyWeb", "Temps\MyWeb\", "{A
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49662"
 	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49662"
+		Debug.AspNetCompiler.PhysicalPath = "Temps\MyWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49662\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49662"
+		Release.AspNetCompiler.PhysicalPath = "Temps\MyWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49662\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49662"
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PersonSite", "Temps\PersonSite\", "{D37779CB-BE3C-4BB9-AD26-FF532301DAC3}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -116,8 +170,44 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PersonSite", "Temps\PersonS
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49663"
 	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49663"
+		Debug.AspNetCompiler.PhysicalPath = "Temps\PersonSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49663\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49663"
+		Release.AspNetCompiler.PhysicalPath = "Temps\PersonSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49663\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49663"
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "startbootstrap-sb-admin-2-1.0.8", "Temps\startbootstrap-sb-admin-2-1.0.8\", "{B1399E23-38DB-4E14-9668-5D67E9A51D0D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49666"
+		Debug.AspNetCompiler.PhysicalPath = "Temps\startbootstrap-sb-admin-2-1.0.8\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49666\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49666"
+		Release.AspNetCompiler.PhysicalPath = "Temps\startbootstrap-sb-admin-2-1.0.8\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49666\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49666"
+	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49666"
@@ -823,8 +913,8 @@ Global
 		{B1399E23-38DB-4E14-9668-5D67E9A51D0D} = {911B2485-3979-4927-9797-0AAB91A2B47F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 		VisualSVNWorkingCopyRoot = .
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = KLS.vsmdi

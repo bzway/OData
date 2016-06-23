@@ -1212,11 +1212,11 @@
       <Project>{5fe33a48-0bfa-40b7-a2d6-2999b9f00417}</Project>
       <Name>OpenData.Security.WeChat</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\OpenData.Framework.User\OpenData.Framework.Core.csproj">
+    <ProjectReference Include="..\..\Framework\OpenData.Framework.Core\OpenData.Framework.Core.csproj">
       <Project>{f3281193-f250-4e79-840b-93b60b0992ee}</Project>
       <Name>OpenData.Framework.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\OpenData.Framework.Core\OpenData.Framework.Common.csproj">
+    <ProjectReference Include="..\..\Framework\OpenData.Framework.Common\OpenData.Framework.Common.csproj">
       <Project>{b02ad5cf-b0ca-4123-aef6-5d69b0ea7266}</Project>
       <Name>OpenData.Framework.Common</Name>
     </ProjectReference>

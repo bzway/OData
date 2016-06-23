@@ -242,7 +242,7 @@
       <Project>{dd3dca24-67ff-4555-a803-5d14335822f6}</Project>
       <Name>OpenData.Data.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OpenData.Framework.Core\OpenData.Framework.Common.csproj">
+    <ProjectReference Include="..\OpenData.Framework.Common\OpenData.Framework.Common.csproj">
       <Project>{b02ad5cf-b0ca-4123-aef6-5d69b0ea7266}</Project>
       <Name>OpenData.Framework.Common</Name>
     </ProjectReference>
