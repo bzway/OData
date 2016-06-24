@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace OpenData.Caching
+namespace OpenData.Common.Caching
 {
     /// <summary>
     /// Represents a NopStaticCache

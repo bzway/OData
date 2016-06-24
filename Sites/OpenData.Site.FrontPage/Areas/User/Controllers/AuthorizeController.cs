@@ -1,4 +1,4 @@
-﻿using OpenData.Caching;
+﻿using OpenData.Common.Caching;
 using OpenData.Data.Core;
 using OpenData.Utility;
 using System;

@@ -29,18 +29,19 @@ namespace OpenData.Framework.Common
 #if TRACE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            response.Write("FrontPageMiddleware Start");
+            response.Write("<!--\r\n");
 #endif
             foreach (var item in env.Keys)
             {
-                response.Write(string.Format("{0}:{1}<br/>", item, env[item]));
+                response.Write(string.Format("{0}:{1}\r\n", item, env[item]));
             }
+            response.Write("\r\n-->");
             await next(env);
 
 #if TRACE
 
             stopwatch.Stop();
-            response.Write(string.Format("FrontPageMiddleware, {0}ms.</br>", stopwatch.ElapsedMilliseconds));
+            response.Write(string.Format("<!--Exec in {0}ms.-->", stopwatch.ElapsedMilliseconds));
 #endif
 
         }

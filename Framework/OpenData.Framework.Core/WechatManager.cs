@@ -11,7 +11,7 @@ using System.IO;
 using System.Drawing;
 using System.Security.Cryptography;
 using OpenData.Framework.Core.Entity;
-using OpenData.Caching;
+using OpenData.Common.Caching;
 using Newtonsoft.Json;
 using OpenData.Common.AppEngine;
 using Autofac;

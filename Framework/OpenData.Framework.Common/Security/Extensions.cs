@@ -4,9 +4,9 @@ namespace OpenData.Framework.Common
 {
     public static class Extensions
     {
-        public static BzwayIdentity BzwayIdentity(this IPrincipal p)
+        public static UserIdentity BzwayIdentity(this IPrincipal p)
         {
-            return p.Identity as BzwayIdentity;
+            return p.Identity as UserIdentity;
         }
 
     }

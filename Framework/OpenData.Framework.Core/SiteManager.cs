@@ -1,9 +1,12 @@
 
 using Autofac;
+using Microsoft.Owin;
 using OpenData.Common.AppEngine;
+using OpenData.Common.Caching;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
-using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 
 namespace OpenData.Framework.Core
@@ -18,8 +21,9 @@ namespace OpenData.Framework.Core
         static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         ISiteService siteService = ApplicationEngine.Current.Default.Resolve<ISiteService>();
 
-        readonly Site site;
-        readonly IDatabase db;
+        IOwinContext context;
+        Site site;
+        IDatabase db;
 
         public SiteManager(string siteID)
         {
@@ -29,38 +33,54 @@ namespace OpenData.Framework.Core
                 this.db = OpenDatabase.GetDatabase(this.site.ProviderName, this.site.ConnectionString, this.site.DatabaseName);
             }
         }
+        public SiteManager(IOwinContext context)
+        {
+            this.context = context;
+        }
         public SiteManager(HttpContextBase context)
         {
-            this.site = this.siteService.FindSiteByDomain(context.GetOwinContext().Request.Host.Value);
-
-            if (this.site == null && context.Session["CurrentSite"] != null)
-            {
-                this.site = siteService.FindSiteByID(context.Session["CurrentSite"].ToString());
-            }
-
-            if (this.site == null)
-            {
-                this.site = siteService.FindSiteByName(context.Request.QueryString["siteName"]);
-            }
-
-            if (this.site != null)
-            {
-                this.db = OpenDatabase.GetDatabase(this.site.ProviderName, this.site.ConnectionString, this.site.DatabaseName);
-            }
+            this.context = context.GetOwinContext();
         }
         #endregion
 
         public Site GetSite()
         {
+            if (this.site == null)
+            { this.site = this.siteService.FindSiteByDomain(this.context.Request.Host.Value); }
+            if (site == null)
+            {
+                site = GetDefaultSite();
+            }
             return this.site;
+        }
+
+        public Site GetDefaultSite()
+        {
+            return new Site() { };
         }
         public IDatabase GetSiteDataBase()
         {
+            if (this.db == null)
+            {
+                this.db = OpenDatabase.GetDatabase(this.GetSite().ProviderName, this.GetSite().ConnectionString, this.GetSite().DatabaseName);
+            }
             return this.db;
         }
         public SitePage GetSitePage(string PageUrl)
         {
-            if (this.db == null)
+            ICacheManager cache = ApplicationEngine.Current.Default.Resolve<ICacheManager>();
+            var pageList = cache.Get<List<SitePage>>("SitePage", () =>
+            {
+                List<SitePage> list = new List<SitePage>();
+                foreach (var item in this.GetSiteDataBase().Entity<SitePage>().Query().ToList())
+                {
+                    list.Add(item);
+                }
+                return list;
+            });
+            
+            var page = pageList.Where(m => m.PageUrl == PageUrl).FirstOrDefault();
+            if (page == null)
             {
                 return new SitePage()
                 {
@@ -69,39 +89,9 @@ namespace OpenData.Framework.Core
                     MasterVirtualPath = "~/Views/Shared/_Layout.cshtml",
                 };
             }
-            if (string.IsNullOrWhiteSpace(PageUrl))
-            {
-                var page = this.db.Entity<SitePage>().Query().Where(m => m.PageUrl, null, CompareType.Equal).First();
-                if (page == null)
-                {
-                    return new SitePage()
-                    {
-                        VirtualPath = "~/Views/Home/NotFound.cshtml",
-                        FileExtension = ".cshtml",
-                        MasterVirtualPath = "~/Views/Shared/_Layout.cshtml",
-                    };
-                }
 
-                return page;
-            }
-            else
-            {
-                var page = this.db.Entity<SitePage>().Query().Where(m => m.PageUrl, PageUrl, CompareType.Equal).First();
-
-                if (page == null)
-                {
-                    return new SitePage()
-                    {
-                        VirtualPath = "~/Views/Home/NotFound.cshtml",
-                        FileExtension = ".cshtml",
-                        MasterVirtualPath = "~/Views/Shared/_Layout.cshtml",
-                    };
-                }
-
-                return page;
-            }
-        }
-
+            return page;
+        } 
         public IMemberService GetMemberService()
         {
             return new MemberService();

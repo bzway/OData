@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Caching;
 using System.Text.RegularExpressions;
 
-namespace OpenData.Caching
+namespace OpenData.Common.Caching
 {
     /// <summary>
     /// Represents a MemoryCacheCache

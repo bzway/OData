@@ -1,4 +1,4 @@
-namespace OpenData.Caching
+namespace OpenData.Common.Caching
 {
     /// <summary>
     /// Cache manager interface

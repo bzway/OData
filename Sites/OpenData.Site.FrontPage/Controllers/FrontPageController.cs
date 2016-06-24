@@ -6,6 +6,9 @@ using System.Text;
 using OpenData.Framework.Common;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
+using Autofac;
+using OpenData.Common.AppEngine;
+using System.Web.Routing;
 
 namespace OpenData.Sites.FrontPage.Controllers
 {
@@ -14,6 +17,14 @@ namespace OpenData.Sites.FrontPage.Controllers
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public ActionResult Index(string PageUrl)
         {
+            if (ApplicationEngine.Current[this.Site.GetSite().Name].IsRegisteredWithName<IController>(PageUrl))
+            {
+                var controller = ApplicationEngine.Current[this.Site.GetSite().Name].ResolveNamed<IController>(PageUrl);
+                RequestContext requestContext = this.ControllerContext.RequestContext;
+                controller.Execute(requestContext);
+                return null;
+            }
+
             //get webpage according to PageUrl which is a friendly name of the web page created by user.
             var page = this.Site.GetSitePage(PageUrl);
             if (page == null)

@@ -1,5 +1,5 @@
 ﻿using OpenData.Common.AppEngine;
-using OpenData.Caching;
+using OpenData.Common.Caching;
 using OpenData.Data.Core;
 using OpenData.Message;
 using System.Web;
