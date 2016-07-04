@@ -21,10 +21,10 @@ namespace OpenData.Framework.Core.Entity
         /// </summary>
         public string FileExtension { get; set; }
         /// <summary>
-        /// 虚拟路径
+        /// 虚拟路径 for Virtual Path
         /// </summary>
-        public string VirtualPath { get; set; }
-        [Display(Name = "模板",Description="相对路径")]
+        public string Name { get; set; }
+        [Display(Name = "模板", Description = "相对路径")]
         /// <summary>
         /// 模板
         /// </summary>
@@ -63,6 +63,8 @@ namespace OpenData.Framework.Core.Entity
         public bool ShowInCrumb { get; set; }
         public string DisplayText { get; set; }
         public int SortBy { get; set; }
+
+        public string NavigationId { get; set; }
         #endregion
 
         #region Permission

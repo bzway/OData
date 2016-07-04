@@ -185,7 +185,7 @@
     <Compile Include="Areas\Site\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Site\Controllers\PageController.cs" />
     <Compile Include="Areas\Site\SitesAreaRegistration.cs" />
-    <Compile Include="Areas\User\Controllers\BaseSiteController.cs" />
+    <Compile Include="Areas\User\Controllers\BaseController.cs" />
     <Compile Include="Areas\User\Controllers\AuthorizeController.cs" />
     <Compile Include="Areas\User\Controllers\SiteController.cs" />
     <Compile Include="Areas\User\UsersAreaRegistration.cs" />

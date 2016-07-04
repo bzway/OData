@@ -6,7 +6,7 @@ using Autofac;
 
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
-    public class BaseUserController : BzwayController
+    public class BaseController : BzwayController
     {
         public IDatabase db
         {

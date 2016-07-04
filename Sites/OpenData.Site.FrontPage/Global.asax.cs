@@ -24,7 +24,7 @@ namespace OpenData.Sites.FrontPage
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ControllerBuilder.Current.SetControllerFactory(new BzwayControllerFactory());
             ModelMetadataProviders.Current = new BzwayDataAnnotationsModelMetadataProvider() { };
-            ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
+            //ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
             //ViewEngines.Engines.Clear();
             //ViewEngines.Engines.Add(new BzwayViewEngine());

@@ -18,12 +18,12 @@ namespace OpenData.Sites.FrontPage
     {
         public void Configuration(IAppBuilder app)
         {
-            app.Use<LogMiddleware>();
-            app.Use<UserIdentityMiddleware>();
-            app.Use<UserSiteMiddleware>();
-            app.Use<FrontPageMiddleware>();
+            //app.Use<LogMiddleware>();
+            //app.Use<UserIdentityMiddleware>();
+            //app.Use<UserSiteMiddleware>();
+            //app.Use<FrontPageMiddleware>();
             ConfigureAuth(app);
-            DependencyResolver.SetResolver(new MvcDependencyResolver(DependencyResolver.Current));
+            //DependencyResolver.SetResolver(new MvcDependencyResolver(DependencyResolver.Current));
         }
     }
 }

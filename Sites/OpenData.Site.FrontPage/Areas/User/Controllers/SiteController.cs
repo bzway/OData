@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
-    public class SiteController : BaseUserController
+    public class SiteController : BaseController
     {
 
         [Authorize(Roles = "Site")]

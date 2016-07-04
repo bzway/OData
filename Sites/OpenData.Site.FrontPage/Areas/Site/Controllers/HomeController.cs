@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using OpenData.Framework.Core;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -7,7 +8,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
     public class HomeController : BaseSiteController
     {
 
-        [Authorize(Roles = "Site")]
+        [BzwayAuthorize(Roles = "Site")]
         public ActionResult Index(string id)
         {
             if (string.IsNullOrEmpty(id))

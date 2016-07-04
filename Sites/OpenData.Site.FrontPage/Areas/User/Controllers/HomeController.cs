@@ -5,7 +5,7 @@ using System.Web.Mvc;
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
 
-    public class HomeController : BaseUserController
+    public class HomeController : BaseController
     {
         [Authorize]
         public ActionResult Index()

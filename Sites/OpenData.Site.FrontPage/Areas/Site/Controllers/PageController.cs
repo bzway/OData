@@ -63,7 +63,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
                 ShowInNavigation = true,
                 SortBy = 0,
                 Status = 0,
-                VirtualPath = string.Empty,
+                Name = string.Empty,
             };
             return View(sitePage);
         }

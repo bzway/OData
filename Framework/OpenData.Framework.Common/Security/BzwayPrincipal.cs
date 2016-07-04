@@ -8,7 +8,7 @@ namespace OpenData.Framework.Common
 {
     public class BzwayPrincipal : IPrincipal
     {
-        private static readonly string SessionKey = "Bzway.Session";
+        private static readonly string SessionKey = "SessionKey";
         private static readonly string PasswordKey = "passwordKey";
         private readonly IDictionary<string, string> cookies;
         private UserIdentity identity;
@@ -21,7 +21,7 @@ namespace OpenData.Framework.Common
         {
             get
             {
-                if (this.identity == null)
+                if (this.identity == null && cookies.ContainsKey(SessionKey))
                 {
                     var data = cookies[SessionKey];
                     data = Cryptor.DecryptAES(data, PasswordKey);

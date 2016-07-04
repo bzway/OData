@@ -84,7 +84,7 @@ namespace OpenData.Framework.Core
             {
                 return new SitePage()
                 {
-                    VirtualPath = "~/Views/Home/NotFound.cshtml",
+                    Name = "~/Views/Home/NotFound.cshtml",
                     FileExtension = ".cshtml",
                     MasterVirtualPath = "~/Views/Shared/_Layout.cshtml",
                 };

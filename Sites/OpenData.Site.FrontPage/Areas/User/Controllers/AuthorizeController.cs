@@ -13,7 +13,7 @@ using Autofac;
 
 namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 {
-    public class AuthorizeController : BaseUserController
+    public class AuthorizeController : BaseController
     {
         public ActionResult Login(string state, string returnUrl)
         {
