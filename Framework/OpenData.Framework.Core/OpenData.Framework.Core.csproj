@@ -92,7 +92,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Text.Encodings.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Text.Encodings.Web.4.0.0-rc2-24027\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>..\..\packages\System.Text.Encodings.Web.4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
@@ -157,6 +157,7 @@
     <Compile Include="User\Entity\UserCard.cs" />
     <Compile Include="User\Entity\UserEmail.cs" />
     <Compile Include="User\Entity\UserPhone.cs" />
+    <Compile Include="User\Entity\App.cs" />
     <Compile Include="User\Entity\UserSite.cs" />
     <Compile Include="User\Entity\UserToken.cs" />
     <Compile Include="User\Entity\UserWechat.cs" />
@@ -226,7 +227,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="cd.cd" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserSite\Model\" />

@@ -977,11 +977,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Content\font-awesome.css.map" />
-    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\ckeditor\styles.js" />
-    <Content Include="Scripts\jquery-2.2.3.js" />
-    <Content Include="Scripts\jquery-2.2.3.min.js" />
-    <Content Include="Scripts\jquery-2.2.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jQuery.FileUpload\cors\jquery.postmessage-transport.js" />
     <Content Include="Scripts\jQuery.FileUpload\cors\jquery.xdr-transport.js" />
@@ -1208,9 +1204,9 @@
       <Project>{508b7ec2-dae8-4ef5-bd0f-13539b189367}</Project>
       <Name>OpenData.Data.SQL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Modules\OpenData.Security.WeChat\OpenData.Security.WeChat.csproj">
+    <ProjectReference Include="..\..\Modules\OpenData.Module.WeChat\OpenData.Module.WeChat.csproj">
       <Project>{5fe33a48-0bfa-40b7-a2d6-2999b9f00417}</Project>
-      <Name>OpenData.Security.WeChat</Name>
+      <Name>OpenData.Module.WeChat</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Framework\OpenData.Framework.Core\OpenData.Framework.Core.csproj">
       <Project>{f3281193-f250-4e79-840b-93b60b0992ee}</Project>
