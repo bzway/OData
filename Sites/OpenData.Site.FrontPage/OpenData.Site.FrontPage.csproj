@@ -1204,6 +1204,10 @@
       <Project>{508b7ec2-dae8-4ef5-bd0f-13539b189367}</Project>
       <Name>OpenData.Data.SQL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Modules\OpenData.Module.Website\OpenData.Module.Website.csproj">
+      <Project>{0cbf8c1f-918a-4e9b-bc00-777291919523}</Project>
+      <Name>OpenData.Module.Website</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Modules\OpenData.Module.WeChat\OpenData.Module.WeChat.csproj">
       <Project>{5fe33a48-0bfa-40b7-a2d6-2999b9f00417}</Project>
       <Name>OpenData.Module.WeChat</Name>

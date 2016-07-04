@@ -3,7 +3,7 @@ using OpenData.Data.Core;
 using OpenData.Common.AppEngine;
 using Autofac;
 
-namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Module.Website.Controllers
 {
     public class BaseSiteController : BzwayController
     {

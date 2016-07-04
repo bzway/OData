@@ -7,7 +7,7 @@ using System.IO;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Module.Website.Controllers
 {
     public class FileController : BaseSiteController
     {

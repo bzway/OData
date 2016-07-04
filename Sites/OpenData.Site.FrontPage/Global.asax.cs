@@ -1,4 +1,5 @@
 ﻿using OpenData.Framework.Common;
+using OpenData.Framework.Common.ViewEngine;
 using OpenData.Framework.Core;
 using OpenData.Message;
 using RabbitMQ.Client;
@@ -26,8 +27,8 @@ namespace OpenData.Sites.FrontPage
             ModelMetadataProviders.Current = new BzwayDataAnnotationsModelMetadataProvider() { };
             //ModelValidatorProviders.Providers.Add(new MyModelValidatorProvider());
             //ModelBinderProviders.BinderProviders.Add(new EntityModelBinder());
-            //ViewEngines.Engines.Clear();
-            //ViewEngines.Engines.Add(new BzwayViewEngine());
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new BzwayViewEngine());
 
         }
 

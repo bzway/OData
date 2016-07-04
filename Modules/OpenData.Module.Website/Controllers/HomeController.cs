@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
+namespace OpenData.Module.Website.Controllers
 {
     public class HomeController : BaseSiteController
     {

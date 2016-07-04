@@ -190,6 +190,7 @@
     <Compile Include="Security\BzwayModule.cs" />
     <Compile Include="Security\BzwayPrincipal.cs" />
     <Compile Include="Security\Extensions.cs" />
+    <Compile Include="ViewEngine\BzwayViewEngine.cs" />
     <Compile Include="ViewResult\JsonResultData.cs" />
     <Compile Include="AggregateHtmlString.cs" />
     <Compile Include="ViewResult\FrontViewResult.cs" />

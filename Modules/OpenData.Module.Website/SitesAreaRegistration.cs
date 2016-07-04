@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OpenData.Sites.FrontPage.Areas.Sites
+namespace OpenData.Module.Website
 {
     public class SitesAreaRegistration : AreaRegistration
     {
@@ -8,15 +8,15 @@ namespace OpenData.Sites.FrontPage.Areas.Sites
         {
             get
             {
-                return "Site";
+                return "Sites";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Site_default",
-                "Site/{controller}/{action}/{id}",
+                "Sites_default",
+                "Sites/{controller}/{action}/{id}",
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
