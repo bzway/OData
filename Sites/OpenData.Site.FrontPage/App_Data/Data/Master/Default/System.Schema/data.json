@@ -40,5 +40,12 @@
     "Id": "cc38e9b4939a48ad88b8f7a7951bb9da",
     "CreatedOn": "2016-05-30T08:42:47.7696293Z",
     "UpdatedOn": "2016-05-30T08:42:47.7696293Z"
+  },
+  {
+    "Name": "SiteLayout",
+    "Description": "",
+    "Id": "9e0d4e762acd4f0d8be9ff5f7d3d8a46",
+    "CreatedOn": "2016-07-04T15:45:15.7836758Z",
+    "UpdatedOn": "2016-07-04T15:45:15.7836758Z"
   }
 ]

@@ -25,11 +25,12 @@ namespace OpenData.Sites.FrontPage
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                    "~/Scripts/html5shiv.js",
+                    "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/respond.min.js"));
+                    "~/Scripts/bootstrap.min.js",
+                    "~/Scripts/respond.min.js"));
 
 
             bundles.Add(new ScriptBundle("~/bundles/admin").Include(
@@ -42,7 +43,7 @@ namespace OpenData.Sites.FrontPage
                     "~/content/site.css"));
 
 
-            bundles.Add(new StyleBundle("~/content/bootstrap").Include(   
+            bundles.Add(new StyleBundle("~/content/bootstrap").Include(
                     "~/content/bootstrap.min.css"));
 
             bundles.Add(new StyleBundle("~/content/admin").Include(

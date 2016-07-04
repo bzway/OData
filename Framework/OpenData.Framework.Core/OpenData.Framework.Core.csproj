@@ -132,6 +132,7 @@
     <Compile Include="BzwayController.cs" />
     <Compile Include="BzwayControllerFactory.cs" />
     <Compile Include="Entity\System\Workflow.cs" />
+    <Compile Include="Entity\UserSite\SiteNavigation.cs" />
     <Compile Include="Middleware\UserIdentityMiddleware.cs" />
     <Compile Include="Middleware\FrontPageMiddleware.cs" />
     <Compile Include="Middleware\UserSiteMiddleware.cs" />

@@ -1,0 +1,51 @@
+﻿<li>
+    <a href="#"><i class="fa fa-sitemap fa-fw"></i> @("Site Management".Localize())<span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level">
+        <li>
+            @Html.ActionLink("Generic".Localize(), "Index", "Home", new { area = "Site" }, null)
+        </li>
+        <li>
+            @Html.ActionLink("Language Resource".Localize(), "Index", "Language", new { area = "Site" }, null)
+        </li>
+        <li>
+            <a href="#">@("Other".Localize())</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="fa fa-pagelines fa-fw"></i> @("Pages".Localize())<span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level">
+        <li>
+            <a href="@Url.Action("Index", "Layout", new { area = "Site" }, null)"><i class=" fa fa-list-alt fa-fw"></i> @("Layout".Localize()) </a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Layout", new { area = "Site" }, null) "><i class=" fa fa-file-o fa-fw"></i> @("Resources".Localize())<span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+                <li>
+                    <a href="@Url.Action("Upload", "File", new { area = "Site" }, null)"><i class="fa fa-upload fa-fw"></i> @("Upload".Localize())</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Css", "File", new { area = "Site" }, null)"><i class="fa fa-css3 fa-fw"></i> CSS</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Js", "File", new { area = "Site" }, null)"><i class="fa fa-scribd fa-fw"></i> Javascript</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("HTML", "File", new { area = "Site" }, null)"><i class="fa fa-html5 fa-fw"></i> HTML</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Entity", new { area = "Site" }, null) "><i class=" fa fa-database fa-fw"></i> @("Entities".Localize()) </a>
+
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Page", new { area = "Site" }, null) "><i class=" fa fa-file fa-fw"></i> @("Pages".Localize()) </a>
+        </li>
+        <li>
+
+            <a href="@Url.Action("Index", "Form", new { area = "Site" }, null) "><i class=" fa fa-code-fork fa-fw"></i> @("Forms".Localize()) </a>
+        </li>
+
+    </ul>
+</li>

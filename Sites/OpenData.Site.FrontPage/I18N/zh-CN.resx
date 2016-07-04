@@ -472,9 +472,15 @@
     <value>分组</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Title</value>
+    <value>标题</value>
   </data>
   <data name="Menu" xml:space="preserve">
-    <value>Menu</value>
+    <value>菜单</value>
+  </data>
+  <data name="网站管理后台" xml:space="preserve">
+    <value>网站管理后台</value>
+  </data>
+  <data name="Language Resource" xml:space="preserve">
+    <value>翻译</value>
   </data>
 </root>

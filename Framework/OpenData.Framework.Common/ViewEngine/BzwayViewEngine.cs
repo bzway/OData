@@ -8,14 +8,14 @@ namespace OpenData.Framework.Common.ViewEngine
     {
         public BzwayViewEngine()
         {
-            List<string> list = new List<string>();
-            foreach (var item in base.ViewLocationFormats)
-            {
+            //List<string> list = new List<string>();
+            //foreach (var item in base.ViewLocationFormats)
+            //{
 
-                list.Add(item);
-                list.Add("~/bin" + item.Substring(1));
-            }
-            base.ViewLocationFormats = list.ToArray();
+            //    list.Add(item);
+            //    list.Add("~/bin" + item.Substring(1));
+            //}
+            //base.ViewLocationFormats = list.ToArray();
         }
     }
 }
