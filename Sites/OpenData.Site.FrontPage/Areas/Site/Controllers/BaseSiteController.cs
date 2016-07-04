@@ -6,6 +6,7 @@ using Autofac;
 
 namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
+    [BzwayAuthorize(Roles = "Site")]
     public class BaseSiteController : BzwayController
     {
         public IDatabase db
@@ -21,7 +22,7 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
             {
                 if (this.Session["CurrentSite"] == null)
                 {
-                    this.Redirect("/User");
+                    this.RedirectToLocal("/User");
                     return string.Empty;
                 }
                 return this.Session["CurrentSite"].ToString();

@@ -7,15 +7,20 @@ namespace OpenData.Sites.FrontPage.Areas.Sites.Controllers
 {
     public class HomeController : BaseSiteController
     {
+        public ActionResult Index()
+        {
+            var list = this.SiteService.FindSiteByUserID(this.User.GetCurrentUser().ID);
+            return View(list);
+        }
 
-        [BzwayAuthorize(Roles = "Site")]
-        public ActionResult Index(string id)
+        public ActionResult Details(string id)
         {
             if (string.IsNullOrEmpty(id))
             {
                 var site = this.SiteService.FindSiteByUserID(this.User.GetCurrentUser().ID).FirstOrDefault();
                 if (site == null)
                 {
+                    this.Warning("test");
                     return Redirect("/User");
                 }
                 this.CurrentSite = site.Id;

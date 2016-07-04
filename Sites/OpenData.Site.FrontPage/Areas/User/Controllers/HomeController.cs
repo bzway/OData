@@ -7,7 +7,7 @@ namespace OpenData.Sites.FrontPage.Areas.Users.Controllers
 
     public class HomeController : BaseController
     {
-        [Authorize]
+        
         public ActionResult Index()
         {
             var userId = this.User.GetCurrentUser().ID;

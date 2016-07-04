@@ -483,4 +483,7 @@
   <data name="Language Resource" xml:space="preserve">
     <value>翻译</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
 </root>
