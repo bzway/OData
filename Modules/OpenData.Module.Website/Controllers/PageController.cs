@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using OpenData.Data.Core;
 using OpenData.Framework.Core.Entity;
 
-namespace OpenData.Module.Website.Controllers
+namespace OpenData.Module.EBook.Controllers
 {
     public class PageController : BaseSiteController
     {

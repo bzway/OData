@@ -1,16 +1,14 @@
-﻿using Bzway.Data;
-using System;
-
-namespace Bzway.Business.Model
+﻿using OpenData.Data.Core;
+namespace OpenData.Framework.Core.Entity
 {
-    public class ViewWorkflow : IViewBase
+    public class  Workflow : BaseEntity 
     {
         public string EntityID { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }
-    public class ViewWorkflowState : IViewBase
+    public class  WorkflowState : BaseEntity
     {
         public string WorkflowID { get; set; }
         public string Name { get; set; }
@@ -20,7 +18,7 @@ namespace Bzway.Business.Model
         public int Y { get; set; }
 
     }
-    public class Transition : IViewBase
+    public class Transition : BaseEntity
     {
         public string WorkflowID { get; set; }
         public string Name { get; set; }
@@ -29,7 +27,7 @@ namespace Bzway.Business.Model
         public string RoleList { get; set; }
     }
     
-    public class Action : IViewBase
+    public class Action : BaseEntity
     {
         public string TransitionID { get; set; }
         public string Name { get; set; }
@@ -37,7 +35,7 @@ namespace Bzway.Business.Model
         public string Module { get; set; }
         public string Method { get; set; }
     }
-    public class ActionDetail : IViewBase
+    public class ActionDetail : BaseEntity
     {
         public string ActionID { get; set; }
         public string Name { get; set; }
